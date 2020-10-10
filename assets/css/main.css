@@ -38,6 +38,7 @@ hr.divider {
   --red: #EC1C24;
   --green-success: #2D8823;
   --space-mobile: 50px;
+  --space-big-desktop: 1200px;
 }
 
 .header {
@@ -46,53 +47,57 @@ hr.divider {
   position: relative;
   background-color: var(--black);
 }
-.header .menu {
+.header > div {
+  width: 100%;
+}
+.header > div .menu {
   position: fixed;
   height: 100vh;
   width: 100vw;
   right: -100vw;
   background-color: var(--menu-gray);
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  outline: none;
 }
-.header .menu .close-menu {
+.header > div .menu .close-menu {
   position: absolute;
   top: 20px;
   right: 20px;
   height: 24px;
 }
-.header .menu .close-menu svg {
+.header > div .menu .close-menu svg {
   width: 24px;
   fill: var(--white);
 }
-.header .menu ul {
+.header > div .menu > div {
   width: 210px;
-  height: 480px;
+  height: 400px;
   padding: 0;
+  margin: 0;
   margin-top: 80px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-.header .menu ul li a {
+.header > div .menu > div > div a {
   text-decoration: none;
   color: var(--white);
   font-size: 30px;
 }
-.header .open-menu {
+.header > div .open-menu {
   position: absolute;
   top: 25px;
   right: 25px;
   width: 45px;
   height: 45px;
 }
-.header .open-menu svg {
+.header > div .open-menu svg {
   width: 45px;
   fill: var(--white);
 }
-.header .logo {
+.header > div .logo {
   position: absolute;
-  width: 100px;
   height: 100px;
   top: 45px;
   left: calc(50% - 85px);
@@ -102,20 +107,21 @@ hr.divider {
   height: 0;
 }
 
-@media (min-width: 992px) {
-  .header .menu {
+@media (min-width: 850px) {
+  .header > div .menu {
     position: relative;
     height: initial;
     width: 100%;
+    height: 100%;
     right: initial;
     background-color: initial;
-    margin-left: 250px;
     margin-right: var(--space-mobile);
+    align-items: center;
   }
-  .header .menu .close-menu {
+  .header > div .menu .close-menu {
     display: none;
   }
-  .header .menu ul {
+  .header > div .menu > div {
     width: 100%;
     height: initial;
     padding: 0;
@@ -124,35 +130,49 @@ hr.divider {
     justify-content: space-between;
     align-items: center;
   }
-  .header .menu ul li {
+  .header > div .menu > div > div {
     justify-content: space-between;
   }
-  .header .menu ul li a {
+  .header > div .menu > div > div a {
     text-decoration: none;
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
   }
-  .header .open-menu {
+  .header > div .open-menu {
     display: none;
   }
-  .header .logo {
+  .header > div .logo {
+    width: 350px;
     position: relative;
     left: 0;
     top: 0;
   }
-  .header .logo a {
+  .header > div .logo a {
     position: absolute;
     top: 30px;
-    left: 40px;
+    left: calc(50% - 60px);
   }
-  .header .logo a img {
+  .header > div .logo a img {
     width: 120px;
   }
 }
 @media (min-width: 1200px) {
-  .header .menu {
-    margin-left: 350px;
+  .header > div .menu > div > div a {
+    font-size: 20px;
+  }
+  .header > div .logo {
+    width: 600px;
+  }
+  .header > div .logo a {
+    left: 50px;
+  }
+}
+@media (min-width: 1441px) {
+  .header > div {
+    margin: auto;
+    width: var(--space-big-desktop);
+    align-items: center;
   }
 }
 .footer {
@@ -167,6 +187,9 @@ hr.divider {
 .footer > div .footer-logo {
   display: none;
 }
+.footer > div .footer-logo img {
+  margin-bottom: 16px;
+}
 .footer > div .wrapper {
   width: 100%;
   flex-direction: column;
@@ -176,6 +199,7 @@ hr.divider {
   padding: 0;
   flex-direction: column;
   margin-top: 50px;
+  justify-content: center;
 }
 .footer > div .wrapper ul li {
   color: var(--white);
@@ -190,8 +214,8 @@ hr.divider {
   margin-bottom: 16px;
 }
 .footer > div .wrapper ul li img {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   margin-right: 10px;
   align-items: center;
 }
@@ -221,8 +245,6 @@ hr.divider {
     margin-bottom: 16px;
   }
   .footer > div .wrapper ul li img {
-    height: 40px;
-    width: 40px;
     margin-right: 10px;
     align-items: center;
   }
@@ -239,8 +261,11 @@ hr.divider {
   .footer > div .wrapper .footer-logo .logo-title {
     font-size: 50px;
   }
+  .footer > div .wrapper ul {
+    margin-top: 0;
+  }
   .footer > div .wrapper ul li {
-    font-size: 16px;
+    font-size: 14px;
   }
   .footer > div .wrapper ul li.title {
     font-size: 24px;
@@ -281,6 +306,12 @@ hr.divider {
 @media (min-width: 1200px) {
   .footer .footer-logo .logo-title {
     font-size: 50px;
+  }
+}
+@media (min-width: 1441px) {
+  .footer > div {
+    margin: auto;
+    width: var(--space-big-desktop);
   }
 }
 section {
