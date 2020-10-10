@@ -59,18 +59,20 @@ hr.divider {
   justify-content: center;
   align-items: flex-start;
   outline: none;
+  transition: all 0.3s cubic-bezier(0.52, 0.16, 0.24, 1);
 }
 .header > div .menu .close-menu {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 24px;
+  top: 30px;
+  right: 30px;
+  height: 35px;
+  width: 35px;
 }
 .header > div .menu .close-menu svg {
-  width: 24px;
+  width: 100%;
   fill: var(--white);
 }
-.header > div .menu > div {
+.header > div .menu .menu-wrap {
   width: 210px;
   height: 400px;
   padding: 0;
@@ -80,7 +82,7 @@ hr.divider {
   justify-content: space-between;
   align-items: center;
 }
-.header > div .menu > div > div a {
+.header > div .menu .menu-wrap > div a {
   text-decoration: none;
   color: var(--white);
   font-size: 30px;
@@ -107,6 +109,24 @@ hr.divider {
   height: 0;
 }
 
+.menu-open > div .menu {
+  right: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 @media (min-width: 850px) {
   .header > div .menu {
     position: relative;
@@ -121,7 +141,7 @@ hr.divider {
   .header > div .menu .close-menu {
     display: none;
   }
-  .header > div .menu > div {
+  .header > div .menu .menu-wrap {
     width: 100%;
     height: initial;
     padding: 0;
@@ -130,10 +150,10 @@ hr.divider {
     justify-content: space-between;
     align-items: center;
   }
-  .header > div .menu > div > div {
+  .header > div .menu .menu-wrap > div {
     justify-content: space-between;
   }
-  .header > div .menu > div > div a {
+  .header > div .menu .menu-wrap > div a {
     text-decoration: none;
     color: var(--white);
     font-size: 18px;
@@ -158,7 +178,7 @@ hr.divider {
   }
 }
 @media (min-width: 1200px) {
-  .header > div .menu > div > div a {
+  .header > div .menu .menu-wrap > div a {
     font-size: 20px;
   }
   .header > div .logo {
