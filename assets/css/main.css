@@ -410,9 +410,6 @@ hr.divider {
 }
 
 @media (min-width: 768px) {
-  #about .hero {
-    width: 680px;
-  }
   #about .hero .wrapper .image {
     justify-content: flex-start;
   }
@@ -444,7 +441,18 @@ hr.divider {
 }
 @media (min-width: 850px) {
   #about #prime-hero .wrapper {
-    margin: 100px;
+    margin: 80px var(--space-mobile);
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-mobile);
+  }
+}
+@media (min-width: 992px) {
+  #about #prime-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-desktop);
   }
 }
 @media (min-width: 1200px) {
