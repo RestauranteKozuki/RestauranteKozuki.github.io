@@ -14,10 +14,6 @@ body {
     margin: 0;
     flex-direction: column;
     background-color: var(--bg-gray);
-
-    > main {
-        min-height: calc(100vh - 400px);
-    }
 }
 
 hr {
