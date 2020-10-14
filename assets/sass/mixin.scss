@@ -1,0 +1,25 @@
+@mixin btn-red {
+    margin-top: 10px;
+    min-width: 120px;
+    height: 60px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: red;
+    color: var(--white);
+    &:hover {
+        background-color: var(--white);
+        color: var(--red);
+        border: var(--red) solid 2px;
+        
+    }
+    &:active {
+        background-color: var(--bg-gray);
+    }
+}

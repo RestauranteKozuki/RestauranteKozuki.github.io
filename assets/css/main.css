@@ -29,6 +29,23 @@ hr.divider {
   align-self: center;
 }
 
+.title {
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.title h2 {
+  font-size: 44px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+.title hr {
+  margin: 0;
+  border: 0;
+  width: 70px;
+  height: 5px;
+  background-color: var(--red);
+}
+
 :root {
   --bg-gray: #ECECEC;
   --dark-gray: #6B6B6B;
@@ -40,6 +57,50 @@ hr.divider {
   --space-mobile: 50px;
   --space-desktop: 125px;
   --space-big-desktop: 1200px;
+  --border-radius: 5px;
+}
+
+form {
+  width: 100%;
+  flex-direction: column;
+}
+form .fields {
+  flex-direction: column;
+}
+form .field {
+  margin-top: 10px;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+form .field label {
+  position: absolute;
+  color: var(--dark-gray);
+  font-size: 14px;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+form .field input, form .field textarea, form .field select {
+  border: var(--dark-gray) 1px solid;
+  padding: 15px;
+  padding-top: 32px;
+  font-size: 16px;
+  color: var(--dark-0);
+  outline: none;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.5s ease-in-out;
+  width: 100%;
+  background-color: var(--white);
+}
+form .field input:focus, form .field textarea:focus, form .field select:focus {
+  border-color: var(--red);
+}
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
+  color: var(--red);
 }
 
 .header {
@@ -335,6 +396,66 @@ hr.divider {
     width: var(--space-big-desktop);
   }
 }
+#menu-page > section {
+  flex-direction: column;
+}
+#menu-page > section .subtitle {
+  flex-direction: column;
+  margin-top: 158px;
+  margin-left: 42px;
+}
+#menu-page > section .subtitle h1 {
+  font-size: 50px;
+  margin-bottom: 19px;
+}
+#menu-page > section .subtitle hr {
+  width: 75px;
+  height: 8px;
+  align-self: flex-start;
+  margin-top: 0;
+}
+#menu-page > section .item {
+  flex-direction: column;
+  margin: 50px;
+  border: 1px solid var(--menu-gray);
+  background-color: var(--white);
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 6px 0 18px var(--dark-gray);
+}
+#menu-page > section .item figure {
+  flex-direction: column;
+  align-items: center;
+}
+#menu-page > section .item figure picture img {
+  width: 233px;
+  height: 157px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+#menu-page > section .item figure figcaption h2 {
+  font-size: 24px;
+}
+#menu-page > section .item figure figcaption span.price {
+  font-size: 19px;
+  color: var(--red);
+}
+#menu-page > section .item .description {
+  display: none;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 58px;
+}
+#menu-page > section .item .description li {
+  margin-bottom: 10px;
+}
+#menu-page > section .item p {
+  margin: 0;
+  padding: 30px;
+  padding-top: 0;
+  text-align: center;
+}
+
 #about {
   flex-direction: column;
 }
@@ -491,65 +612,64 @@ hr.divider {
     width: var(--space-big-desktop);
   }
 }
-
-#menu-page > section {
+#reservation {
+  width: 100%;
+  min-height: 800px;
+  background-image: url("../images/reservation1920.jpg");
+  background-repeat: no-repeat;
+}
+#reservation .warp {
+  width: 100vh;
+  justify-content: flex-end;
+}
+#reservation .warp #squarereservation {
+  padding: 25px;
   flex-direction: column;
+  right: 50px;
+  margin: 75px;
+  z-index: 1;
+  width: 300px;
+  background-color: var(--bg-gray);
+  height: 700px;
 }
-#menu-page > section .subtitle {
-  flex-direction: column;
-  margin-top: 158px;
-  margin-left: 42px;
+#reservation .warp #squarereservation .title h2 {
+  font-size: 40px;
 }
-#menu-page > section .subtitle h1 {
-  font-size: 50px;
-  margin-bottom: 19px;
+#reservation .warp #squarereservation form button {
+  margin-top: 10px;
+  min-width: 120px;
+  height: 60px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: red;
+  color: var(--white);
+  z-index: 3;
 }
-#menu-page > section .subtitle hr {
-  width: 75px;
-  height: 8px;
-  align-self: flex-start;
-  margin-top: 0;
-}
-#menu-page > section .item {
-  flex-direction: column;
-  margin: 50px;
-  border: 1px solid var(--menu-gray);
+#reservation .warp #squarereservation form button:hover {
   background-color: var(--white);
-  border-radius: 15px;
-  align-items: center;
-  box-shadow: 6px 0 18px var(--dark-gray);
-}
-#menu-page > section .item figure {
-  flex-direction: column;
-  align-items: center;
-}
-#menu-page > section .item figure picture img {
-  width: 233px;
-  height: 157px;
-  border-radius: 15px;
-  margin-top: 25px;
-}
-#menu-page > section .item figure figcaption h2 {
-  font-size: 24px;
-}
-#menu-page > section .item figure figcaption span.price {
-  font-size: 19px;
   color: var(--red);
+  border: var(--red) solid 2px;
 }
-#menu-page > section .item .description {
-  display: none;
-  flex-direction: column;
-  padding: 0;
-  margin-bottom: 58px;
+#reservation .warp #squarereservation form button:active {
+  background-color: var(--bg-gray);
 }
-#menu-page > section .item .description li {
-  margin-bottom: 10px;
+
+@media (min-width: 768px) {
+  #squarereservation {
+    min-width: 400px;
+  }
 }
-#menu-page > section .item p {
-  margin: 0;
-  padding: 30px;
-  padding-top: 0;
-  text-align: center;
+@media (min-width: 1280px) {
+  #squarereservation {
+    min-width: 500px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
