@@ -129,6 +129,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   right: 30px;
   height: 35px;
   width: 35px;
+  cursor: pointer;
 }
 .header > div .menu .close-menu svg {
   width: 100%;
@@ -155,6 +156,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   right: 25px;
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 .header > div .open-menu svg {
   width: 45px;
@@ -259,12 +261,14 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 .footer {
   background-color: var(--black);
+  position: relative;
 }
 .footer > div {
   width: 100%;
   align-items: center;
-  padding: var(--space-mobile);
+  padding: var(--space-mobile) 0;
   flex-direction: column;
+  margin: 0 50px;
 }
 .footer > div .footer-logo {
   display: none;
@@ -300,6 +304,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 20px;
   margin-right: 10px;
   align-items: center;
+}
+.footer .credits {
+  position: absolute;
+  height: fit-content;
+  right: 20px;
+  bottom: 0;
+}
+.footer .credits span {
+  color: var(--white);
+}
+.footer .credits span.span {
+  color: #5fd65a;
 }
 
 @media (min-width: 576px) {
@@ -461,6 +477,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about .hero {
   flex-direction: column;
+  width: 100%;
 }
 #about .hero .wrapper {
   flex-direction: column;
@@ -471,23 +488,24 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about .hero .wrapper .text .title {
   flex-direction: column;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 #about .hero .wrapper .text .title h2 {
-  font-size: 44px;
+  font-size: 36px;
   margin: 0;
   margin-bottom: 12px;
 }
 #about .hero .wrapper .text .title hr {
   margin: 0;
   border: 0;
-  width: 70px;
+  width: 60px;
   height: 5px;
   background-color: var(--red);
 }
 #about .hero .wrapper .text .description {
   font-size: 20px;
   color: var(--menu-gray);
+  font-weight: 300;
 }
 #about .hero .wrapper .image {
   width: 100%;
@@ -497,7 +515,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   object-fit: cover;
 }
 #about #prime-hero {
-  width: 100%;
   margin-top: 0;
 }
 #about #prime-hero .wrapper {
@@ -510,8 +527,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin: 50px var(--space-mobile) 50px var(--space-mobile);
   flex-direction: column-reverse;
 }
+#about #second-hero .wrapper .text .description {
+  color: var(--white);
+}
 #about #third-hero {
-  width: 100%;
   margin-top: 0;
 }
 #about #third-hero .wrapper {
@@ -531,24 +550,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 
 @media (min-width: 768px) {
-  #about .hero {
-    width: 680px;
-  }
   #about .hero .wrapper .image {
-    justify-content: flex-start;
+    justify-content: center;
   }
   #about .hero .wrapper .image img {
-    width: 500px;
-  }
-  #about #second-hero {
-    width: 100%;
+    width: 400px;
   }
   #about #second-hero .wrapper {
     width: 680px;
     margin: 50px var(--space-mobile);
-  }
-  #about #third-hero {
-    width: 700px;
   }
   #about #third-hero .wrapper .image-gallery {
     flex-direction: row;
@@ -565,13 +575,30 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 @media (min-width: 850px) {
   #about #prime-hero .wrapper {
-    margin: 100px;
+    margin: 80px var(--space-mobile);
+  }
+  #about #prime-hero .wrapper .text .title h2 {
+    font-size: 40px;
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-mobile);
+  }
+}
+@media (min-width: 992px) {
+  #about #prime-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #third-hero {
+    width: 100%;
+  }
+  #about #third-hero .wrapper {
+    margin: 80px var(--space-desktop);
   }
 }
 @media (min-width: 1200px) {
-  #about .hero {
-    width: 100%;
-  }
   #about .hero .wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -581,6 +608,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
   #about .hero .wrapper .image {
     width: initial;
+  }
+  #about #prime-hero {
+    margin-top: 50px;
   }
   #about #prime-hero .wrapper {
     margin: 40px var(--space-desktop) 50px var(--space-desktop);
@@ -593,24 +623,36 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     width: 100%;
     margin: 0;
   }
+  #about #second-hero .wrapper .text {
+    margin: 0;
+    justify-content: center;
+  }
   #about #third-hero .wrapper .text {
     max-width: initial;
   }
 }
 @media (min-width: 1441px) {
-  #about .hero {
-    width: var(--space-big-desktop);
+  #about .hero .wrapper {
+    width: 1200px;
+  }
+  #about #prime-hero {
+    margin-top: 0;
   }
   #about #prime-hero .wrapper {
-    margin: 0;
+    margin: 100px auto 50px;
+  }
+  #about #prime-hero .wrapper .text {
+    margin-right: 50px;
   }
   #about #second-hero {
     margin: 0;
+    padding: 60px 0;
   }
   #about #second-hero .wrapper {
     margin: auto;
     width: var(--space-big-desktop);
   }
+<<<<<<< HEAD
 }
 #reservation {
   width: 100%;
@@ -669,6 +711,11 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 @media (min-width: 1280px) {
   #squarereservation {
     min-width: 500px;
+=======
+  #about #third-hero .wrapper {
+    margin: 0;
+    margin: 40px auto var(--space-desktop);
+>>>>>>> fce439e1a246a20ab4c9aae8024bed7112c8ac84
   }
 }
 
