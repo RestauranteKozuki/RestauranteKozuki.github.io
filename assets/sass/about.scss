@@ -2,6 +2,7 @@
     flex-direction: column;
     .hero {
         flex-direction: column;
+        width: 100%;
         .wrapper {
             flex-direction: column;
             .text {
@@ -38,7 +39,6 @@
         }
     }
     #prime-hero {
-        width: 100%;
         margin-top: 0;
         .wrapper {
             margin: 150px var(--space-mobile) 50px var(--space-mobile);
@@ -52,7 +52,6 @@
         }
     }
     #third-hero {
-        width: 100%;
         margin-top: 0;
         .wrapper {
             margin: 50px var(--space-mobile) 0 var(--space-mobile);
@@ -78,7 +77,7 @@
         .hero {
             .wrapper {
                 .image {
-                    justify-content: flex-start;
+                    justify-content: center;
                     img {
                         width: 500px;
                     }
@@ -86,14 +85,12 @@
             }
         }
         #second-hero {
-            width: 100%;
             .wrapper {
                 width: 680px;
                 margin: 50px var(--space-mobile);
             }
         }
         #third-hero {
-            width: 700px;
             .wrapper {
                 .image-gallery {
                     flex-direction: row;
@@ -139,13 +136,18 @@
                 margin: 80px var(--space-desktop);
             }
         }
+        #third-hero {
+            width: 100%;
+            .wrapper {
+                margin: 80px var(--space-desktop);
+            }
+        }
     }
 }
 
 @media (min-width: 1200px) {
     #about {
         .hero {
-            width: 100%;
             .wrapper {
                 flex-direction: row;
                 justify-content: space-between;
@@ -158,6 +160,7 @@
             }
         }
         #prime-hero {
+            margin-top: 50px;
             .wrapper {
                 margin: 40px var(--space-desktop) 50px var(--space-desktop);
             }
@@ -168,6 +171,10 @@
                 flex-direction: row;
                 width: 100%;
                 margin: 0;
+                .text {
+                    margin: 0;
+                    justify-content: center;
+                }
             }
         }
         #third-hero {
@@ -183,18 +190,31 @@
 @media (min-width: 1441px) {
     #about {
         .hero {
-            width: var(--space-big-desktop);
+            .wrapper {
+                width: 1200px;
+            }
         }
         #prime-hero {
+            margin-top: 0;
             .wrapper {
-                margin: 0;
+                margin: 100px auto;
+                .text {
+                    margin-right: 50px;
+                }
             }
         }
         #second-hero {
             margin: 0;
+            padding: 60px 0;
             .wrapper {
                 margin: auto;
                 width: var(--space-big-desktop);
+            }
+        }
+        #third-hero {
+            .wrapper {
+                margin: 0;
+                margin: 40px auto var(--space-desktop);
             }
         }
     }

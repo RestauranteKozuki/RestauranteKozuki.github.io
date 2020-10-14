@@ -198,12 +198,14 @@ hr.divider {
 }
 .footer {
   background-color: var(--black);
+  position: relative;
 }
 .footer > div {
   width: 100%;
   align-items: center;
-  padding: var(--space-mobile);
+  padding: var(--space-mobile) 0;
   flex-direction: column;
+  margin: 0 50px;
 }
 .footer > div .footer-logo {
   display: none;
@@ -239,6 +241,18 @@ hr.divider {
   width: 20px;
   margin-right: 10px;
   align-items: center;
+}
+.footer .credits {
+  position: absolute;
+  height: fit-content;
+  right: 20px;
+  bottom: 0;
+}
+.footer .credits span {
+  color: var(--white);
+}
+.footer .credits span.span {
+  color: #5fd65a;
 }
 
 @media (min-width: 576px) {
@@ -335,171 +349,6 @@ hr.divider {
     width: var(--space-big-desktop);
   }
 }
-#about {
-  flex-direction: column;
-}
-#about .hero {
-  flex-direction: column;
-}
-#about .hero .wrapper {
-  flex-direction: column;
-}
-#about .hero .wrapper .text {
-  flex-direction: column;
-  margin-bottom: 50px;
-}
-#about .hero .wrapper .text .title {
-  flex-direction: column;
-  margin-bottom: 28px;
-}
-#about .hero .wrapper .text .title h2 {
-  font-size: 44px;
-  margin: 0;
-  margin-bottom: 12px;
-}
-#about .hero .wrapper .text .title hr {
-  margin: 0;
-  border: 0;
-  width: 70px;
-  height: 5px;
-  background-color: var(--red);
-}
-#about .hero .wrapper .text .description {
-  font-size: 20px;
-  color: var(--menu-gray);
-}
-#about .hero .wrapper .image {
-  width: 100%;
-}
-#about .hero .wrapper .image img {
-  width: 100%;
-  object-fit: cover;
-}
-#about #prime-hero {
-  width: 100%;
-  margin-top: 0;
-}
-#about #prime-hero .wrapper {
-  margin: 150px var(--space-mobile) 50px var(--space-mobile);
-}
-#about #second-hero {
-  background-color: var(--black);
-}
-#about #second-hero .wrapper {
-  margin: 50px var(--space-mobile) 50px var(--space-mobile);
-  flex-direction: column-reverse;
-}
-#about #third-hero {
-  width: 100%;
-  margin-top: 0;
-}
-#about #third-hero .wrapper {
-  margin: 50px var(--space-mobile) 0 var(--space-mobile);
-  flex-direction: column-reverse;
-}
-#about #third-hero .wrapper .image-gallery {
-  flex-direction: column;
-  width: 100%;
-}
-#about #third-hero .wrapper .image-gallery .item-img {
-  width: 100%;
-  margin-bottom: 50px;
-}
-#about #third-hero .wrapper .image-gallery .item-img img {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  #about .hero .wrapper .image {
-    justify-content: flex-start;
-  }
-  #about .hero .wrapper .image img {
-    width: 500px;
-  }
-  #about #second-hero {
-    width: 100%;
-  }
-  #about #second-hero .wrapper {
-    width: 680px;
-    margin: 50px var(--space-mobile);
-  }
-  #about #third-hero {
-    width: 700px;
-  }
-  #about #third-hero .wrapper .image-gallery {
-    flex-direction: row;
-  }
-  #about #third-hero .wrapper .image-gallery .item-img {
-    margin-left: 50px;
-  }
-  #about #third-hero .wrapper .image-gallery .item-img:nth-child(1) {
-    margin-left: 0;
-  }
-  #about #third-hero .wrapper .image-gallery .item-img img {
-    object-fit: cover;
-  }
-}
-@media (min-width: 850px) {
-  #about #prime-hero .wrapper {
-    margin: 80px var(--space-mobile);
-  }
-  #about #second-hero .wrapper {
-    margin: 80px var(--space-mobile);
-  }
-}
-@media (min-width: 992px) {
-  #about #prime-hero .wrapper {
-    margin: 80px var(--space-desktop);
-  }
-  #about #second-hero .wrapper {
-    margin: 80px var(--space-desktop);
-  }
-}
-@media (min-width: 1200px) {
-  #about .hero {
-    width: 100%;
-  }
-  #about .hero .wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  #about .hero .wrapper .text {
-    max-width: 430px;
-  }
-  #about .hero .wrapper .image {
-    width: initial;
-  }
-  #about #prime-hero .wrapper {
-    margin: 40px var(--space-desktop) 50px var(--space-desktop);
-  }
-  #about #second-hero {
-    padding: 60px var(--space-desktop) 60px var(--space-desktop);
-  }
-  #about #second-hero .wrapper {
-    flex-direction: row;
-    width: 100%;
-    margin: 0;
-  }
-  #about #third-hero .wrapper .text {
-    max-width: initial;
-  }
-}
-@media (min-width: 1441px) {
-  #about .hero {
-    width: var(--space-big-desktop);
-  }
-  #about #prime-hero .wrapper {
-    margin: 0;
-  }
-  #about #second-hero {
-    margin: 0;
-  }
-  #about #second-hero .wrapper {
-    margin: auto;
-    width: var(--space-big-desktop);
-  }
-}
-
 #menu-page > section {
   flex-direction: column;
 }
@@ -558,6 +407,185 @@ hr.divider {
   padding: 30px;
   padding-top: 0;
   text-align: center;
+}
+
+#about {
+  flex-direction: column;
+}
+#about .hero {
+  flex-direction: column;
+  width: 100%;
+}
+#about .hero .wrapper {
+  flex-direction: column;
+}
+#about .hero .wrapper .text {
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+#about .hero .wrapper .text .title {
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+#about .hero .wrapper .text .title h2 {
+  font-size: 44px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+#about .hero .wrapper .text .title hr {
+  margin: 0;
+  border: 0;
+  width: 70px;
+  height: 5px;
+  background-color: var(--red);
+}
+#about .hero .wrapper .text .description {
+  font-size: 20px;
+  color: var(--menu-gray);
+}
+#about .hero .wrapper .image {
+  width: 100%;
+}
+#about .hero .wrapper .image img {
+  width: 100%;
+  object-fit: cover;
+}
+#about #prime-hero {
+  margin-top: 0;
+}
+#about #prime-hero .wrapper {
+  margin: 150px var(--space-mobile) 50px var(--space-mobile);
+}
+#about #second-hero {
+  background-color: var(--black);
+}
+#about #second-hero .wrapper {
+  margin: 50px var(--space-mobile) 50px var(--space-mobile);
+  flex-direction: column-reverse;
+}
+#about #third-hero {
+  margin-top: 0;
+}
+#about #third-hero .wrapper {
+  margin: 50px var(--space-mobile) 0 var(--space-mobile);
+  flex-direction: column-reverse;
+}
+#about #third-hero .wrapper .image-gallery {
+  flex-direction: column;
+  width: 100%;
+}
+#about #third-hero .wrapper .image-gallery .item-img {
+  width: 100%;
+  margin-bottom: 50px;
+}
+#about #third-hero .wrapper .image-gallery .item-img img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #about .hero .wrapper .image {
+    justify-content: center;
+  }
+  #about .hero .wrapper .image img {
+    width: 500px;
+  }
+  #about #second-hero .wrapper {
+    width: 680px;
+    margin: 50px var(--space-mobile);
+  }
+  #about #third-hero .wrapper .image-gallery {
+    flex-direction: row;
+  }
+  #about #third-hero .wrapper .image-gallery .item-img {
+    margin-left: 50px;
+  }
+  #about #third-hero .wrapper .image-gallery .item-img:nth-child(1) {
+    margin-left: 0;
+  }
+  #about #third-hero .wrapper .image-gallery .item-img img {
+    object-fit: cover;
+  }
+}
+@media (min-width: 850px) {
+  #about #prime-hero .wrapper {
+    margin: 80px var(--space-mobile);
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-mobile);
+  }
+}
+@media (min-width: 992px) {
+  #about #prime-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #third-hero {
+    width: 100%;
+  }
+  #about #third-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+}
+@media (min-width: 1200px) {
+  #about .hero .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #about .hero .wrapper .text {
+    max-width: 430px;
+  }
+  #about .hero .wrapper .image {
+    width: initial;
+  }
+  #about #prime-hero {
+    margin-top: 50px;
+  }
+  #about #prime-hero .wrapper {
+    margin: 40px var(--space-desktop) 50px var(--space-desktop);
+  }
+  #about #second-hero {
+    padding: 60px var(--space-desktop) 60px var(--space-desktop);
+  }
+  #about #second-hero .wrapper {
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+  }
+  #about #second-hero .wrapper .text {
+    margin: 0;
+    justify-content: center;
+  }
+  #about #third-hero .wrapper .text {
+    max-width: initial;
+  }
+}
+@media (min-width: 1441px) {
+  #about .hero .wrapper {
+    width: 1200px;
+  }
+  #about #prime-hero {
+    margin-top: 0;
+  }
+  #about #prime-hero .wrapper {
+    margin: 100px auto;
+  }
+  #about #prime-hero .wrapper .text {
+    margin-right: 50px;
+  }
+  #about #second-hero {
+    margin: 0;
+    padding: 60px 0;
+  }
+  #about #second-hero .wrapper {
+    margin: auto;
+    width: var(--space-big-desktop);
+  }
+  #about #third-hero .wrapper {
+    margin: 0;
+    margin: 40px auto var(--space-desktop);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
