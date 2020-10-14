@@ -68,6 +68,7 @@ hr.divider {
   right: 30px;
   height: 35px;
   width: 35px;
+  cursor: pointer;
 }
 .header > div .menu .close-menu svg {
   width: 100%;
@@ -94,6 +95,7 @@ hr.divider {
   right: 25px;
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 .header > div .open-menu svg {
   width: 45px;
@@ -425,23 +427,24 @@ hr.divider {
 }
 #about .hero .wrapper .text .title {
   flex-direction: column;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 #about .hero .wrapper .text .title h2 {
-  font-size: 44px;
+  font-size: 36px;
   margin: 0;
   margin-bottom: 12px;
 }
 #about .hero .wrapper .text .title hr {
   margin: 0;
   border: 0;
-  width: 70px;
+  width: 60px;
   height: 5px;
   background-color: var(--red);
 }
 #about .hero .wrapper .text .description {
   font-size: 20px;
   color: var(--menu-gray);
+  font-weight: 300;
 }
 #about .hero .wrapper .image {
   width: 100%;
@@ -462,6 +465,9 @@ hr.divider {
 #about #second-hero .wrapper {
   margin: 50px var(--space-mobile) 50px var(--space-mobile);
   flex-direction: column-reverse;
+}
+#about #second-hero .wrapper .text .description {
+  color: var(--white);
 }
 #about #third-hero {
   margin-top: 0;
@@ -487,7 +493,7 @@ hr.divider {
     justify-content: center;
   }
   #about .hero .wrapper .image img {
-    width: 500px;
+    width: 400px;
   }
   #about #second-hero .wrapper {
     width: 680px;
@@ -509,6 +515,9 @@ hr.divider {
 @media (min-width: 850px) {
   #about #prime-hero .wrapper {
     margin: 80px var(--space-mobile);
+  }
+  #about #prime-hero .wrapper .text .title h2 {
+    font-size: 40px;
   }
   #about #second-hero .wrapper {
     margin: 80px var(--space-mobile);
@@ -569,7 +578,7 @@ hr.divider {
     margin-top: 0;
   }
   #about #prime-hero .wrapper {
-    margin: 100px auto;
+    margin: 100px auto 50px;
   }
   #about #prime-hero .wrapper .text {
     margin-right: 50px;
