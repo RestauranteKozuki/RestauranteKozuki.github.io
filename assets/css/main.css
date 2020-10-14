@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 500;
+  font-family: "Lato";
+  font-weight: 400;
 }
 
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, div, nav, button, figure, picture, form {
@@ -15,9 +14,6 @@ body {
   margin: 0;
   flex-direction: column;
   background-color: var(--bg-gray);
-}
-body > main {
-  min-height: calc(100vh - 400px);
 }
 
 hr.divider {
@@ -37,6 +33,7 @@ hr.divider {
   font-size: 44px;
   margin: 0;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 .title hr {
   margin: 0;
@@ -492,6 +489,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about .hero .wrapper .text .title h2 {
   font-size: 36px;
+  font-weight: 700;
   margin: 0;
   margin-bottom: 12px;
 }
@@ -505,7 +503,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #about .hero .wrapper .text .description {
   font-size: 20px;
   color: var(--menu-gray);
-  font-weight: 300;
+  font-weight: 400;
 }
 #about .hero .wrapper .image {
   width: 100%;
@@ -652,7 +650,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin: auto;
     width: var(--space-big-desktop);
   }
-<<<<<<< HEAD
+  #about #third-hero .wrapper {
+    margin: 0;
+    margin: 40px auto var(--space-desktop);
+  }
 }
 #reservation {
   width: 100%;
@@ -711,11 +712,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 @media (min-width: 1280px) {
   #squarereservation {
     min-width: 500px;
-=======
-  #about #third-hero .wrapper {
-    margin: 0;
-    margin: 40px auto var(--space-desktop);
->>>>>>> fce439e1a246a20ab4c9aae8024bed7112c8ac84
   }
 }
 
