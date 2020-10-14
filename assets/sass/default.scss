@@ -26,3 +26,20 @@ hr {
         align-self: center;
     }
 }
+
+.title {
+    flex-direction: column;
+    margin-bottom: 25px;
+    h2 {
+        font-size: 44px;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+    hr {
+        margin: 0;
+        border: 0;
+        width: 70px;
+        height: 5px;
+        background-color: var(--red);
+    }
+}
