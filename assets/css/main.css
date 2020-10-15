@@ -37,6 +37,7 @@ hr.divider {
   --black: #000000;
   --red: #EC1C24;
   --green-success: #2D8823;
+  --gray-3: #d5d5d5;
   --space-mobile: 50px;
   --space-desktop: 125px;
   --space-big-desktop: 1200px;
@@ -335,6 +336,184 @@ hr.divider {
     width: var(--space-big-desktop);
   }
 }
+#menu-page {
+  margin-bottom: 60px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+#menu-page section {
+  flex-direction: column;
+  width: 100%;
+}
+#menu-page section .subtitle {
+  flex-direction: column;
+  margin-top: 120px;
+  margin-left: 42px;
+}
+#menu-page section .subtitle.second {
+  margin-top: 0;
+}
+#menu-page section .subtitle .title {
+  font-size: 35px;
+  margin-bottom: 19px;
+}
+#menu-page section .subtitle hr {
+  width: 75px;
+  height: 8px;
+  align-self: flex-start;
+  margin-top: 0;
+}
+#menu-page section .container {
+  flex-direction: column;
+}
+#menu-page section .container .item {
+  flex-direction: column;
+  margin: 40px;
+  background-color: var(--white);
+  border-radius: 6px;
+  align-items: center;
+  box-shadow: 14px 14px 31px -18px var(--dark-gray);
+  padding-bottom: 15px;
+}
+#menu-page section .container .item.hide-mobile {
+  display: none;
+}
+#menu-page section .container .item figure {
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+#menu-page section .container .item figure picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px 6px 0px 0px;
+}
+#menu-page section .container .item figure figcaption h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+#menu-page section .container .item span {
+  font-size: 20px;
+  color: var(--red);
+}
+#menu-page section .container .item p {
+  margin: 0;
+  padding: 0 40px 10px 40px;
+  text-align: center;
+  font-size: 16px;
+}
+#menu-page section .container .arrow-container {
+  display: none;
+}
+#menu-page section button {
+  width: 217px;
+  height: 66px;
+  border: 5px solid;
+  border-radius: 5px;
+  border-color: var(--red);
+  color: var(--red);
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-style: initial;
+  font-weight: bold;
+  align-self: center;
+}
+
+@media (min-width: 576px) {
+  #menu-page section .container .item {
+    min-height: 500px;
+  }
+  #menu-page section .container .item figure figcaption h3 {
+    font-size: 28px;
+  }
+  #menu-page section .container .item span {
+    font-size: 28px;
+  }
+  #menu-page section .container .item p {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  #menu-page section .container .item {
+    min-height: 500px;
+  }
+  #menu-page section .container .item figure figcaption h3 {
+    font-size: 32px;
+  }
+  #menu-page section .container .item span {
+    font-size: 31px;
+  }
+  #menu-page section .container .item p {
+    font-size: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  #menu-page section .subtitle {
+    margin-top: 57px;
+    margin-left: 71px;
+  }
+  #menu-page section .container {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 50px;
+    position: relative;
+  }
+  #menu-page section .container .item {
+    width: 200px;
+    margin: 20px;
+    min-height: initial;
+  }
+  #menu-page section .container .item p {
+    font-size: 13px;
+    padding: 0 30px 10px 30px;
+  }
+  #menu-page section .container .item.hide-mobile {
+    display: flex;
+  }
+  #menu-page section .container .item figure {
+    margin-bottom: 0;
+  }
+  #menu-page section .container .item figure picture img {
+    width: 100%;
+    height: auto;
+    margin-top: -10px;
+  }
+  #menu-page section .container .item figure figcaption {
+    margin-top: 0;
+  }
+  #menu-page section .container .item figure figcaption h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  #menu-page section .container .item span {
+    font-size: initial;
+  }
+  #menu-page section .container .arrow-container {
+    display: flex;
+    position: absolute;
+    left: calc(100vw - 142px);
+    width: 100px;
+    height: 100%;
+    align-items: center;
+  }
+  #menu-page section .container .arrow-container .arrow {
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border-radius: 50%;
+    box-shadow: 8px 6px 10px 1px var(--black);
+  }
+  #menu-page section .container .arrow-container .arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+  #menu-page section button {
+    display: none;
+  }
+}
 #about {
   flex-direction: column;
 }
@@ -490,66 +669,6 @@ hr.divider {
     margin: auto;
     width: var(--space-big-desktop);
   }
-}
-
-#menu-page > section {
-  flex-direction: column;
-}
-#menu-page > section .subtitle {
-  flex-direction: column;
-  margin-top: 158px;
-  margin-left: 42px;
-}
-#menu-page > section .subtitle h1 {
-  font-size: 50px;
-  margin-bottom: 19px;
-}
-#menu-page > section .subtitle hr {
-  width: 75px;
-  height: 8px;
-  align-self: flex-start;
-  margin-top: 0;
-}
-#menu-page > section .item {
-  flex-direction: column;
-  margin: 50px;
-  border: 1px solid var(--menu-gray);
-  background-color: var(--white);
-  border-radius: 15px;
-  align-items: center;
-  box-shadow: 6px 0 18px var(--dark-gray);
-}
-#menu-page > section .item figure {
-  flex-direction: column;
-  align-items: center;
-}
-#menu-page > section .item figure picture img {
-  width: 233px;
-  height: 157px;
-  border-radius: 15px;
-  margin-top: 25px;
-}
-#menu-page > section .item figure figcaption h2 {
-  font-size: 24px;
-}
-#menu-page > section .item figure figcaption span.price {
-  font-size: 19px;
-  color: var(--red);
-}
-#menu-page > section .item .description {
-  display: none;
-  flex-direction: column;
-  padding: 0;
-  margin-bottom: 58px;
-}
-#menu-page > section .item .description li {
-  margin-bottom: 10px;
-}
-#menu-page > section .item p {
-  margin: 0;
-  padding: 30px;
-  padding-top: 0;
-  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
