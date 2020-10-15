@@ -1,10 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 500;
+  font-family: "Lato";
+  font-weight: 400;
 }
 
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, div, nav, button, figure, picture, form {
@@ -16,9 +15,6 @@ body {
   flex-direction: column;
   background-color: var(--bg-gray);
 }
-body > main {
-  min-height: calc(100vh - 400px);
-}
 
 hr.divider {
   background-color: red;
@@ -27,6 +23,24 @@ hr.divider {
   margin: 15px 0;
   border: none;
   align-self: center;
+}
+
+.title {
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+.title h2 {
+  font-size: 44px;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.title hr {
+  margin: 0;
+  border: 0;
+  width: 70px;
+  height: 5px;
+  background-color: var(--red);
 }
 
 :root {
@@ -41,6 +55,50 @@ hr.divider {
   --space-mobile: 50px;
   --space-desktop: 125px;
   --space-big-desktop: 1200px;
+  --border-radius: 5px;
+}
+
+form {
+  width: 100%;
+  flex-direction: column;
+}
+form .fields {
+  flex-direction: column;
+}
+form .field {
+  margin-top: 10px;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+form .field label {
+  position: absolute;
+  color: var(--dark-gray);
+  font-size: 14px;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+form .field input, form .field textarea, form .field select {
+  border: var(--dark-gray) 1px solid;
+  padding: 15px;
+  padding-top: 32px;
+  font-size: 16px;
+  color: var(--dark-0);
+  outline: none;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.5s ease-in-out;
+  width: 100%;
+  background-color: var(--white);
+}
+form .field input:focus, form .field textarea:focus, form .field select:focus {
+  border-color: var(--red);
+}
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
+  color: var(--red);
 }
 
 .header {
@@ -69,6 +127,7 @@ hr.divider {
   right: 30px;
   height: 35px;
   width: 35px;
+  cursor: pointer;
 }
 .header > div .menu .close-menu svg {
   width: 100%;
@@ -95,6 +154,7 @@ hr.divider {
   right: 25px;
   width: 45px;
   height: 45px;
+  cursor: pointer;
 }
 .header > div .open-menu svg {
   width: 45px;
@@ -199,12 +259,14 @@ hr.divider {
 }
 .footer {
   background-color: var(--black);
+  position: relative;
 }
 .footer > div {
   width: 100%;
   align-items: center;
-  padding: var(--space-mobile);
+  padding: var(--space-mobile) 0;
   flex-direction: column;
+  margin: 0 50px;
 }
 .footer > div .footer-logo {
   display: none;
@@ -240,6 +302,18 @@ hr.divider {
   width: 20px;
   margin-right: 10px;
   align-items: center;
+}
+.footer .credits {
+  position: absolute;
+  height: fit-content;
+  right: 20px;
+  bottom: 0;
+}
+.footer .credits span {
+  color: var(--white);
+}
+.footer .credits span.span {
+  color: #5fd65a;
 }
 
 @media (min-width: 576px) {
@@ -406,18 +480,30 @@ hr.divider {
   display: none;
 }
 #menu-page section button {
-  width: 217px;
-  height: 66px;
-  border: 5px solid;
-  border-radius: 5px;
-  border-color: var(--red);
-  color: var(--red);
+  margin-top: 10px;
+  min-width: 120px;
+  height: 60px;
+  display: flex;
+  border: none;
   align-items: center;
   justify-content: center;
-  font-size: 27px;
-  font-style: initial;
-  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: red;
+  color: var(--white);
+  width: 150px;
   align-self: center;
+}
+#menu-page section button:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border: var(--red) solid 2px;
+}
+#menu-page section button:active {
+  background-color: var(--bg-gray);
 }
 
 @media (min-width: 576px) {
@@ -519,6 +605,7 @@ hr.divider {
 }
 #about .hero {
   flex-direction: column;
+  width: 100%;
 }
 #about .hero .wrapper {
   flex-direction: column;
@@ -529,23 +616,25 @@ hr.divider {
 }
 #about .hero .wrapper .text .title {
   flex-direction: column;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 #about .hero .wrapper .text .title h2 {
-  font-size: 44px;
+  font-size: 36px;
+  font-weight: 700;
   margin: 0;
   margin-bottom: 12px;
 }
 #about .hero .wrapper .text .title hr {
   margin: 0;
   border: 0;
-  width: 70px;
+  width: 60px;
   height: 5px;
   background-color: var(--red);
 }
 #about .hero .wrapper .text .description {
   font-size: 20px;
   color: var(--menu-gray);
+  font-weight: 400;
 }
 #about .hero .wrapper .image {
   width: 100%;
@@ -555,7 +644,6 @@ hr.divider {
   object-fit: cover;
 }
 #about #prime-hero {
-  width: 100%;
   margin-top: 0;
 }
 #about #prime-hero .wrapper {
@@ -568,8 +656,10 @@ hr.divider {
   margin: 50px var(--space-mobile) 50px var(--space-mobile);
   flex-direction: column-reverse;
 }
+#about #second-hero .wrapper .text .description {
+  color: var(--white);
+}
 #about #third-hero {
-  width: 100%;
   margin-top: 0;
 }
 #about #third-hero .wrapper {
@@ -589,24 +679,15 @@ hr.divider {
 }
 
 @media (min-width: 768px) {
-  #about .hero {
-    width: 680px;
-  }
   #about .hero .wrapper .image {
-    justify-content: flex-start;
+    justify-content: center;
   }
   #about .hero .wrapper .image img {
-    width: 500px;
-  }
-  #about #second-hero {
-    width: 100%;
+    width: 400px;
   }
   #about #second-hero .wrapper {
     width: 680px;
     margin: 50px var(--space-mobile);
-  }
-  #about #third-hero {
-    width: 700px;
   }
   #about #third-hero .wrapper .image-gallery {
     flex-direction: row;
@@ -623,13 +704,30 @@ hr.divider {
 }
 @media (min-width: 850px) {
   #about #prime-hero .wrapper {
-    margin: 100px;
+    margin: 80px var(--space-mobile);
+  }
+  #about #prime-hero .wrapper .text .title h2 {
+    font-size: 40px;
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-mobile);
+  }
+}
+@media (min-width: 992px) {
+  #about #prime-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #second-hero .wrapper {
+    margin: 80px var(--space-desktop);
+  }
+  #about #third-hero {
+    width: 100%;
+  }
+  #about #third-hero .wrapper {
+    margin: 80px var(--space-desktop);
   }
 }
 @media (min-width: 1200px) {
-  #about .hero {
-    width: 100%;
-  }
   #about .hero .wrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -639,6 +737,9 @@ hr.divider {
   }
   #about .hero .wrapper .image {
     width: initial;
+  }
+  #about #prime-hero {
+    margin-top: 50px;
   }
   #about #prime-hero .wrapper {
     margin: 40px var(--space-desktop) 50px var(--space-desktop);
@@ -651,23 +752,97 @@ hr.divider {
     width: 100%;
     margin: 0;
   }
+  #about #second-hero .wrapper .text {
+    margin: 0;
+    justify-content: center;
+  }
   #about #third-hero .wrapper .text {
     max-width: initial;
   }
 }
 @media (min-width: 1441px) {
-  #about .hero {
-    width: var(--space-big-desktop);
+  #about .hero .wrapper {
+    width: 1200px;
+  }
+  #about #prime-hero {
+    margin-top: 0;
   }
   #about #prime-hero .wrapper {
-    margin: 0;
+    margin: 100px auto 50px;
+  }
+  #about #prime-hero .wrapper .text {
+    margin-right: 50px;
   }
   #about #second-hero {
     margin: 0;
+    padding: 60px 0;
   }
   #about #second-hero .wrapper {
     margin: auto;
     width: var(--space-big-desktop);
+  }
+  #about #third-hero .wrapper {
+    margin: 0;
+    margin: 40px auto var(--space-desktop);
+  }
+}
+#reservation {
+  width: 100%;
+  min-height: 800px;
+  background-image: url("../images/reservation1920.jpg");
+  background-repeat: no-repeat;
+}
+#reservation .warp {
+  width: 100vh;
+  justify-content: flex-end;
+}
+#reservation .warp #squarereservation {
+  padding: 25px;
+  flex-direction: column;
+  right: 50px;
+  margin: 75px;
+  z-index: 1;
+  width: 300px;
+  background-color: var(--bg-gray);
+  height: 700px;
+}
+#reservation .warp #squarereservation .title h2 {
+  font-size: 40px;
+}
+#reservation .warp #squarereservation form button {
+  margin-top: 10px;
+  min-width: 120px;
+  height: 60px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: red;
+  color: var(--white);
+  z-index: 3;
+}
+#reservation .warp #squarereservation form button:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border: var(--red) solid 2px;
+}
+#reservation .warp #squarereservation form button:active {
+  background-color: var(--bg-gray);
+}
+
+@media (min-width: 768px) {
+  #squarereservation {
+    min-width: 400px;
+  }
+}
+@media (min-width: 1280px) {
+  #squarereservation {
+    min-width: 500px;
   }
 }
 
