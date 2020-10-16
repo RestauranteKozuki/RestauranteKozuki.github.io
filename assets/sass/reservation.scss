@@ -3,8 +3,13 @@
     min-height: 800px;
    background-image: url('../images/reservation1920.jpg');
    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
    .warp {
-       width: 100vh;    
+        max-width: 1200px;
+        margin: 0 auto;
+       width: 100%;  
        justify-content: flex-end;
         #squarereservation {
             padding: 25px;

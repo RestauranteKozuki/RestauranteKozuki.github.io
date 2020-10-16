@@ -16,9 +16,6 @@ body {
   flex-direction: column;
   background-color: var(--bg-gray);
 }
-body > main {
-  min-height: calc(100vh - 400px);
-}
 
 hr.divider {
   background-color: red;
@@ -652,16 +649,24 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin: auto;
     width: var(--space-big-desktop);
   }
-<<<<<<< HEAD
+  #about #third-hero .wrapper {
+    margin: 0;
+    margin: 40px auto var(--space-desktop);
+  }
 }
 #reservation {
   width: 100%;
   min-height: 800px;
   background-image: url("../images/reservation1920.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 #reservation .warp {
-  width: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
   justify-content: flex-end;
 }
 #reservation .warp #squarereservation {
@@ -711,11 +716,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 @media (min-width: 1280px) {
   #squarereservation {
     min-width: 500px;
-=======
-  #about #third-hero .wrapper {
-    margin: 0;
-    margin: 40px auto var(--space-desktop);
->>>>>>> fce439e1a246a20ab4c9aae8024bed7112c8ac84
   }
 }
 
