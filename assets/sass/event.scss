@@ -1,7 +1,7 @@
-#reservation {
+#event {
     width: 100%;
     min-height: 800px;
-   background-image: url('../images/reservation1920.jpg');
+   background-image: url('../images/event1920.jpg');
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -22,10 +22,9 @@
             margin: 25px;
             width: 300px;
             background-color: var(--bg-gray);
-            height: 750px;
+            height: 700px;
             .title {
                 h2 {
-                    margin-top: 10px;
                     font-size: 40px;
                 }
             }
@@ -53,7 +52,7 @@
         margin-top: 50px !important;
         #squarereservation {
             min-width: 450px;
-            height: 600px  !important;
+            height: 560px  !important;
             
             
             .title {
