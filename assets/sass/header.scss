@@ -15,6 +15,7 @@
             align-items: flex-start;
             outline: none;
             transition: all .3s cubic-bezier(0.52, 0.16, 0.24, 1);
+            z-index: 3;
             .close-menu {
                 position: absolute;
                 top: 30px;
@@ -36,11 +37,14 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                > div{
+                > div {
                     a {
                         text-decoration: none;
                         color: var(--white);
                         font-size: 30px;
+                        &:hover {
+                            color: var(--menu-gray);
+                        }
                     }
                 }
             }
