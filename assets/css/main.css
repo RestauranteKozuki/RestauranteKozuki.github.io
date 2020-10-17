@@ -45,9 +45,10 @@ hr.divider {
 :root {
   --bg-gray: #ECECEC;
   --dark-gray: #6B6B6B;
-  --menu-gray: #6b6b6bee;
+  --menu-gray: #6b6b6be1;
+  --menu-gray-hover: #ccccccee;
   --white: #FFFFFF;
-  --black: #000000;
+  --black: #202225;
   --red: #EC1C24;
   --green-success: #2D8823;
   --shadow: #4D4D4Ecc;
@@ -256,7 +257,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-size: 30px;
 }
 .header > div .menu .menu-wrap > div a:hover {
-  color: var(--menu-gray);
+  color: var(--menu-gray-hover);
 }
 .header > div .open-menu {
   position: absolute;
@@ -412,6 +413,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin-right: 10px;
   align-items: center;
 }
+.footer > div .wrapper ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+.footer > div .wrapper ul li a:hover {
+  color: var(--dark-gray);
+}
 .footer .credits {
   position: absolute;
   height: fit-content;
@@ -421,7 +429,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 .footer .credits span {
   color: var(--white);
 }
-.footer .credits span.span {
+.footer .credits span.span a {
+  text-decoration: none;
   color: #5fd65a;
 }
 
@@ -532,32 +541,36 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   display: none;
 }
 #menu-page section button {
-  margin-top: 10px;
-  min-width: 120px;
-  height: 60px;
+  height: 54px;
   display: flex;
   border: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  background-color: red;
+  background-color: var(--red);
   color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
   align-self: center;
   width: 180px;
   font-size: 24px;
   margin-top: 30px;
 }
 #menu-page section button:hover {
-  background-color: var(--white);
-  color: var(--red);
-  border: var(--red) solid 2px;
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
 }
 #menu-page section button:active {
-  background-color: var(--bg-gray);
+  background-color: #ed1b24EE;
 }
 
 @media (min-width: 576px) {
@@ -676,6 +689,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-weight: 700;
   margin: 0;
   margin-bottom: 12px;
+  color: var(--black);
 }
 #about .hero .wrapper .text .title hr {
   margin: 0;
@@ -686,8 +700,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about .hero .wrapper .text .description {
   font-size: 20px;
-  color: var(--menu-gray);
-  font-weight: 400;
+  color: var(--dark-gray);
+  font-weight: 300;
 }
 #about .hero .wrapper .image {
   width: 100%;
@@ -729,6 +743,73 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about #third-hero .wrapper .image-gallery .item-img img {
   width: 100%;
+}
+#about .btn-wrap {
+  width: 100%;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#about .btn-wrap .btn-gray {
+  height: 54px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  color: #555555;
+  border: 2px solid #555555;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  margin-right: 30px;
+}
+#about .btn-wrap .btn-gray:hover {
+  background-color: #707070;
+  border-color: #707070;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
+}
+#about .btn-wrap .btn-gray:active {
+  background-color: rgba(131, 131, 131, 0.9);
+  color: var(--white);
+  border-color: rgba(131, 131, 131, 0.9);
+}
+#about .btn-wrap .btn-red {
+  height: 54px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: var(--red);
+  color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+#about .btn-wrap .btn-red:hover {
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
+}
+#about .btn-wrap .btn-red:active {
+  background-color: #ed1b24EE;
 }
 
 @media (min-width: 768px) {
@@ -872,28 +953,32 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-size: 40px;
 }
 #reservation .wrap #squarereservation form button {
-  margin-top: 10px;
-  min-width: 120px;
-  height: 60px;
+  height: 54px;
   display: flex;
   border: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  background-color: red;
+  background-color: var(--red);
   color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 #reservation .wrap #squarereservation form button:hover {
-  background-color: var(--white);
-  color: var(--red);
-  border: var(--red) solid 2px;
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
 }
 #reservation .wrap #squarereservation form button:active {
-  background-color: var(--bg-gray);
+  background-color: #ed1b24EE;
 }
 #reservation .wrap #squarereservation form span {
   color: var(--red);
@@ -959,28 +1044,32 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-size: 40px;
 }
 #event .wrap #squarereservation form button {
-  margin-top: 10px;
-  min-width: 120px;
-  height: 60px;
+  height: 54px;
   display: flex;
   border: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  background-color: red;
+  background-color: var(--red);
   color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 #event .wrap #squarereservation form button:hover {
-  background-color: var(--white);
-  color: var(--red);
-  border: var(--red) solid 2px;
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
 }
 #event .wrap #squarereservation form button:active {
-  background-color: var(--bg-gray);
+  background-color: #ed1b24EE;
 }
 #event .wrap #squarereservation form span {
   color: var(--red);

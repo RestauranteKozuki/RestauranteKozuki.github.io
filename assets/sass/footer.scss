@@ -38,6 +38,13 @@
                             margin-right: 10px;
                             align-items: center;
                         }
+                        a {
+                            text-decoration: none;
+                            color: var(--white);
+                            &:hover {
+                                color: var(--dark-gray);
+                            }
+                        }
                     }
                 }
             }
@@ -50,7 +57,10 @@
             span {
                 color: var(--white);
                 &.span {
-                    color: #5fd65a;
+                    a {
+                        text-decoration: none;
+                        color: #5fd65a;
+                    }
                 }
             }
         }
