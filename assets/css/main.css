@@ -424,7 +424,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 .footer .credits span {
   color: var(--white);
 }
-.footer .credits span.span {
+.footer .credits span.span a {
+  text-decoration: none;
   color: #5fd65a;
 }
 
