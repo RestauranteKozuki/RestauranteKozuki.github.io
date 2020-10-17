@@ -141,6 +141,11 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-weight: bold;
   margin-top: 20px;
 }
+.card .text-card .price .black {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+}
 
 @font-face {
   font-family: "Roboto";
@@ -515,6 +520,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section .container .card {
   width: 100%;
   margin-bottom: 40px;
+  max-height: 500px;
 }
 #menu-page section .container .card.hide-mobile {
   display: none;
@@ -555,8 +561,12 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 
 @media (min-width: 576px) {
+  #menu-page section .container .card .img-card img {
+    max-height: 200px;
+  }
   #menu-page section .container .card .text-card {
-    height: initial;
+    height: 100%;
+    justify-content: space-between;
   }
   #menu-page section .container .card .text-card h3 {
     font-size: 40px;
@@ -603,6 +613,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
   #menu-page section .container .card .text-card {
     padding: 12px 30px;
+    height: 100%;
+    justify-content: space-around;
   }
   #menu-page section .container .card .text-card h3 {
     font-size: 24px;
