@@ -5,108 +5,289 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Kozuki</title>
+    <meta name="description" content="O melhor restaurante japonês">
+    <link rel="preload" href="assets/css/main.css" as="style" />
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
 </head>
 
 <body>
-    <header id="header-home" class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/images/logo.svg" alt="Logo">
-            </a>
-        </div>
-        <div class="open-menu">
-            <?xml version="1.0" encoding="iso-8859-1"?>
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" viewBox="0 0 384 384" style="enable-background:new 0 0 384 384;" xml:space="preserve">
-
-                <g>
-                    <rect x="0" y="277.333" width="384" height="42.667" />
-                    <rect x="0" y="170.667" width="384" height="42.667" />
-                    <rect x="0" y="64" width="384" height="42.667" />
-                </g>
-            </svg>
-
-        </div>
-        <nav class="menu">
-            <div class="close-menu">
-                <svg id="Capa_1" enable-background="new 0 0 512.001 512.001" viewBox="0 0 512.001 512.001"
-                    xmlns="http://www.w3.org/2000/svg">
+    <header class="header">
+        <div>
+            <a class="skip-link" href="#maincontent">Skip to main</a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Logo">
+                </a>
+            </div>
+            <div class="open-menu">
+                <?xml version="1.0" encoding="iso-8859-1"?>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 384 384"
+                    style="enable-background:new 0 0 384 384;" xml:space="preserve">
                     <g>
-                        <path
-                            d="m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853 84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147 171.147 171.147 84.853-84.853-171.148-171.148z" />
+                        <rect x="0" y="277.333" width="384" height="42.667" />
+                        <rect x="0" y="170.667" width="384" height="42.667" />
+                        <rect x="0" y="64" width="384" height="42.667" />
                     </g>
                 </svg>
 
             </div>
-            <ul>
-                <li class="menu-item"><a href="">Home</a></li>
-                <li class="menu-item"><a href="">Cardápio</a></li>
-                <li class="menu-item"><a href="">Quem somos</a></li>
-                <li class="menu-item"><a href="">Delivery</a></li>
-                <li class="menu-item"><a href="">Eventos</a></li>
-                <li class="menu-item"><a href="">Reserva</a></li>
-                <li class="menu-item"><a href="">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+            <nav class="menu">
+                <div class="close-menu">
+                    <svg id="Capa_1" enable-background="new 0 0 512.001 512.001" viewBox="0 0 512.001 512.001"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853 84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147 171.147 171.147 84.853-84.853-171.148-171.148z" />
+                        </g>
+                    </svg>
 
-    <section></section>
+                </div>
+                <div class="menu-wrap">
+                    <div class="menu-item"><a href="index.html">Home</a></div>
+                    <div class="menu-item"><a href="menu.html">Cardápio</a></div>
+                    <div class="menu-item"><a href="about.html">Quem somos</a></div>
+                    <div class="menu-item"><a href="delivery.html">Delivery</a></div>
+                    <div class="menu-item"><a href="events.html">Eventos</a></div>
+                    <div class="menu-item"><a href="reservation.html">Reserva</a></div>
+                    <div class="menu-item"><a href="contact.html">Contato</a></div>
+                </div>
+            </nav>
+    </header>
+    </div>
+
+    <main id="menu-page">
+
+
+        <section>
+
+            <div class="title" id="title-dish">
+                <h1 >Nossos Pratos</h1>
+                <hr />
+            </div>
+
+            <div class="container">
+                <div class="card">
+                    <div class="img-card">
+                        <img src="assets/images/menu/sushi-barco.jpg" alt="Sushi">
+                    </div>
+                    <div class="text-card">
+                        <h3 class="title">Sushi</h3>
+                        <p class="text">Porção completa com sushis váriados, do tipo Hossomaki, Makizushi, Futomaki, Kappamaki e Dyos. Perfeita pra quem não consegue escolher só um!</p>
+                        <span class="price">89,99</span>
+                    </div>
+                </div>
+
+                <div class="card hide-mobile">
+                    <div class="img-card">
+                        <img src="assets/images/menu/sushi-sem-arroz.jpg" alt="Sushi sem arroz">
+                    </div>
+                    <div class="text-card">
+                        <h3 class="title">Sushi sem arroz</h3>
+                        <p class="text">O sushi sem arroz é leve e tem baíxo valor de calórias, é uma excelente opção pra quem busca uma dieta balanceada, mas sem perder a suavidade e o sabor do salmão.</p>
+                        <span class="price">49,99</span>
+                    </div>
+                </div>
+
+                <div class="card ">
+                    <div class="img-card">
+                        <img src="assets/images/menu/sashimi.jpg" alt="Sashimi">
+                    </div>
+                    <div class="text-card">
+                        <h3 class="title">Sashimí</h3>
+                        <p class="text">Prato típico japonês, consiste em porção de peixe e frutos do mar frescos, servidos com molho e guarnição.</p>
+                        <span class="price">79,99</span>
+                    </div>
+                </div>
+
+                <div class="card  hide-mobile">
+                    <div class="img-card">
+                        <img src="assets/images/menu/sahimi-tataki.jpg" alt="Sashimí Tataki">
+                    </div>
+                    <div class="text-card">
+                        <h3 class="title">Sashimí Tataki</h3>
+                        <p class="text">O Tatakí é selado diretamente no fogo, o que o deixa cozido por fora e levemente cru e suculento por dentro, acompanha molho especial do chef.</p>
+                        <span class="price">29,99</span>
+                    </div>
+                </div>
+
+                <div class="card  ">
+                    <div class="img-card">
+                        <img src="assets/images/menu/temaki-california.jpg" alt="temaki-california">
+                    </div>
+                    <div class="text-card">
+                        <h3 class="title">Temaki Califórnia</h3>
+                        <p class="text">Inspirado no calor a nas ondas da Califórnia, esse Temaki é feito de Kani e pepino, com a tropicalidade da manga.</p>
+                        <span class="price">19,99</span>
+                    </div>
+                </div>
+
+                <div class="card  hide-mobile">
+                    <div class="img-card">
+                        <img src="assets/images/menu/temaki-camarao.jpg" alt="Temaki-camarao">
+                    </div>
+                    <div class="text-card">
+                        <h3 class="title">Temaki Camarão</h3>
+                        <p class="text">Releitura do Temaki tradicional, recheado com camarão cream cheese e cebolinha</p>
+                        <span class="price">29,99</span>
+                    </div>
+                </div>
+
+                <div class="arrow-container">
+                    <div class="arrow">
+                        <?xml version="1.0"?>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 434.002 434.002" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path d="M95.457,434.002l-33.105-45.076l234.094-171.928L62.352,45.077L95.456,0L360.24,194.459    c7.174,5.269,11.41,13.638,11.41,22.539c0,8.9-4.236,17.27-11.41,22.538L95.457,434.002z" fill="#fffdfd" data-original="#000000" style="" class=""/>
+                            </g>
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        <g xmlns="http://www.w3.org/2000/svg">
+                        </g>
+                        </g></svg>
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+            
+            <button type="button" class="button">CARDÁPIO</button>
+           
+        </section>
+        <section class="hero" id="prime-hero">
+            <div class="wrapper">
+                <div class="text">
+                    <div class="title">
+                        <h2>Quem somos</h2>
+                        <hr>
+                    </div>
+                    <div class="description">Conhecido pelo cuidado e a originalidade com os alimentos da culinária Japonesa o restaurante Kozuki está presente no Guia Michelan de melhores restaurantes do mundo. O que já era bom ficou ainda melhor, com o novo site do restaurante Kozuki novos horizontes serão desbravados com o mesmo zelo de quem a 50 anos reinventou a culinária japonesa.
+                    </div>
+
+                </div>
+                <div class="image">
+                    <img src="assets/images/front.jpg" alt="Senhor Kozuki cozinhando">
+                </div>
+            </div>
+
+        </section>
+        <section class="hero" id="second-hero">
+            <div class="wrapper">
+                <div class="image">
+                    <img src="assets/images/bag1920.png" alt="Senhor Kozuki cozinhando">
+                </div>
+                <div class="text">
+                    <div class="title">
+                        <h2>Delivery</h2>
+                        <hr>
+                    </div>
+                    <div class="description">Os melhores pratos também na sua casa.
+                    </div>
+                    <button type="button" class="button">faça seu pedido</button>
+
+                </div>
+                
+            </div>
+            
+
+        </section>
+
+
+    </main>
 
     <footer class="footer">
         <div>
-            <ul class="contact">
-                <li class="title">São Paulo</li>
-                <li>Terça a Domingo</li>
-                <li>Horário: 9:00 às 23:00 hrs</li>
-                <li>Avenida Paulista, 1234</li>
-                <li>+55 11 012345678</li>
-                <li>kazukirj@kazuki.com.br</li>
-            </ul>
-            <ul class="contact">
-                <li class="title">Rio de Janeiro</li>
-                <li>Terça a Domingo</li>
-                <li>Horário: 9:00 às 23:00 hrs</li>
-                <li>Avenida Brasil, 1234</li>
-                <li>+55 11 012345678</li>
-                <li>kazukirj@kazuki.com.br</li>
-            </ul>
+            <div class="wrapper">
+                <ul class="contact">
+                    <li class="title">São Paulo</li>
+                    <li>Terça a Domingo</li>
+                    <li>Horário: 9:00 às 23:00 hrs</li>
+                    <li>Avenida Paulista, 1234</li>
+                    <li>+55 11 012345678</li>
+                    <li>kazukirj@kazuki.com.br</li>
+                </ul>
+                <ul class="contact">
+                    <li class="title">Rio de Janeiro</li>
+                    <li>Terça a Domingo</li>
+                    <li>Horário: 9:00 às 23:00 hrs</li>
+                    <li>Avenida Brasil, 1234</li>
+                    <li>+55 11 012345678</li>
+                    <li>kazukirj@kazuki.com.br</li>
+                </ul>
+            </div>
+
             <div class="footer-logo">
                 <img src="assets/images/logo.svg" alt="Logo">
                 <div class="logo-title">
                     Kozuki
                 </div>
             </div>
-            <ul class="links">
-                <li class="title">Links</li>
-                <li>Home</li>
-                <li>Cardápio</li>
-                <li>Delivery</li>
-                <li>Quem somos</li>
-                <li>Eventos</li>
-                <li>Reservas</li>
-            </ul>
-            <ul class="links">
-                <li class="title">Redes sociais</li>
-                <li>
-                    <img src="assets/images/facebook.svg" alt="">
-                    Facebook
-                </li>
-                <li>
-                    <img src="assets/images/youtube.svg" alt="">
-                    Youtube
-                </li>
-                <li>
-                    <img src="assets/images/instagram.svg" alt="">
-                    Instagram
-                </li>
-                <li>
-                    <img src="assets/images/twitter.svg" alt="">
-                    Twitter
-                </li>
-            </ul>
+
+            <div class="wrapper">
+                <ul class="links">
+                    <li class="title">Links</li>
+                    <li>Home</li>
+                    <li>Cardápio</li>
+                    <li>Delivery</li>
+                    <li>Quem somos</li>
+                    <li>Eventos</li>
+                    <li>Reservas</li>
+                </ul>
+                <ul class="links">
+                    <li class="title">Redes sociais</li>
+                    <li>
+                        <img src="assets/images/facebook.svg" alt="">
+                        Facebook
+                    </li>
+                    <li>
+                        <img src="assets/images/youtube.svg" alt="">
+                        Youtube
+                    </li>
+                    <li>
+                        <img src="assets/images/instagram.svg" alt="">
+                        Instagram
+                    </li>
+                    <li>
+                        <img src="assets/images/twitter.svg" alt="">
+                        Twitter
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </footer>
+
+    <script src="assets/scripts/index.js"></script>
+
 </body>
 
 </html>
