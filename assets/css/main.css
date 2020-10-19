@@ -513,6 +513,32 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page #title-dish {
   align-items: center;
 }
+#menu-page .home-footer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#menu-page .home-footer #overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#menu-page .home-footer .text-at-home {
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  width: 350px;
+  justify-content: center;
+}
+#menu-page .home-footer .text-at-home h3 {
+  font-size: 80px;
+}
+#menu-page .home-footer .text-at-home p {
+  font-size: 24px;
+  color: var(--white);
+}
 #menu-page .hero {
   flex-direction: column;
   width: 100%;
