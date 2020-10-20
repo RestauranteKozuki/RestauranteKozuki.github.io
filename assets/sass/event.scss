@@ -29,8 +29,11 @@
                 }
             }
             form {
+                
                 button {
                     @include btn-red;
+                    margin-top: 10px;
+                   
                    
                 }
                 span {
