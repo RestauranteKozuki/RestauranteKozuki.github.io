@@ -1,157 +1,67 @@
 
-#menu-page {
+
+#home {
     flex-direction: column;
-    #title-dish{
-        align-items: center;
-    }
-    
-    .hero {
-        flex-direction: column;
-        width: 100%;
-        
-        .wrapper {
-            flex-direction: column;
-            
-            .text {
-                flex-direction: column;
-                margin-bottom: 50px;
-                
-                .title {
-                    flex-direction: column;
-                    margin-bottom: 36px;
-                    
-                    
-                    h2 {
-                        font-size: 36px;
-                        font-weight: 700;
-                        margin: 0;
-                        margin-bottom: 12px;
-                        color: var(--white);
-                    }
-                    hr {
-                        margin: 0;
-                        border: 0;
-                        width: 60px;
-                        height: 5px;
-                        background-color: var(--red);
-                    }
-                }
-                .description {
-                    font-size: 20px;
-                    color: var(--dark-gray);
-                    font-weight: 300;
-                }
-            }
-            .image {
-                width: 100%;
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-    }
     #prime-hero {
-        background: var(--black);
-        .hero{
-            .wrapper {
-                margin: 150px var(--space-mobile) 50px var(--space-mobile);
-            }
-        }
-        .image {
+        .home-footer{
+            position: relative;
             width: 100%;
+            flex-direction: row;
+            background: url(../images/comida-japonesa.jpg);
+            background-repeat: no-repeat;
+            background-size: cover ;     
+            align-items: center;
+            justify-content: center;
+            #overlay {
+                top: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.4);
+                z-index: 2;
+            }
+            
+            .text-at-home{
+                margin-top: 170px;
+                position: relative;
+                z-index: 3;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                width: 350px;
+                justify-content: center;
+                h3{
+                    font-size: 50px;
+                    color: var(--white);
+                    margin-bottom: 100px;
+                        hr {
+                        position: absolute;
+                        background-color: red;
+                        left: calc(50% - 25px);
+                        height: 5px;
+                        width: 50px;
+                        margin: 15px 0;
+                        border: none;
+                        align-self: center;
+                    }
+                }
+                
+                button {
+                    @include btn-gray;
+                    margin-bottom: 290px;
+                }
+            }
+    
         }
-        
     }
     #second-hero {
-        margin-top: 0;
-        
-        .wrapper {
-            margin: 150px var(--space-mobile) 50px var(--space-mobile);
+        flex-direction: column;
+        .container{
+            .card{
+                width: 500px;
+                margin: 0 25px;
+            }
         }
-    }
-    .button{
-        margin-bottom: 20px;
-        white-space: pre;
-        width: 320px;        
     }
 }
 
-@media (min-width: 1200px){
-    #menu-page{
-        .button {
-            display: block;
-            
-        }
-        
-        .hero {
-            .wrapper {
-                flex-direction: row;
-                justify-content: space-between;
-                .text {
-                    max-width: 430px;
-                }
-                .image {
-                    width: initial;
-                }
-            }
-        }
-        #prime-hero {
-            margin-top: 50px;
-            
-            .wrapper {
-                margin: 40px var(--space-desktop) 50px var(--space-desktop);
-            }
-        }
-        #second-hero {
-            margin-top: 50px;
-            text-align: end;
-            align-items: flex-end;
-            justify-content: flex-end;
-            h2 {
-                align-items: flex-end;
-                color: var(--black);
-            }
-            .title{
-                align-items: flex-end;
-            }
-
-            .wrapper {
-                margin: 40px var(--space-desktop) 50px var(--space-desktop);
-            }
-        }
-        .image{
-            margin-left: 30px;
-            
-        }
-        .button{
-            
-        }
-    }
-}
-// @media (min-width: 1441px) {
-//     #menu-page {
-//         .hero {
-//             .wrapper {
-//                 width: 1200px;
-//             }
-//         }
-//         #prime-hero {
-//             margin-top: 0;
-//             .wrapper {
-//                 margin: 100px auto 50px;
-//                 .text {
-//                     margin-right: 50px;
-//                 }
-//             }
-//         }
-//         #second-hero {
-//             margin: 0;
-//             padding: 60px 0;
-//             .wrapper {
-//                 margin: auto;
-//                 width: var(--space-big-desktop);
-//             }
-//         }
-//     }
-// }
