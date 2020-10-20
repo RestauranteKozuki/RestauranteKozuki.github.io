@@ -1173,6 +1173,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  margin-top: 10px;
 }
 #reservation .wrap #squarereservation form button:hover {
   background-color: #b10000;
@@ -1264,6 +1265,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  margin-top: 10px;
 }
 #event .wrap #squarereservation form button:hover {
   background-color: #b10000;
