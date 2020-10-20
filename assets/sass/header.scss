@@ -71,7 +71,9 @@
 }
 
 #header-home {
-    height: 0;
+    position: absolute;
+    z-index: 3;
+    background-color: initial;
 }
 
 .menu-open {
