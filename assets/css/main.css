@@ -60,96 +60,6 @@ hr.divider {
   --border-radius: 5px;
 }
 
-form {
-  width: 100%;
-  flex-direction: column;
-}
-form .fields {
-  flex-direction: column;
-}
-form .field {
-  margin-top: 10px;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-}
-form .field label {
-  position: absolute;
-  color: var(--dark-gray);
-  font-size: 14px;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
-}
-form .field input, form .field textarea, form .field select {
-  border: var(--dark-gray) 1px solid;
-  padding: 15px;
-  padding-top: 32px;
-  font-size: 16px;
-  color: var(--dark-0);
-  outline: none;
-  border-radius: var(--border-radius);
-  position: relative;
-  z-index: 1;
-  top: 0;
-  transition: border-color 0.5s ease-in-out;
-  width: 100%;
-  background-color: var(--white);
-}
-form .field input:focus, form .field textarea:focus, form .field select:focus {
-  border-color: var(--red);
-}
-form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
-  color: var(--red);
-}
-
-.card {
-  width: 500px;
-  background-color: var(--white);
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 12px 12px 20px -10px var(--shadow);
-}
-.card .img-card {
-  border-radius: 20px 20px 0 0;
-  min-height: 200px;
-  width: 100%;
-}
-.card .img-card img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}
-.card .text-card {
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 30px;
-}
-.card .text-card h3 {
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 10px;
-}
-.card .text-card .text {
-  text-align: center;
-  font-size: 20px;
-  margin: 0;
-}
-.card .text-card .price {
-  color: var(--red);
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-.card .text-card .price .black {
-  color: var(--black);
-  font-size: 16px;
-  font-weight: 500;
-}
-
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
@@ -210,6 +120,96 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-style: italic;
   font-weight: 900;
 }
+form {
+  width: 100%;
+  flex-direction: column;
+}
+form .fields {
+  flex-direction: column;
+}
+form .field {
+  margin-top: 10px;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+form .field label {
+  position: absolute;
+  color: var(--dark-gray);
+  font-size: 14px;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+form .field input, form .field textarea, form .field select {
+  border: var(--dark-gray) 1px solid;
+  padding: 15px;
+  padding-top: 32px;
+  font-size: 16px;
+  color: var(--dark-0);
+  outline: none;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.5s ease-in-out;
+  width: 100%;
+  background-color: var(--white);
+}
+form .field input:focus, form .field textarea:focus, form .field select:focus {
+  border-color: var(--red);
+}
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
+  color: var(--red);
+}
+
+.card {
+  width: 500px;
+  background-color: var(--white);
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 10px -5px var(--shadow);
+}
+.card .img-card {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  min-height: 200px;
+  width: 100%;
+}
+.card .img-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.card .text-card {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+}
+.card .text-card h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card .text-card .text {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+.card .text-card .price {
+  color: var(--red);
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.card .text-card .price .black {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .header {
   width: 100%;
   height: 100px;
@@ -514,6 +514,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home {
   flex-direction: column;
 }
+#home #prime-hero {
+  height: 100vh;
+}
 #home #prime-hero .home-footer {
   position: relative;
   width: 100%;
@@ -533,7 +536,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   z-index: 2;
 }
 #home #prime-hero .home-footer .text-at-home {
-  margin-top: 170px;
   position: relative;
   z-index: 3;
   flex-direction: column;
@@ -545,7 +547,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #prime-hero .home-footer .text-at-home h3 {
   font-size: 50px;
   color: var(--white);
-  margin-bottom: 100px;
 }
 #home #prime-hero .home-footer .text-at-home h3 hr {
   position: absolute;
@@ -570,24 +571,20 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 290px;
 }
 #home #prime-hero .home-footer .text-at-home button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #prime-hero .home-footer .text-at-home button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #second-hero {
   flex-direction: column;
@@ -600,8 +597,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   align-items: center;
 }
 #home #second-hero .container .card {
+  width: 300px;
+  height: 100%;
   max-width: 100%;
   margin: 15px 15px;
+}
+#home #second-hero .container .card img {
+  min-height: 300px;
 }
 #home #second-hero .title {
   margin-top: 20px;
@@ -620,24 +622,21 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 #home #second-hero button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #second-hero button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #third-hero {
   position: relative;
@@ -686,8 +685,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
@@ -696,15 +695,12 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 230px;
 }
 #home #bedroom-hero .wrapper button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #bedroom-hero .wrapper button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #bedroom-hero img {
   display: none;
@@ -714,22 +710,60 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #home #second-hero {
     width: 100%;
     align-items: center;
+    margin: 50px 0;
   }
   #home #second-hero .container {
     flex-direction: row;
+    overflow: hidden;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+  }
+  #home #second-hero .container .card {
+    width: initial;
+  }
+  #home #second-hero .container .card .text-card {
+    justify-content: space-around;
+    padding: 30px;
+  }
+  #home #second-hero .container .card .img-card {
+    min-height: initial;
+  }
+  #home #second-hero .container .card h3 {
+    margin: 0;
+  }
+  #home #second-hero .container .card .price {
+    margin: 0;
+  }
+  #home #second-hero button {
+    margin: 20px;
   }
   #home #third-hero .wrapper {
     flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
   }
   #home #third-hero .wrapper .text {
     width: 40%;
+    margin: 0;
+  }
+  #home #third-hero .wrapper .text .title {
+    width: 100%;
+  }
+  #home #third-hero .wrapper .text .title h2 {
+    text-align: left;
+  }
+  #home #third-hero .wrapper .text .description {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
   }
   #home #third-hero .wrapper .image {
-    padding-left: 15%;
+    width: 500px;
   }
 }
 #menu-page {
-  margin-bottom: 60px;
   max-width: 100vw;
   overflow: hidden;
   padding: 20px;
@@ -737,6 +771,27 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section {
   flex-direction: column;
   width: 100%;
+  margin-bottom: 20px;
+}
+#menu-page section .fixed {
+  height: 100px;
+  right: 30px;
+  width: 100px;
+  position: fixed;
+  background-color: var(--red-active);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 12px 12px 20px -10px var(--shadow);
+  bottom: 30px;
+  z-index: 1;
+}
+#menu-page section .fixed:hover {
+  background-color: var(--red-active);
+}
+#menu-page section .fixed svg {
+  width: 70px;
+  height: 70px;
 }
 #menu-page section .title {
   margin-top: 150px;
@@ -793,6 +848,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section button:active {
   background-color: #ed1b24EE;
 }
+#menu-page section button.btn-desktop {
+  display: none;
+}
 
 @media (min-width: 576px) {
   #menu-page section .container .card .img-card img {
@@ -803,13 +861,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     justify-content: space-between;
   }
   #menu-page section .container .card .text-card h3 {
-    font-size: 40px;
+    font-size: 24px;
   }
   #menu-page section .container .card .text-card .text {
     font-size: 1.2em;
   }
   #menu-page section .container .card .text-card .price {
-    font-size: 40px;
+    font-size: 26px;
   }
   #menu-page section button {
     width: 230px;
@@ -825,6 +883,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #menu-page section .container .card {
     flex: 3;
     margin: 10px;
+    max-height: 620px;
   }
 }
 @media (min-width: 1200px) {
@@ -846,7 +905,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     min-width: 200px;
   }
   #menu-page section .container .card .text-card {
-    padding: 12px 30px;
+    padding: 12px 12px;
     height: 100%;
     justify-content: space-around;
   }
@@ -878,12 +937,29 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     background-color: var(--red);
     border-radius: 50%;
     box-shadow: 8px 6px 10px 1px var(--black);
+    cursor: pointer;
+  }
+  #menu-page section .container .arrow-container .arrow:hover {
+    background-color: var(--red-hover);
+  }
+  #menu-page section .container .arrow-container .arrow:active {
+    background-color: var(--red-active);
   }
   #menu-page section .container .arrow-container .arrow svg {
     width: 24px;
     height: 24px;
   }
   #menu-page section button {
+    display: none;
+  }
+  #menu-page section button.btn-desktop {
+    display: flex;
+  }
+  #menu-page section button.btn-desktop a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  #menu-page section .fixed {
     display: none;
   }
 }
@@ -900,24 +976,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #about .hero .wrapper .text {
   flex-direction: column;
   margin-bottom: 50px;
-}
-#about .hero .wrapper .text .title {
-  flex-direction: column;
-  margin-bottom: 36px;
-}
-#about .hero .wrapper .text .title h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 12px;
-  color: var(--black);
-}
-#about .hero .wrapper .text .title hr {
-  margin: 0;
-  border: 0;
-  width: 60px;
-  height: 5px;
-  background-color: var(--red);
 }
 #about .hero .wrapper .text .description {
   font-size: 20px;
@@ -1324,587 +1382,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 @media (min-width: 1280px) {
   #squarereservation {
     min-width: 500px;
-  }
-}
-@media (min-width: 320px) {
-  section {
-    justify-content: center;
-  }
-  section div div img {
-    margin: 0;
-  }
-  section .container1:first-child {
-    margin-top: 140px;
-  }
-  section .container1 {
-    flex-direction: column;
-  }
-  section #menu-delivery {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 120px;
-    height: 83px;
-    font-size: 18px;
-    align-items: center;
-  }
-  section #menu-delivery .btn-orange:first-child {
-    margin-left: 48px;
-  }
-  section #menu-delivery .btn-red {
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    height: 41px;
-    width: 127px;
-    font-size: 17px;
-    margin-right: 101px;
-    list-style-type: none;
-    margin-left: 48px;
-    margin-top: 20px;
-  }
-  section #menu-delivery .btn-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  section #menu-delivery .btn-red:active {
-    background-color: #ed1b24EE;
-  }
-  section #menu-delivery .btn-orange {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange);
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  section #menu-delivery .btn-orange-light {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange-light);
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  section #menu-delivery a {
-    color: var(--white);
-    text-decoration: none;
-    align-items: center;
-  }
-
-  .card:first-child {
-    margin-top: 170px;
-  }
-
-  .card {
-    margin-left: 49px;
-    margin-right: 49px;
-    width: 277px;
-    margin-bottom: 20px;
-    background-color: var(--white);
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
-  }
-
-  .card .img-card {
-    border-radius: 20px 20px 0 0;
-    min-height: 200px;
-    width: 100%;
-    height: 274px;
-  }
-
-  .card .img-card img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-  }
-
-  .card .text-card {
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 30px;
-  }
-
-  .card .text-card h3 {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .card .text-card .text {
-    text-align: center;
-    font-size: 20px;
-    margin: 0;
-  }
-
-  .card .text-card .price {
-    color: var(--red);
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  .card .text-card .price .black {
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 500;
-  }
-}
-@media (min-width: 992px) {
-  section .container1:first-child {
-    margin-top: 0px;
-    margin-left: 101px;
-  }
-  section .container1 {
-    flex-direction: column;
-  }
-  section .card {
-    margin-left: 40px;
-    width: 350px;
-    margin-right: 20px;
-    margin-bottom: 45px;
-    background-color: var(--white);
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
-  }
-  section .card .img-card {
-    border-radius: 20px 20px 0 0;
-    min-height: 200px;
-    width: 100%;
-    height: 274px;
-  }
-  section .card .img-card img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-  }
-  section .card .text-card {
-    height: 100%;
-    margin-top: 30px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 30px;
-  }
-  section .card .text-card h3 {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  section .card .text-card .text {
-    text-align: center;
-    font-size: 20px;
-    margin: 0;
-  }
-  section .card .text-card .price {
-    color: var(--red);
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  section .card .text-card .price .black {
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 500;
-  }
-  section #menu-delivery {
-    bottom: 0px;
-    position: fixed;
-    background-color: #2E2E2E;
-    height: 83px;
-    width: 100%;
-    font-size: 18px;
-    align-items: center;
-    margin-left: 0px;
-    flex-direction: row;
-  }
-  section #menu-delivery div {
-    margin-left: 0px;
-  }
-  section #menu-delivery .btn-orange:first-child {
-    margin-left: 80px;
-  }
-  section #menu-delivery .btn-red {
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    margin-left: 400px;
-    margin-right: 101px;
-    list-style-type: none;
-  }
-  section #menu-delivery .btn-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  section #menu-delivery .btn-red:active {
-    background-color: #ed1b24EE;
-  }
-  section #menu-delivery .btn-orange {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange);
-  }
-  section #menu-delivery .btn-orange2 {
-    border-radius: 30%;
-    margin-top: 20px;
-    height: 30px;
-    background-color: var(--orange);
-  }
-  section #menu-delivery .btn-orange-light {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange-light);
-    align-items: center;
-    margin-left: 10px;
-  }
-  section #menu-delivery a {
-    color: var(--white);
-    text-decoration: none;
-    align-items: center;
-  }
-}
-@media (min-width: 1200px) {
-  section .card {
-    width: 411px;
-    margin-left: 101px;
-    margin-right: 20px;
-    margin-bottom: 45px;
-    background-color: var(--white);
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
-  }
-}
-@media (min-width: 320px) {
-  section {
-    display: block;
-  }
-  section .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  section .delivery h1 {
-    margin: 0px;
-    font-size: 48px;
-    font-family: "Roboto";
-    font-weight: bold;
-  }
-  section .delivery h2 {
-    margin: 0px;
-    font-size: 24px;
-    font-family: "Roboto";
-    font-weight: 400;
-  }
-  section .delivery hr {
-    width: 75px;
-    margin: 0px;
-    margin-bottom: 50px;
-    height: 1px;
-    border: solid 2px var(--red);
-  }
-  section img {
-    width: 274px;
-    height: 274px;
-    margin-left: 50px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 80px;
-  }
-}
-@media (min-width: 992px) {
-  section {
-    display: flex;
-  }
-  section div .delivery h2 {
-    margin-bottom: 50px;
-  }
-}
-@media (min-width: 320px) {
-  section {
-    display: block;
-  }
-  section container.precoPC {
-    display: none;
-  }
-  section .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  section .delivery h1 {
-    margin: 0px;
-    font-size: 48px;
-    font-family: "Roboto";
-    font-weight: bold;
-  }
-  section .delivery hr {
-    width: 75px;
-    margin: 0px;
-    margin-bottom: 50px;
-    height: 1px;
-    border: solid 2px var(--red);
-  }
-  section .Pedido h1 {
-    margin: 0px;
-    font-size: 40px;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-left: 50px;
-  }
-  section .Pedido span {
-    color: var(--red);
-    font-size: 40px;
-    font-family: "Roboto";
-    margin-left: calc(100% - 80%);
-  }
-  section form .field {
-    height: 73px;
-    width: 302px;
-    margin-left: 48px;
-    margin-bottom: 20px;
-  }
-  section form .field label {
-    font-size: 21px;
-    align-items: center;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  section h3 {
-    margin-left: 25px;
-    font-size: 25px;
-    font-family: "Roboto";
-  }
-  section .valor {
-    width: 80%;
-  }
-  section .valor h3 {
-    margin: 0;
-    margin-left: 25px;
-    font-size: 25px;
-    margin-bottom: 46px;
-    font-family: "Roboto";
-  }
-  section .valor span {
-    font-size: 25px;
-    color: var(--red);
-    margin-left: 198px;
-    font-family: "Roboto";
-  }
-  section .button {
-    text-align: center;
-  }
-  section .button button {
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    color: #555555;
-    border: 2px solid #555555;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 85px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  section .button button:hover {
-    background-color: #707070;
-    border-color: #707070;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  section .button button:active {
-    background-color: rgba(131, 131, 131, 0.9);
-    color: var(--white);
-    border-color: rgba(131, 131, 131, 0.9);
-  }
-}
-@media (min-width: 992px) {
-  section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  section container.precoCE {
-    display: none;
-  }
-  section container.precoPC {
-    display: block;
-  }
-  section container.precoPC {
-    margin: 0;
-    margin-right: 60px;
-    margin-top: 30px;
-  }
-  section container.precoPC .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  section container.precoPC .delivery h1 {
-    margin: 0px;
-    font-size: 48px;
-    font-family: "Roboto";
-    font-weight: bold;
-  }
-  section container.precoPC .delivery hr {
-    width: 75px;
-    margin: 0px;
-    margin-bottom: 50px;
-    height: 1px;
-    border: solid 2px var(--red);
-  }
-  section container.precoPC container.precoCE .Pedido h1 {
-    margin: 0px;
-    font-size: 40px;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-left: 50px;
-  }
-  section container.precoPC container.precoCE .Pedido span {
-    color: var(--red);
-    font-size: 40px;
-    font-family: "Roboto";
-    margin-left: calc(100% - 80%);
-  }
-  section container.precoPC h3 {
-    margin-left: 25px;
-    font-size: 25px;
-    font-family: "Roboto";
-  }
-  section container.precoPC .valor {
-    width: 80%;
-  }
-  section container.precoPC .valor h3 {
-    margin: 0;
-    margin-left: 25px;
-    font-size: 25px;
-    margin-bottom: 46px;
-    font-family: "Roboto";
-  }
-  section container.precoPC .valor span {
-    font-size: 25px;
-    color: var(--red);
-    margin-left: 198px;
-    font-family: "Roboto";
-  }
-  section container.precoPC .button {
-    text-align: center;
-  }
-  section container.precoPC .button button {
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    color: #555555;
-    border: 2px solid #555555;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 85px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  section container.precoPC .button button:hover {
-    background-color: #707070;
-    border-color: #707070;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  section container.precoPC .button button:active {
-    background-color: rgba(131, 131, 131, 0.9);
-    color: var(--white);
-    border-color: rgba(131, 131, 131, 0.9);
-  }
-  section container form .field {
-    height: 73px;
-    width: 522px;
-    margin-left: 48px;
-    margin-bottom: 20px;
-  }
-  section container form .field label {
-    font-size: 21px;
-    align-items: center;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-top: 10px;
   }
 }
 
