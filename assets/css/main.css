@@ -372,141 +372,141 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     align-items: center;
   }
 }
-.footer {
+#footer {
   background-color: var(--black);
   position: relative;
 }
-.footer > div {
+#footer > div {
   width: 100%;
   align-items: center;
   padding: var(--space-mobile) 0;
   flex-direction: column;
   margin: 0 50px;
 }
-.footer > div .footer-logo {
+#footer > div .footer-logo {
   display: none;
 }
-.footer > div .footer-logo img {
+#footer > div .footer-logo img {
   margin-bottom: 16px;
 }
-.footer > div .wrapper {
+#footer > div .wrapper {
   width: 100%;
   flex-direction: column;
 }
-.footer > div .wrapper ul {
+#footer > div .wrapper ul {
   margin: 0;
   padding: 0;
   flex-direction: column;
   margin-top: 50px;
   justify-content: center;
 }
-.footer > div .wrapper ul li {
+#footer > div .wrapper ul li {
   color: var(--white);
   font-size: 20px;
   font-weight: normal;
   margin-bottom: 14px;
 }
-.footer > div .wrapper ul li.title {
+#footer > div .wrapper ul li.title {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 16px;
 }
-.footer > div .wrapper ul li img {
+#footer > div .wrapper ul li img {
   height: 20px;
   width: 20px;
   margin-right: 10px;
   align-items: center;
 }
-.footer > div .wrapper ul li a {
+#footer > div .wrapper ul li a {
   text-decoration: none;
   color: var(--white);
 }
-.footer > div .wrapper ul li a:hover {
+#footer > div .wrapper ul li a:hover {
   color: var(--dark-gray);
 }
-.footer .credits {
+#footer .credits {
   position: absolute;
   height: fit-content;
   right: 20px;
   bottom: 0;
 }
-.footer .credits span {
+#footer .credits span {
   color: var(--white);
 }
-.footer .credits span.span a {
+#footer .credits span.span a {
   text-decoration: none;
   color: #5fd65a;
 }
 
 @media (min-width: 576px) {
-  .footer > div .wrapper {
+  #footer > div .wrapper {
     justify-content: space-between;
     flex-direction: row;
   }
-  .footer > div .wrapper ul li img {
+  #footer > div .wrapper ul li img {
     margin-right: 10px;
   }
 }
 @media (min-width: 768px) {
-  .footer > div {
+  #footer > div {
     flex-direction: row;
     justify-content: space-between;
   }
-  .footer > div .wrapper {
+  #footer > div .wrapper {
     justify-content: space-around;
   }
-  .footer > div .wrapper .footer-logo .logo-title {
+  #footer > div .wrapper .footer-logo .logo-title {
     font-size: 50px;
   }
-  .footer > div .wrapper ul {
+  #footer > div .wrapper ul {
     margin-top: 0;
   }
-  .footer > div .wrapper ul li {
+  #footer > div .wrapper ul li {
     font-size: 14px;
   }
-  .footer > div .wrapper ul li.title {
+  #footer > div .wrapper ul li.title {
     font-size: 24px;
   }
 }
 @media (min-width: 992px) {
-  .footer > div {
+  #footer > div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  .footer > div .footer-logo {
+  #footer > div .footer-logo {
     display: block;
     flex-direction: row;
   }
-  .footer > div .footer-logo img {
+  #footer > div .footer-logo img {
     width: 130px;
     height: 130px;
   }
-  .footer > div .footer-logo .logo-title {
+  #footer > div .footer-logo .logo-title {
     padding: 0;
     display: block;
     color: var(--white);
     font-size: 32px;
     text-align: center;
   }
-  .footer > div ul {
+  #footer > div ul {
     margin-top: 0;
   }
-  .footer > div ul li {
+  #footer > div ul li {
     font-size: 16px;
   }
-  .footer > div ul li.title {
+  #footer > div ul li.title {
     font-size: 24px;
   }
 }
 @media (min-width: 1200px) {
-  .footer .footer-logo .logo-title {
+  #footer .footer-logo .logo-title {
     font-size: 50px;
   }
 }
 @media (min-width: 1441px) {
-  .footer > div {
+  #footer > div {
     margin: auto;
     width: var(--space-big-desktop);
   }
@@ -902,7 +902,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about .hero .wrapper .text .description {
   font-size: 20px;
-  color: var(--dark-gray);
+  color: var(--black);
   font-weight: 300;
 }
 #about .hero .wrapper .image {
