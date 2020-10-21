@@ -593,6 +593,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   flex-direction: column;
   position: relative;
   width: 100%;
+  align-items: center;
 }
 #home #second-hero .container {
   flex-direction: column;
@@ -711,11 +712,20 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 
 @media (min-width: 1100px) {
   #home #second-hero {
-    flex-direction: row;
+    width: 100%;
+    align-items: center;
   }
   #home #second-hero .container {
-    align-items: center;
     flex-direction: row;
+  }
+  #home #third-hero .wrapper {
+    flex-direction: row;
+  }
+  #home #third-hero .wrapper .text {
+    width: 40%;
+  }
+  #home #third-hero .wrapper .image {
+    padding-left: 15%;
   }
 }
 #menu-page {
