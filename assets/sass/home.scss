@@ -56,12 +56,71 @@
     }
     #second-hero {
         flex-direction: column;
+        position: relative;
+        width: 100%;
         .container{
-            .card{
-                width: 500px;
-                margin: 0 25px;
+           flex-direction: column;
+           align-items: center;
+           
+           .card{
+               
+               max-width: 100%;
+               margin: 15px 15px;
+
+           }
+        }
+        .title {
+            margin-top: 20px;
+            align-items: center;
+        }
+        button {
+            @include btn-gray;
+            margin-bottom: 20px;
+            
+        }
+    }
+    #third-hero {
+        position: relative;
+        width: 100%;
+        background: var(--black);
+        .wrapper{
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            .text{
+                margin: 30px 50px;
+                color: var(--white);
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            img {
+                max-width: 100%;
             }
         }
+    }
+    #bedroom-hero{
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+        .wrapper {
+            flex-direction: column;
+            align-items: center;
+            .text{
+                align-items: center;
+                flex-direction: column;
+                margin-bottom: 40px;
+            }
+            button {
+                @include btn-gray;
+                margin-bottom: 50px;
+                width: 230px;
+            }
+        }
+        img {
+            display: none;
+        }
+        
     }
 }
 
