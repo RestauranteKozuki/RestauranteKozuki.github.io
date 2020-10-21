@@ -52,12 +52,74 @@ hr.divider {
   --red: #EC1C24;
   --green-success: #2D8823;
   --shadow: #4D4D4Ecc;
+  --red-hover: #b10000;
+  --red-active: #ed1b24EE;
   --space-mobile: 50px;
   --space-desktop: 125px;
   --space-big-desktop: 1200px;
   --border-radius: 5px;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light Italic"), url("../fonts/Roboto-LightItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium Italic"), url("../fonts/Roboto-MediumItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold Italic"), url("../fonts/Roboto-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black Italic"), url("../fonts/Roboto-BlackItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 900;
+}
 form {
   width: 100%;
   flex-direction: column;
@@ -148,66 +210,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-weight: 500;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Light Italic"), url("../fonts/Roboto-LightItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Regular"), url("../fonts/Roboto-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Medium"), url("../fonts/Roboto-Medium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Medium Italic"), url("../fonts/Roboto-MediumItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Bold Italic"), url("../fonts/Roboto-BoldItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Black Italic"), url("../fonts/Roboto-BlackItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 900;
-}
 .header {
   width: 100%;
   height: 100px;
@@ -508,7 +510,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
 }
 #menu-page {
-  margin-bottom: 60px;
   max-width: 100vw;
   overflow: hidden;
   padding: 20px;
@@ -516,6 +517,27 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section {
   flex-direction: column;
   width: 100%;
+  margin-bottom: 20px;
+}
+#menu-page section .fixed {
+  height: 100px;
+  right: 30px;
+  width: 100px;
+  position: fixed;
+  background-color: var(--red-active);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 12px 12px 20px -10px var(--shadow);
+  bottom: 30px;
+  z-index: 1;
+}
+#menu-page section .fixed:hover {
+  background-color: var(--red-active);
+}
+#menu-page section .fixed svg {
+  width: 70px;
+  height: 70px;
 }
 #menu-page section .title {
   margin-top: 150px;
@@ -572,6 +594,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section button:active {
   background-color: #ed1b24EE;
 }
+#menu-page section button.btn-desktop {
+  display: none;
+}
 
 @media (min-width: 576px) {
   #menu-page section .container .card .img-card img {
@@ -604,6 +629,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #menu-page section .container .card {
     flex: 3;
     margin: 10px;
+    max-height: 620px;
   }
 }
 @media (min-width: 1200px) {
@@ -627,7 +653,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #menu-page section .container .card .text-card {
     padding: 12px 30px;
     height: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   #menu-page section .container .card .text-card h3 {
     font-size: 24px;
@@ -657,12 +683,29 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     background-color: var(--red);
     border-radius: 50%;
     box-shadow: 8px 6px 10px 1px var(--black);
+    cursor: pointer;
+  }
+  #menu-page section .container .arrow-container .arrow:hover {
+    background-color: var(--red-hover);
+  }
+  #menu-page section .container .arrow-container .arrow:active {
+    background-color: var(--red-active);
   }
   #menu-page section .container .arrow-container .arrow svg {
     width: 24px;
     height: 24px;
   }
   #menu-page section button {
+    display: none;
+  }
+  #menu-page section button.btn-desktop {
+    display: flex;
+  }
+  #menu-page section button.btn-desktop a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  #menu-page section .fixed {
     display: none;
   }
 }
