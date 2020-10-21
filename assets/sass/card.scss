@@ -3,17 +3,17 @@
     background-color: var(--white);
     flex-direction: column;
     border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
+    box-shadow: 5px 5px 10px -5px var(--shadow);
     .img-card {
         
-        border-radius: 20px 20px 0 0;
+        border-radius: var(--border-radius);
         min-height: 200px;
         width: 100%;
         img {
             
             width: 100%;
             object-fit: cover;
-            border-radius: 20px 20px 0 0;
+            border-radius: var(--border-radius);
         }
     }
     .text-card {
