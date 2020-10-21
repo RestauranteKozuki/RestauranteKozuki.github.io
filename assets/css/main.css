@@ -1655,6 +1655,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   section {
     display: block;
   }
+  section container.precoPC {
+    display: none;
+  }
   section .delivery {
     margin: 0px;
     margin-left: 50px;
@@ -1764,6 +1767,134 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
+  }
+}
+@media (min-width: 992px) {
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  section container.precoCE {
+    display: none;
+  }
+  section container.precoPC {
+    display: block;
+  }
+  section container.precoPC {
+    margin: 0;
+    margin-right: 60px;
+    margin-top: 30px;
+  }
+  section container.precoPC .delivery {
+    margin: 0px;
+    margin-left: 50px;
+    margin-right: calc(100% - 70%);
+    display: block;
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  section container.precoPC .delivery h1 {
+    margin: 0px;
+    font-size: 48px;
+    font-family: "Roboto";
+    font-weight: bold;
+  }
+  section container.precoPC .delivery hr {
+    width: 75px;
+    margin: 0px;
+    margin-bottom: 50px;
+    height: 1px;
+    border: solid 2px var(--red);
+  }
+  section container.precoPC container.precoCE .Pedido h1 {
+    margin: 0px;
+    font-size: 40px;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-left: 50px;
+  }
+  section container.precoPC container.precoCE .Pedido span {
+    color: var(--red);
+    font-size: 40px;
+    font-family: "Roboto";
+    margin-left: calc(100% - 80%);
+  }
+  section container.precoPC h3 {
+    margin-left: 25px;
+    font-size: 25px;
+    font-family: "Roboto";
+  }
+  section container.precoPC .valor {
+    width: 80%;
+  }
+  section container.precoPC .valor h3 {
+    margin: 0;
+    margin-left: 25px;
+    font-size: 25px;
+    margin-bottom: 46px;
+    font-family: "Roboto";
+  }
+  section container.precoPC .valor span {
+    font-size: 25px;
+    color: var(--red);
+    margin-left: 198px;
+    font-family: "Roboto";
+  }
+  section container.precoPC .button {
+    text-align: center;
+  }
+  section container.precoPC .button button {
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    color: #555555;
+    border: 2px solid #555555;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 85px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
+    margin-bottom: 100px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  section container.precoPC .button button:hover {
+    background-color: #707070;
+    border-color: #707070;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  section container.precoPC .button button:active {
+    background-color: rgba(131, 131, 131, 0.9);
+    color: var(--white);
+    border-color: rgba(131, 131, 131, 0.9);
+  }
+  section container form .field {
+    height: 73px;
+    width: 522px;
+    margin-left: 48px;
+    margin-bottom: 20px;
+  }
+  section container form .field label {
+    font-size: 21px;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 10px;
   }
 }
 
