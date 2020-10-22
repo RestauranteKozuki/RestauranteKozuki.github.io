@@ -1,13 +1,166 @@
 @media (min-width:320px)  {
-
     #delivery-form {
-        section {
         display: block;
-            container.precoPC {
-                    display: none;
+        container.precoPC {
+                display: none;
+            
+        }
+
+        .delivery {
+            margin: 0px;
+            margin-left: 50px;
+            margin-right: calc(100% - 70%);
+            display: block;
+            flex-direction: column;
+            margin-top: 120px;
+            
+            h1 {
+                margin: 0px;       
+                font-size: 48px;
+                font-family: 'Roboto';
+                font-weight: bold;            
+            }
+            
+            hr {           
+                width: 75px;
+                margin: 0px;
+                margin-bottom: 50px;
+                height: 1px;
+                border: solid 2px var(--red);
                 
             }
+            
+        }
     
+        .Pedido {
+            h1 {
+                margin: 0px;       
+                font-size: 40px;
+                font-family: 'Roboto';
+                font-weight: bold;
+                margin-left: 50px;
+            }
+            span {
+                color: var(--red);
+                font-size: 40px;
+                font-family: 'Roboto';
+                margin-left: calc(100% - 80%);
+                
+            }
+        }
+    
+
+        form {
+            .field {
+                height: 73px;
+                width: 302px;
+                margin-left: 48px;
+                margin-bottom: 20px;
+                label {
+                    font-size: 21px;
+                    align-items: center;
+                    font-family: 'Roboto';
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            }
+        }
+    
+        h3 {
+            margin-left: 25px;
+            font-size: 25px;
+            font-family: 'Roboto';
+        }
+    
+    
+        .valor {
+            width: 80%;
+            h3 {
+                margin: 0;
+                margin-left: 25px;
+                font-size: 25px;
+                margin-bottom: 46px;
+                font-family: 'Roboto';
+            }
+            span {
+                font-size: 25px;               
+                color: var(--red);
+                margin-left: 198px;
+                font-family: 'Roboto';           
+            }
+        }
+    
+
+        container.precoCE {
+            div.botao1 {
+                flex-direction: column;            
+                div.button-gray {
+                    text-align: center;                                            
+                    margin: 0;
+                    @include btn-gray;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    button {          
+                        font-size: 35px;
+                        font-weight: bold;
+                        border: none;        
+                    }
+                }
+            
+            }
+        }
+
+        container.precoCE {
+            div.botao1 {
+                flex-direction: column;            
+                div.button-red {
+                    text-align: center;                                            
+                    margin: 0;
+                    @include btn-red;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    button {          
+                        font-size: 35px;
+                        font-weight: bold;
+                        border: none;
+                        background-color:#ed1b24EE;        
+                    }
+                }
+            
+            }
+        }
+    }
+
+}
+
+
+@media (min-width:992px)  {
+    #delivery-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        container.precoCE {
+                display: none;
+            
+        }
+        container.precoPC {
+                display: block;
+                width: 30%;
+            
+        }
+
+        container.precoPC {
+            margin: 0;
+            margin-right: 60px;
+            margin-top: 30px;
+
             .delivery {
                 margin: 0px;
                 margin-left: 50px;
@@ -33,48 +186,33 @@
                 }
                 
             }
-        
-            .Pedido {
-                h1 {
-                    margin: 0px;       
-                    font-size: 40px;
-                    font-family: 'Roboto';
-                    font-weight: bold;
-                    margin-left: 50px;
-                }
-                span {
-                    color: var(--red);
-                    font-size: 40px;
-                    font-family: 'Roboto';
-                    margin-left: calc(100% - 80%);
-                    
-                }
-            }
-        
-    
-            form {
-                .field {
-                    height: 73px;
-                    width: 302px;
-                    margin-left: 48px;
-                    margin-bottom: 20px;
-                    label {
-                        font-size: 21px;
-                        align-items: center;
+            
+            container.precoCE {
+                .Pedido {
+                    h1 {
+                        margin: 0px;       
+                        font-size: 40px;
                         font-family: 'Roboto';
                         font-weight: bold;
-                        margin-top: 10px;
+                        margin-left: 50px;
+                    }
+                    span {
+                        color: var(--red);
+                        font-size: 40px;
+                        font-family: 'Roboto';
+                        margin-left: calc(100% - 80%);
+                        
                     }
                 }
             }
-        
+            
             h3 {
                 margin-left: 25px;
                 font-size: 25px;
                 font-family: 'Roboto';
             }
-        
-        
+            
+            
             .valor {
                 width: 80%;
                 h3 {
@@ -91,220 +229,75 @@
                     font-family: 'Roboto';           
                 }
             }
-        
-    
-            container.precoCE {
-                div.botao1 {
-                    flex-direction: column;            
-                    div.button-gray {
-                        text-align: center;                                            
-                        margin: 0;
-                        @include btn-gray;
-                        width: 270px;
-                        height: 60px; 
-                        margin-left: calc(100% - 85%);
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        button {          
-                            font-size: 35px;
-                            font-weight: bold;
-                            border: none;        
-                        }
+            
+        }
+        container {
+            form {
+                .field {
+                    height: 73px;
+                    width: 522px;
+                    margin-left: 48px;
+                    margin-bottom: 20px;
+                    label {
+                        font-size: 21px;
+                        align-items: center;
+                        font-family: 'Roboto';
+                        font-weight: bold;
+                        margin-top: 10px;
                     }
-                
-                }
-            }
-    
-            container.precoCE {
-                div.botao1 {
-                    flex-direction: column;            
-                    div.button-red {
-                        text-align: center;                                            
-                        margin: 0;
-                        @include btn-red;
-                        width: 270px;
-                        height: 60px; 
-                        margin-left: calc(100% - 85%);
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        button {          
-                            font-size: 35px;
-                            font-weight: bold;
-                            border: none;
-                            background-color:#ed1b24EE;        
-                        }
-                    }
-                
                 }
             }
         }
-    }
-
-
-}
-
-
-@media (min-width:992px)  {
-    #delivery-form {
-        section {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-    
-            container.precoCE {
-                    display: none;
-                
-            }
-            container.precoPC {
-                    display: block;
-                    width: 30%;
-                
-            }
-    
-            container.precoPC {
-                margin: 0;
-                margin-right: 60px;
-                margin-top: 30px;
-    
-                .delivery {
-                    margin: 0px;
-                    margin-left: 50px;
-                    margin-right: calc(100% - 70%);
-                    display: block;
-                    flex-direction: column;
-                    margin-top: 120px;
-                    
-                    h1 {
-                        margin: 0px;       
-                        font-size: 48px;
-                        font-family: 'Roboto';
-                        font-weight: bold;            
-                    }
-                    
-                    hr {           
-                        width: 75px;
-                        margin: 0px;
-                        margin-bottom: 50px;
-                        height: 1px;
-                        border: solid 2px var(--red);
+        container.precoPC {
+            .botao2 {
+                flex-direction: row;            
+                .button-gray {
+                    height: 50px;
+                    text-align: center;                                            
+                    margin: 0;
+                    @include btn-gray;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    margin-left: -100px;
+                    button {          
+                        font-size: 35px;
                         
-                    }
-                    
-                }
-                
-                container.precoCE {
-                    .Pedido {
-                        h1 {
-                            margin: 0px;       
-                            font-size: 40px;
-                            font-family: 'Roboto';
-                            font-weight: bold;
-                            margin-left: 50px;
-                        }
-                        span {
-                            color: var(--red);
-                            font-size: 40px;
-                            font-family: 'Roboto';
-                            margin-left: calc(100% - 80%);
-                            
-                        }
+                        font-weight: bold;
+                        border: none;        
                     }
                 }
-                
-                h3 {
-                    margin-left: 25px;
-                    font-size: 25px;
-                    font-family: 'Roboto';
-                }
-                
-                
-                .valor {
-                    width: 80%;
-                    h3 {
-                        margin: 0;
-                        margin-left: 25px;
-                        font-size: 25px;
-                        margin-bottom: 46px;
-                        font-family: 'Roboto';
-                    }
-                    span {
-                        font-size: 25px;               
-                        color: var(--red);
-                        margin-left: 198px;
-                        font-family: 'Roboto';           
-                    }
-                }
-                
+            
             }
-            container {
-                form {
-                    .field {
-                        height: 73px;
-                        width: 522px;
-                        margin-left: 48px;
-                        margin-bottom: 20px;
-                        label {
-                            font-size: 21px;
-                            align-items: center;
-                            font-family: 'Roboto';
-                            font-weight: bold;
-                            margin-top: 10px;
-                        }
-                    }
-                }
-            }
-            container.precoPC {
-                .botao2 {
-                    flex-direction: row;            
-                    .button-gray {
-                        height: 50px;
-                        text-align: center;                                            
-                        margin: 0;
-                        @include btn-gray;
-                        width: 270px;
-                        height: 60px; 
-                        margin-left: calc(100% - 85%);
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        margin-left: -100px;
-                        button {          
-                            font-size: 35px;
-                            
-                            font-weight: bold;
-                            border: none;        
-                        }
-                    }
-                
-                }
-            }
-    
-            container.precoPC {
-                .botao2 {
-                    flex-direction: row;            
-                    .button-red {
-                        text-align: center;
-                        height: 60px;                                            
-                        margin: 0;
-                        @include btn-red;
-                        width: 270px;
-                        height: 60px; 
-                        margin-left: calc(100% - 85%);
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        button {          
-                            font-size: 35px;
-                            font-weight: bold;
-                            border: none;
-                            background-color:#ed1b24EE;        
-                        }
-                    }
-                
-                }
-            }
-    
-        
         }
-    }
+
+        container.precoPC {
+            .botao2 {
+                flex-direction: row;            
+                .button-red {
+                    text-align: center;
+                    height: 60px;                                            
+                    margin: 0;
+                    @include btn-red;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    button {          
+                        font-size: 35px;
+                        font-weight: bold;
+                        border: none;
+                        background-color:#ed1b24EE;        
+                    }
+                }
+            
+            }
+        }
+
     
+    }
 
 }
