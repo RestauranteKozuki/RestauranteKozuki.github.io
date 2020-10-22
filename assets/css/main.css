@@ -60,96 +60,6 @@ hr.divider {
   --border-radius: 5px;
 }
 
-form {
-  width: 100%;
-  flex-direction: column;
-}
-form .fields {
-  flex-direction: column;
-}
-form .field {
-  margin-top: 10px;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-}
-form .field label {
-  position: absolute;
-  color: var(--dark-gray);
-  font-size: 14px;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
-}
-form .field input, form .field textarea, form .field select {
-  border: var(--dark-gray) 1px solid;
-  padding: 15px;
-  padding-top: 32px;
-  font-size: 16px;
-  color: var(--dark-0);
-  outline: none;
-  border-radius: var(--border-radius);
-  position: relative;
-  z-index: 1;
-  top: 0;
-  transition: border-color 0.5s ease-in-out;
-  width: 100%;
-  background-color: var(--white);
-}
-form .field input:focus, form .field textarea:focus, form .field select:focus {
-  border-color: var(--red);
-}
-form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
-  color: var(--red);
-}
-
-.card {
-  width: 500px;
-  background-color: var(--white);
-  flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 12px 12px 20px -10px var(--shadow);
-}
-.card .img-card {
-  border-radius: 20px 20px 0 0;
-  min-height: 200px;
-  width: 100%;
-}
-.card .img-card img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 20px 20px 0 0;
-}
-.card .text-card {
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 30px;
-}
-.card .text-card h3 {
-  font-size: 32px;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 10px;
-}
-.card .text-card .text {
-  text-align: center;
-  font-size: 20px;
-  margin: 0;
-}
-.card .text-card .price {
-  color: var(--red);
-  font-size: 32px;
-  font-weight: bold;
-  margin-top: 20px;
-}
-.card .text-card .price .black {
-  color: var(--black);
-  font-size: 16px;
-  font-weight: 500;
-}
-
 @font-face {
   font-family: "Roboto";
   src: local("Roboto Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
@@ -210,6 +120,96 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-style: italic;
   font-weight: 900;
 }
+form {
+  width: 100%;
+  flex-direction: column;
+}
+form .fields {
+  flex-direction: column;
+}
+form .field {
+  margin-top: 10px;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+form .field label {
+  position: absolute;
+  color: var(--dark-gray);
+  font-size: 14px;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+form .field input, form .field textarea, form .field select {
+  border: var(--dark-gray) 1px solid;
+  padding: 15px;
+  padding-top: 32px;
+  font-size: 16px;
+  color: var(--dark-0);
+  outline: none;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.5s ease-in-out;
+  width: 100%;
+  background-color: var(--white);
+}
+form .field input:focus, form .field textarea:focus, form .field select:focus {
+  border-color: var(--red);
+}
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
+  color: var(--red);
+}
+
+.card {
+  width: 500px;
+  background-color: var(--white);
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  box-shadow: 5px 5px 10px -5px var(--shadow);
+}
+.card .img-card {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  min-height: 200px;
+  width: 100%;
+}
+.card .img-card img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.card .text-card {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+}
+.card .text-card h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card .text-card .text {
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+}
+.card .text-card .price {
+  color: var(--red);
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.card .text-card .price .black {
+  color: var(--black);
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .header {
   width: 100%;
   height: 100px;
@@ -372,147 +372,150 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     align-items: center;
   }
 }
-.footer {
+#footer {
   background-color: var(--black);
   position: relative;
 }
-.footer > div {
+#footer > div {
   width: 100%;
   align-items: center;
   padding: var(--space-mobile) 0;
   flex-direction: column;
   margin: 0 50px;
 }
-.footer > div .footer-logo {
+#footer > div .footer-logo {
   display: none;
 }
-.footer > div .footer-logo img {
+#footer > div .footer-logo img {
   margin-bottom: 16px;
 }
-.footer > div .wrapper {
+#footer > div .wrapper {
   width: 100%;
   flex-direction: column;
 }
-.footer > div .wrapper ul {
+#footer > div .wrapper ul {
   margin: 0;
   padding: 0;
   flex-direction: column;
   margin-top: 50px;
   justify-content: center;
 }
-.footer > div .wrapper ul li {
+#footer > div .wrapper ul li {
   color: var(--white);
   font-size: 20px;
   font-weight: normal;
   margin-bottom: 14px;
 }
-.footer > div .wrapper ul li.title {
+#footer > div .wrapper ul li.title {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 16px;
 }
-.footer > div .wrapper ul li img {
+#footer > div .wrapper ul li img {
   height: 20px;
   width: 20px;
   margin-right: 10px;
   align-items: center;
 }
-.footer > div .wrapper ul li a {
+#footer > div .wrapper ul li a {
   text-decoration: none;
   color: var(--white);
 }
-.footer > div .wrapper ul li a:hover {
+#footer > div .wrapper ul li a:hover {
   color: var(--dark-gray);
 }
-.footer .credits {
+#footer .credits {
   position: absolute;
   height: fit-content;
   right: 20px;
   bottom: 0;
 }
-.footer .credits span {
+#footer .credits span {
   color: var(--white);
 }
-.footer .credits span.span a {
+#footer .credits span.span a {
   text-decoration: none;
   color: #5fd65a;
 }
 
 @media (min-width: 576px) {
-  .footer > div .wrapper {
+  #footer > div .wrapper {
     justify-content: space-between;
     flex-direction: row;
   }
-  .footer > div .wrapper ul li img {
+  #footer > div .wrapper ul li img {
     margin-right: 10px;
   }
 }
 @media (min-width: 768px) {
-  .footer > div {
+  #footer > div {
     flex-direction: row;
     justify-content: space-between;
   }
-  .footer > div .wrapper {
+  #footer > div .wrapper {
     justify-content: space-around;
   }
-  .footer > div .wrapper .footer-logo .logo-title {
+  #footer > div .wrapper .footer-logo .logo-title {
     font-size: 50px;
   }
-  .footer > div .wrapper ul {
+  #footer > div .wrapper ul {
     margin-top: 0;
   }
-  .footer > div .wrapper ul li {
+  #footer > div .wrapper ul li {
     font-size: 14px;
   }
-  .footer > div .wrapper ul li.title {
+  #footer > div .wrapper ul li.title {
     font-size: 24px;
   }
 }
 @media (min-width: 992px) {
-  .footer > div {
+  #footer > div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  .footer > div .footer-logo {
+  #footer > div .footer-logo {
     display: block;
     flex-direction: row;
   }
-  .footer > div .footer-logo img {
+  #footer > div .footer-logo img {
     width: 130px;
     height: 130px;
   }
-  .footer > div .footer-logo .logo-title {
+  #footer > div .footer-logo .logo-title {
     padding: 0;
     display: block;
     color: var(--white);
     font-size: 32px;
     text-align: center;
   }
-  .footer > div ul {
+  #footer > div ul {
     margin-top: 0;
   }
-  .footer > div ul li {
+  #footer > div ul li {
     font-size: 16px;
   }
-  .footer > div ul li.title {
+  #footer > div ul li.title {
     font-size: 24px;
   }
 }
 @media (min-width: 1200px) {
-  .footer .footer-logo .logo-title {
+  #footer .footer-logo .logo-title {
     font-size: 50px;
   }
 }
 @media (min-width: 1441px) {
-  .footer > div {
+  #footer > div {
     margin: auto;
     width: var(--space-big-desktop);
   }
 }
 #home {
   flex-direction: column;
+}
+#home #prime-hero {
+  height: 100vh;
 }
 #home #prime-hero .home-footer {
   position: relative;
@@ -533,7 +536,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   z-index: 2;
 }
 #home #prime-hero .home-footer .text-at-home {
-  margin-top: 170px;
   position: relative;
   z-index: 3;
   flex-direction: column;
@@ -545,7 +547,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #prime-hero .home-footer .text-at-home h3 {
   font-size: 50px;
   color: var(--white);
-  margin-bottom: 100px;
 }
 #home #prime-hero .home-footer .text-at-home h3 hr {
   position: absolute;
@@ -570,37 +571,39 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 290px;
 }
 #home #prime-hero .home-footer .text-at-home button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #prime-hero .home-footer .text-at-home button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #second-hero {
   flex-direction: column;
   position: relative;
   width: 100%;
+  align-items: center;
 }
 #home #second-hero .container {
   flex-direction: column;
   align-items: center;
 }
 #home #second-hero .container .card {
+  width: 300px;
+  height: 100%;
   max-width: 100%;
   margin: 15px 15px;
+}
+#home #second-hero .container .card img {
+  min-height: 300px;
 }
 #home #second-hero .title {
   margin-top: 20px;
@@ -619,24 +622,21 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 #home #second-hero button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #second-hero button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #third-hero {
   position: relative;
@@ -685,8 +685,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
@@ -695,22 +695,75 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 230px;
 }
 #home #bedroom-hero .wrapper button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #bedroom-hero .wrapper button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #bedroom-hero img {
   display: none;
 }
 
+@media (min-width: 1100px) {
+  #home #second-hero {
+    width: 100%;
+    align-items: center;
+    margin: 50px 0;
+  }
+  #home #second-hero .container {
+    flex-direction: row;
+    overflow: hidden;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+  }
+  #home #second-hero .container .card {
+    width: initial;
+  }
+  #home #second-hero .container .card .text-card {
+    justify-content: space-around;
+    padding: 30px;
+  }
+  #home #second-hero .container .card .img-card {
+    min-height: initial;
+  }
+  #home #second-hero .container .card h3 {
+    margin: 0;
+  }
+  #home #second-hero .container .card .price {
+    margin: 0;
+  }
+  #home #second-hero button {
+    margin: 20px;
+  }
+  #home #third-hero .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
+  }
+  #home #third-hero .wrapper .text {
+    width: 40%;
+    margin: 0;
+  }
+  #home #third-hero .wrapper .text .title {
+    width: 100%;
+  }
+  #home #third-hero .wrapper .text .title h2 {
+    text-align: left;
+  }
+  #home #third-hero .wrapper .text .description {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+  }
+  #home #third-hero .wrapper .image {
+    width: 500px;
+  }
+}
 #menu-page {
-  margin-bottom: 60px;
   max-width: 100vw;
   overflow: hidden;
   padding: 20px;
@@ -718,6 +771,27 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section {
   flex-direction: column;
   width: 100%;
+  margin-bottom: 20px;
+}
+#menu-page section .fixed {
+  height: 100px;
+  right: 30px;
+  width: 100px;
+  position: fixed;
+  background-color: var(--red-active);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 12px 12px 20px -10px var(--shadow);
+  bottom: 30px;
+  z-index: 1;
+}
+#menu-page section .fixed:hover {
+  background-color: var(--red-active);
+}
+#menu-page section .fixed svg {
+  width: 70px;
+  height: 70px;
 }
 #menu-page section .title {
   margin-top: 150px;
@@ -774,6 +848,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section button:active {
   background-color: #ed1b24EE;
 }
+#menu-page section button.btn-desktop {
+  display: none;
+}
 
 @media (min-width: 576px) {
   #menu-page section .container .card .img-card img {
@@ -784,13 +861,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     justify-content: space-between;
   }
   #menu-page section .container .card .text-card h3 {
-    font-size: 40px;
+    font-size: 24px;
   }
   #menu-page section .container .card .text-card .text {
     font-size: 1.2em;
   }
   #menu-page section .container .card .text-card .price {
-    font-size: 40px;
+    font-size: 26px;
   }
   #menu-page section button {
     width: 230px;
@@ -806,6 +883,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #menu-page section .container .card {
     flex: 3;
     margin: 10px;
+    max-height: 620px;
   }
 }
 @media (min-width: 1200px) {
@@ -827,7 +905,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     min-width: 200px;
   }
   #menu-page section .container .card .text-card {
-    padding: 12px 30px;
+    padding: 12px 12px;
     height: 100%;
     justify-content: space-around;
   }
@@ -859,12 +937,29 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     background-color: var(--red);
     border-radius: 50%;
     box-shadow: 8px 6px 10px 1px var(--black);
+    cursor: pointer;
+  }
+  #menu-page section .container .arrow-container .arrow:hover {
+    background-color: var(--red-hover);
+  }
+  #menu-page section .container .arrow-container .arrow:active {
+    background-color: var(--red-active);
   }
   #menu-page section .container .arrow-container .arrow svg {
     width: 24px;
     height: 24px;
   }
   #menu-page section button {
+    display: none;
+  }
+  #menu-page section button.btn-desktop {
+    display: flex;
+  }
+  #menu-page section button.btn-desktop a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  #menu-page section .fixed {
     display: none;
   }
 }
@@ -882,27 +977,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   flex-direction: column;
   margin-bottom: 50px;
 }
-#about .hero .wrapper .text .title {
-  flex-direction: column;
-  margin-bottom: 36px;
-}
-#about .hero .wrapper .text .title h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 12px;
-  color: var(--black);
-}
-#about .hero .wrapper .text .title hr {
-  margin: 0;
-  border: 0;
-  width: 60px;
-  height: 5px;
-  background-color: var(--red);
-}
 #about .hero .wrapper .text .description {
   font-size: 20px;
-  color: var(--dark-gray);
+  color: var(--black);
   font-weight: 300;
 }
 #about .hero .wrapper .image {
@@ -1307,6 +1384,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     min-width: 500px;
   }
 }
+<<<<<<< HEAD
 @media (min-width: 320px) {
   section {
     justify-content: center;
@@ -2007,5 +2085,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     background-color: #ed1b24EE;
   }
 }
+=======
+>>>>>>> d77dd948d2f250e1486102fa0df4de3244b296b6
 
 /*# sourceMappingURL=main.css.map */

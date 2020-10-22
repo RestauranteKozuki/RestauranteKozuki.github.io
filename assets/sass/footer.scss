@@ -1,4 +1,4 @@
-.footer {
+#footer {
     background-color: var(--black);
     position: relative;
         > div {
@@ -68,7 +68,7 @@
 }
 
 @media (min-width: 576px) {
-    .footer {
+    #footer {
         > div {
             .wrapper {
                 justify-content: space-between;
@@ -87,7 +87,7 @@
 }
 
 @media (min-width: 768px) {
-    .footer {
+    #footer {
         > div {
             flex-direction: row;
             justify-content: space-between;
@@ -114,7 +114,7 @@
 }
 
 @media (min-width: 992px) {
-    .footer {
+    #footer {
         > div {
             flex-direction: row;
             justify-content: space-between;
@@ -150,7 +150,7 @@
 }
 
 @media (min-width: 1200px) {
-    .footer {
+    #footer {
         .footer-logo {
 
             .logo-title {
@@ -161,7 +161,7 @@
     }
 }
 @media (min-width: 1441px) {
-    .footer {
+    #footer {
         > div {
             margin: auto;
             width: var(--space-big-desktop);
