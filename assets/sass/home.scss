@@ -1,8 +1,7 @@
-
-
 #home {
     flex-direction: column;
     #prime-hero {
+        height: 100vh;
         .home-footer{
             position: relative;
             width: 100%;
@@ -22,7 +21,6 @@
             }
             
             .text-at-home{
-                margin-top: 170px;
                 position: relative;
                 z-index: 3;
                 flex-direction: column;
@@ -33,7 +31,6 @@
                 h3{
                     font-size: 50px;
                     color: var(--white);
-                    margin-bottom: 100px;
                         hr {
                         position: absolute;
                         background-color: red;
@@ -47,8 +44,7 @@
                 }
                 
                 button {
-                    @include btn-gray;
-                    margin-bottom: 290px;
+                    @include btn-red;
                 }
             }
     
@@ -58,15 +54,18 @@
         flex-direction: column;
         position: relative;
         width: 100%;
+        align-items: center;
         .container{
            flex-direction: column;
            align-items: center;
-           
-           .card{
-               
-               max-width: 100%;
-               margin: 15px 15px;
-
+           .card {
+                width: 300px;
+                height: 100%;
+                max-width: 100%;
+                margin: 15px 15px;
+                img {
+                    min-height: 300px;
+                }
            }
         }
         .title {
@@ -74,9 +73,8 @@
             align-items: center;
         }
         button {
-            @include btn-gray;
-            margin-bottom: 20px;
-            
+            @include btn-red;
+            margin: 20px;
         }
     }
     #third-hero {
@@ -112,7 +110,7 @@
                 margin-bottom: 40px;
             }
             button {
-                @include btn-gray;
+                @include btn-red;
                 margin-bottom: 50px;
                 width: 230px;
             }
@@ -123,4 +121,69 @@
         
     }
 }
+@media (min-width: 1100px) {
 
+    #home{
+        #second-hero {
+            width: 100%;
+            align-items: center;
+            margin: 50px 0;
+            .container {
+                flex-direction: row;
+                overflow: hidden;
+                max-width: 90%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                padding: 20px 0;
+                .card {
+                    width: initial;
+                    .text-card {
+                        justify-content: space-around;
+                        padding: 30px;
+                    }
+                    .img-card {
+                        min-height: initial;
+                    }
+                    h3 {
+                        margin: 0;
+                    }
+                    .price {
+                        margin: 0;
+                    }
+                }
+            }
+            button {
+                margin: 20px;
+            }
+        }
+        #third-hero {
+            .wrapper{
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 50px;
+                .text{
+                    width: 40%;
+                    margin: 0;
+                    .title {
+                        width: 100%;
+                        h2 {
+                            text-align: left;
+                        }
+                    }
+                    .description  {
+                        font-size: 20px;
+                        font-weight: 300;
+                        text-align: left;
+                    }
+                }
+                .image {
+                    width: 500px;
+                }
+                
+            }
+        }
+
+    }
+    
+
+}

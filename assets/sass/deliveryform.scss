@@ -2,36 +2,36 @@
 
 section {
     display: block;
-    container.precoPC {
-            display: none;
-        
-    }
-
-    .delivery {
-        margin: 0px;
-        margin-left: 50px;
-        margin-right: calc(100% - 70%);
-        display: block;
-        flex-direction: column;
-        margin-top: 120px;
-        
-        h1 {
-            margin: 0px;       
-            font-size: 48px;
-            font-family: 'Roboto';
-            font-weight: bold;            
-        }
-        
-        hr {           
-            width: 75px;
-            margin: 0px;
-            margin-bottom: 50px;
-            height: 1px;
-            border: solid 2px var(--red);
+        container.precoPC {
+                display: none;
             
         }
-        
-    }
+
+        .delivery {
+            margin: 0px;
+            margin-left: 50px;
+            margin-right: calc(100% - 70%);
+            display: block;
+            flex-direction: column;
+            margin-top: 120px;
+            
+            h1 {
+                margin: 0px;       
+                font-size: 48px;
+                font-family: 'Roboto';
+                font-weight: bold;            
+            }
+            
+            hr {           
+                width: 75px;
+                margin: 0px;
+                margin-bottom: 50px;
+                height: 1px;
+                border: solid 2px var(--red);
+                
+            }
+            
+        }
     
         .Pedido {
             h1 {
@@ -51,21 +51,21 @@ section {
         }
     
 
-    form {
-        .field {
-            height: 73px;
-            width: 302px;
-            margin-left: 48px;
-            margin-bottom: 20px;
-            label {
-                font-size: 21px;
-                align-items: center;
-                font-family: 'Roboto';
-                font-weight: bold;
-                margin-top: 10px;
+        form {
+            .field {
+                height: 73px;
+                width: 302px;
+                margin-left: 48px;
+                margin-bottom: 20px;
+                label {
+                    font-size: 21px;
+                    align-items: center;
+                    font-family: 'Roboto';
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
             }
         }
-    }
     
         h3 {
             margin-left: 25px;
@@ -92,23 +92,51 @@ section {
         }
     
 
-    
-        .button {
-            text-align: center;
-            button {
-                margin: 0;
-                @include btn-gray;
-                width: 270px;
-                height: 85px; 
-                margin-left: calc(100% - 85%);           
-                margin-top: 40px;
-                margin-bottom: 100px;
-                font-size: 35px;
-                font-weight: bold;        
+        container.precoCE {
+            div.botao1 {
+                flex-direction: column;            
+                div.button-gray {
+                    text-align: center;                                            
+                    margin: 0;
+                    @include btn-gray;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    button {          
+                        font-size: 35px;
+                        font-weight: bold;
+                        border: none;        
+                    }
+                }
+            
             }
         }
-    
-}
+
+        container.precoCE {
+            div.botao1 {
+                flex-direction: column;            
+                div.button-red {
+                    text-align: center;                                            
+                    margin: 0;
+                    @include btn-red;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    button {          
+                        font-size: 35px;
+                        font-weight: bold;
+                        border: none;
+                        background-color:#ed1b24EE;        
+                    }
+                }
+            
+            }
+        }
+    }
 }
 
 
@@ -124,6 +152,7 @@ section {
         }
         container.precoPC {
                 display: block;
+                width: 30%;
             
         }
 
@@ -200,20 +229,7 @@ section {
                     font-family: 'Roboto';           
                 }
             }
-            .button {
-                text-align: center;
-                button {
-                    margin: 0;
-                    @include btn-gray;
-                    width: 270px;
-                    height: 85px; 
-                    margin-left: calc(100% - 85%);           
-                    margin-top: 40px;
-                    margin-bottom: 100px;
-                    font-size: 35px;
-                    font-weight: bold;        
-                }
-            }
+            
         }
         container {
             form {
@@ -232,6 +248,55 @@ section {
                 }
             }
         }
+        container.precoPC {
+            .botao2 {
+                flex-direction: row;            
+                .button-gray {
+                    height: 50px;
+                    text-align: center;                                            
+                    margin: 0;
+                    @include btn-gray;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    margin-left: -100px;
+                    button {          
+                        font-size: 35px;
+                        
+                        font-weight: bold;
+                        border: none;        
+                    }
+                }
+            
+            }
+        }
+
+        container.precoPC {
+            .botao2 {
+                flex-direction: row;            
+                .button-red {
+                    text-align: center;
+                    height: 60px;                                            
+                    margin: 0;
+                    @include btn-red;
+                    width: 270px;
+                    height: 60px; 
+                    margin-left: calc(100% - 85%);
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    button {          
+                        font-size: 35px;
+                        font-weight: bold;
+                        border: none;
+                        background-color:#ed1b24EE;        
+                    }
+                }
+            
+            }
+        }
+
     
     }
 
