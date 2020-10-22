@@ -12,10 +12,8 @@
             font-size: 150px;
             font-weight: 800;
             margin: 0;
-    
         }
         img {
-            
             max-width: 150px;
             height: 150px;
             animation: sushirotate 4s infinite linear;
@@ -39,7 +37,6 @@
                 color: var(--red);
                 font-weight: bold;
             }
-
         }
     }
 
@@ -48,9 +45,6 @@
 }
 
 @keyframes sushirotate {
-    0% {
-
-    }
     100% {
         transform: rotate(360deg);
     }
@@ -58,8 +52,7 @@
 }
 
 @media (min-width: 576px) {
- #error {
-     margin: 200px auto;
-     
- }
+    #error {
+        margin: 150px auto;
+    }
 }

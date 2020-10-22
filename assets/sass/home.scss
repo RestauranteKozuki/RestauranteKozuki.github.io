@@ -139,6 +139,7 @@
         .wrapper {
             flex-direction: column;
             align-items: center;
+            margin-top: 20px;
             .text{
                 align-items: center;
                 flex-direction: column;
@@ -152,6 +153,9 @@
                 }
                 .description {
                     margin-bottom: 20px;
+                    font-size: 20px;
+                    padding: 0 20px;
+                    text-align: right;
                 }
             }
             button {
@@ -199,6 +203,16 @@
     }
 }
 
+@media (min-width: 768px) {
+    #home {
+        #fourth-hero {
+            .wrapper {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
 @media (min-width: 850px) {
     #home {
         #prime-hero {
@@ -217,6 +231,7 @@
                     margin-right: 50px;
                     top: 150px;
                     align-items: flex-end;
+                    max-width: 250px;
                     .title {
                         position: relative;
                         hr {
@@ -226,6 +241,9 @@
                             left: initial;
                             bottom: -5px;
                         }
+                    }
+                    .description {
+                        padding: 0;
                     }
                 }
             }
