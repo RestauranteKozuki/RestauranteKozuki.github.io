@@ -1,3 +1,9 @@
+//@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap');
+
 #home {
     flex-direction: column;
     #prime-hero {
@@ -30,6 +36,7 @@
                 justify-content: center;
                 margin-top: 50px;
                 h2 {
+                    font-family: 'Fondamento', cursive;
                     font-size: 40px;
                     color: var(--white);
                     font-weight: 400;
@@ -134,7 +141,7 @@
     #fourth-hero {
         background-color: #fafafa;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 0;
         width: 100%;
         .wrapper {
             flex-direction: column;
@@ -178,8 +185,10 @@
         width: 100%;
         height: 300px;
         background-image: url('/assets/images/bag1920.jpg');
-        background-size: cover;
+        background-size: 700px;
         background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 0 -30px;
     }
 }
 
@@ -207,7 +216,7 @@
     #home {
         #fourth-hero {
             .wrapper {
-                margin-top: 20px;
+                margin-top: 0;
             }
         }
     }
@@ -217,6 +226,9 @@
     #home {
         #prime-hero {
             height: 80vh;
+            .home-footer {
+                background-attachment: fixed;
+            }
         }
         #fourth-hero {
             position: relative;
@@ -250,6 +262,10 @@
             .img {
                 height: 500px;
                 z-index: 1;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: -100px;
             }
         }
     }
@@ -330,7 +346,7 @@
         }
         #fourth-hero {
             .img {
-                background-size: contain;
+                background-size: cover;
             }
         }
 
@@ -343,12 +359,12 @@
 @media (min-width: 1441px) {
     #home {
         #second-hero {
-            max-width: 1200px;
+            max-width: var(--space-big-desktop);
             margin: 50px auto;
         }
         #third-hero {
             .wrapper {
-                max-width: 1200px;
+                max-width: var(--space-big-desktop);
                 margin: 50px auto;
             }
         }
