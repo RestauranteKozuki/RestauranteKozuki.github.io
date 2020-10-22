@@ -1320,7 +1320,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   section .container1 {
     flex-direction: column;
   }
-  section #menu-delivery {
+  section #menu-deliveryPC {
+    display: none;
+  }
+  section #menu-deliveryCE {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
@@ -1329,10 +1332,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     font-size: 18px;
     align-items: center;
   }
-  section #menu-delivery .btn-orange:first-child {
+  section #menu-deliveryCE .btn-orange:first-child {
     margin-left: 48px;
   }
-  section #menu-delivery .btn-red {
+  section #menu-deliveryCE .btn-red {
     height: 54px;
     display: flex;
     border: none;
@@ -1359,15 +1362,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 48px;
     margin-top: 20px;
   }
-  section #menu-delivery .btn-red:hover {
+  section #menu-deliveryCE .btn-red:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  section #menu-delivery .btn-red:active {
+  section #menu-deliveryCE .btn-red:active {
     background-color: #ed1b24EE;
   }
-  section #menu-delivery .btn-orange {
+  section #menu-deliveryCE .btn-orange {
     border-radius: 30%;
     height: 30px;
     background-color: var(--orange);
@@ -1375,7 +1378,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 10px;
     margin-top: 20px;
   }
-  section #menu-delivery .btn-orange-light {
+  section #menu-deliveryCE .btn-orange2 {
+    border-radius: 30%;
+    height: 30px;
+    background-color: var(--orange);
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  section #menu-deliveryCE .btn-orange-light {
     border-radius: 30%;
     height: 30px;
     background-color: var(--orange-light);
@@ -1383,7 +1394,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 10px;
     margin-top: 20px;
   }
-  section #menu-delivery a {
+  section #menu-deliveryCE a {
     color: var(--white);
     text-decoration: none;
     align-items: center;
@@ -1452,12 +1463,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
 }
 @media (min-width: 992px) {
-  section .container1:first-child {
-    margin-top: 0px;
-    margin-left: 101px;
-  }
-  section .container1 {
-    flex-direction: column;
+  section .container {
+    margin-right: 15%;
   }
   section .card {
     margin-left: 40px;
@@ -1473,6 +1480,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     border-radius: 20px 20px 0 0;
     min-height: 200px;
     width: 100%;
+  }
+  section .card .img-card img {
     height: 274px;
   }
   section .card .img-card img {
@@ -1510,7 +1519,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     font-size: 16px;
     font-weight: 500;
   }
-  section #menu-delivery {
+  section #menu-deliveryCE {
+    display: none;
+  }
+  section #menu-deliveryPC {
+    display: block;
+    display: flex;
+    justify-content: space-between;
     bottom: 0px;
     position: fixed;
     background-color: #2E2E2E;
@@ -1521,13 +1536,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 0px;
     flex-direction: row;
   }
-  section #menu-delivery div {
+  section #menu-deliveryPC div {
     margin-left: 0px;
   }
-  section #menu-delivery .btn-orange:first-child {
+  section #menu-deliveryPC .btn-orange:first-child {
     margin-left: 80px;
   }
-  section #menu-delivery .btn-red {
+  section #menu-deliveryPC .btn-red {
     height: 54px;
     display: flex;
     border: none;
@@ -1550,33 +1565,32 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-right: 101px;
     list-style-type: none;
   }
-  section #menu-delivery .btn-red:hover {
+  section #menu-deliveryPC .btn-red:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  section #menu-delivery .btn-red:active {
+  section #menu-deliveryPC .btn-red:active {
     background-color: #ed1b24EE;
   }
-  section #menu-delivery .btn-orange {
+  section #menu-deliveryPC .btn-orange {
     border-radius: 30%;
     height: 30px;
     background-color: var(--orange);
   }
-  section #menu-delivery .btn-orange2 {
+  section #menu-deliveryPC .btn-orange2 {
     border-radius: 30%;
-    margin-top: 20px;
     height: 30px;
     background-color: var(--orange);
   }
-  section #menu-delivery .btn-orange-light {
+  section #menu-deliveryPC .btn-orange-light {
     border-radius: 30%;
     height: 30px;
     background-color: var(--orange-light);
     align-items: center;
     margin-left: 10px;
   }
-  section #menu-delivery a {
+  section #menu-deliveryPC a {
     color: var(--white);
     text-decoration: none;
     align-items: center;
@@ -1640,6 +1654,11 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
   section div .delivery h2 {
     margin-bottom: 50px;
+  }
+  section img {
+    width: 400px;
+    height: 400px;
+    margin-right: 10%;
   }
 }
 @media (min-width: 320px) {
@@ -1717,10 +1736,11 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 198px;
     font-family: "Roboto";
   }
-  section .button {
-    text-align: center;
+  section container.precoCE div.botao1 {
+    flex-direction: column;
   }
-  section .button button {
+  section container.precoCE div.botao1 div.button-gray {
+    text-align: center;
     margin: 0;
     height: 54px;
     display: flex;
@@ -1741,23 +1761,70 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     padding: 0 50px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
     width: 270px;
-    height: 85px;
+    height: 60px;
     margin-left: calc(100% - 85%);
     margin-top: 40px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
+    margin-bottom: 20px;
   }
-  section .button button:hover {
+  section container.precoCE div.botao1 div.button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  section .button button:active {
+  section container.precoCE div.botao1 div.button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
+  }
+  section container.precoCE div.botao1 div.button-gray button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+  }
+  section container.precoCE div.botao1 {
+    flex-direction: column;
+  }
+  section container.precoCE div.botao1 div.button-red {
+    text-align: center;
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 60px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  section container.precoCE div.botao1 div.button-red:hover {
+    background-color: #b10000;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  section container.precoCE div.botao1 div.button-red:active {
+    background-color: #ed1b24EE;
+  }
+  section container.precoCE div.botao1 div.button-red button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+    background-color: #ed1b24EE;
   }
 }
 @media (min-width: 992px) {
@@ -1771,6 +1838,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
   section container.precoPC {
     display: block;
+    width: 30%;
   }
   section container.precoPC {
     margin: 0;
@@ -1832,10 +1900,25 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 198px;
     font-family: "Roboto";
   }
-  section container.precoPC .button {
-    text-align: center;
+  section container form .field {
+    height: 73px;
+    width: 522px;
+    margin-left: 48px;
+    margin-bottom: 20px;
   }
-  section container.precoPC .button button {
+  section container form .field label {
+    font-size: 21px;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  section container.precoPC .botao2 {
+    flex-direction: row;
+  }
+  section container.precoPC .botao2 .button-gray {
+    height: 50px;
+    text-align: center;
     margin: 0;
     height: 54px;
     display: flex;
@@ -1856,36 +1939,72 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     padding: 0 50px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
     width: 270px;
-    height: 85px;
+    height: 60px;
     margin-left: calc(100% - 85%);
     margin-top: 40px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: -100px;
   }
-  section container.precoPC .button button:hover {
+  section container.precoPC .botao2 .button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  section container.precoPC .button button:active {
+  section container.precoPC .botao2 .button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  section container form .field {
-    height: 73px;
-    width: 522px;
-    margin-left: 48px;
+  section container.precoPC .botao2 .button-gray button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+  }
+  section container.precoPC .botao2 {
+    flex-direction: row;
+  }
+  section container.precoPC .botao2 .button-red {
+    text-align: center;
+    height: 60px;
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 60px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
     margin-bottom: 20px;
   }
-  section container form .field label {
-    font-size: 21px;
-    align-items: center;
-    font-family: "Roboto";
+  section container.precoPC .botao2 .button-red:hover {
+    background-color: #b10000;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  section container.precoPC .botao2 .button-red:active {
+    background-color: #ed1b24EE;
+  }
+  section container.precoPC .botao2 .button-red button {
+    font-size: 35px;
     font-weight: bold;
-    margin-top: 10px;
+    border: none;
+    background-color: #ed1b24EE;
   }
 }
 
