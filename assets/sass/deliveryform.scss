@@ -137,12 +137,13 @@ section {
             }
         }
     }
+
 }
 }
 
 
 @media (min-width:992px)  {
-    section {
+    #delivery-form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

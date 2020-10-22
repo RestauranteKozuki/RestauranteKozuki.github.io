@@ -1,0 +1,58 @@
+#error {
+    flex-direction: column;
+    margin: 200px 20px;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    .error404 {
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        h6 {
+            font-size: 150px;
+            font-weight: 800;
+            margin: 0;
+        }
+        img {
+            max-width: 150px;
+            height: 150px;
+            animation: sushirotate 4s infinite linear;
+        }
+    
+
+    }
+    .text {
+        flex-direction: column;
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        span {
+            font-size: 16px;
+            text-align: center;
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                color: var(--red);
+                font-weight: bold;
+            }
+        }
+    }
+
+   
+
+}
+
+@keyframes sushirotate {
+    100% {
+        transform: rotate(360deg);
+    }
+    
+}
+
+@media (min-width: 576px) {
+    #error {
+        margin: 150px auto;
+    }
+}

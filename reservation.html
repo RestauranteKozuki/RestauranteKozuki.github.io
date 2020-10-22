@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div>
-            <a class="skip-link" href="main#about">Skip to main</a>
+            <a class="skip-link" href="main#about">Main</a>
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/images/logo.svg" alt="Logo">
@@ -50,7 +50,7 @@
                     <div class="menu-item"><a href="delivery.html">Delivery</a></div>
                     <div class="menu-item"><a href="events.html">Eventos</a></div>
                     <div class="menu-item"><a href="reservation.html">Reserva</a></div>
-                    <div class="menu-item"><a href="contact.html">Contato</a></div>
+                    <div class="menu-item"><a href="#footer">Contato</a></div>
                 </div>
             </nav>
         </div>
@@ -65,33 +65,33 @@
                     <hr>
                </div>
                 
-                <form>
+                <form action="reservationok.html">
                     <div class="field">
-                        <input type="text" name="branch" id="branch"/>
+                        <input type="text" name="branch" id="branch" required/>
                         <label for="branch">Escolha nossas unidades</label>
                     </div>
                     <div class="field">
-                        <input type="text" name="name" id="name"/>
+                        <input type="text" name="name" id="name" required/>
                         <label for="name">Digite seu nome:</label>
                     </div>
                     <div class="fields">
                         <div class="field">
-                            <input type="phone" name="phone" id="phone"/>
+                            <input type="phone" name="phone" id="phone" required/>
                             <label for="phone">Telefone de Contato:</label>
                         </div>
                         <div class="field">
-                            <input type="text" name="amountppl" id="amountppl"/>
+                            <input type="text" name="amountppl" id="amountppl" required/>
                             <label for="amountppl">Quantidade de Pessoas:</label>
                         </div>
                     </div>
 
                     <div class="fields">
                         <div class="field">
-                            <input type="date" name="amountppl" id="amountppl"/>
+                            <input type="date" name="amountppl" id="amountppl" required/>
                             <label for="amountppl">Data da reserva</label>
                         </div>
                         <div class="field">
-                            <input type="time" name="amountppl" id="amountppl"/>
+                            <input type="time" name="amountppl" id="amountppl" required/>
                             <label for="amountppl">Horário da reserva</label>
                         </div>
 
@@ -170,7 +170,7 @@
                         <a href="https://pt-br.facebook.com/hcodebr/">Facebook</a>
                     </li>
                     <li>
-                        <img src="assets/images/youtube.svg" alt="Yotube">
+                        <img src="assets/images/youtube.svg" alt="Youtube">
                         <a href="https://www.youtube.com/channel/UCjWENuSH2gX55-y7QSZiWxA">Yotube</a>
                     </li>
                     <li>
@@ -185,12 +185,12 @@
 
             </div>
         </div>
-        <h6 class="credits">
+        <span class="credits">
             <span>Feito com 💚 pela equipe</span>
             <span class="span">
-                verde
+                <a href="https://xd.adobe.com/view/b655d453-8dcf-469a-80cf-6ebbfa38c939-e306/">verde</a>
             </span>
-        </h6>
+        </span>
     </footer>
 
     <script src="assets/scripts/index.js"></script>

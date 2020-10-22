@@ -18,10 +18,10 @@
             z-index: 3;
             .close-menu {
                 position: absolute;
-                top: 30px;
-                right: 30px;
-                height: 35px;
-                width: 35px;
+                top: 32px;
+                right: 36px;
+                height: 28px;
+                width: 28px;
                 cursor: pointer;
                 svg {
                     width: 100%;
@@ -41,7 +41,7 @@
                     a {
                         text-decoration: none;
                         color: var(--white);
-                        font-size: 30px;
+                        font-size: 24px;
                         &:hover {
                             color: var(--menu-gray-hover);
                         }
@@ -57,7 +57,7 @@
             height: 45px;
             cursor: pointer;
             svg {
-                width: 45px;
+                width: 40px;
                 fill: var(--white);
             }
         }
@@ -65,7 +65,12 @@
             position: absolute;
             height: 100px;
             top: 45px;
-            left: calc(50% - 85px);
+            left: calc(50% - 75px);
+            a {
+                img {
+                    width: 150px;
+                }
+            }
         }
     }
 }
