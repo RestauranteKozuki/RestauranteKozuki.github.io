@@ -1,8 +1,4 @@
-//@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
 
 #home {
     flex-direction: column;
@@ -36,7 +32,7 @@
                 justify-content: center;
                 margin-top: 50px;
                 h2 {
-                    font-family: 'Fondamento', cursive;
+                    font-family: 'Merienda One', cursive;
                     font-size: 40px;
                     color: var(--white);
                     font-weight: 400;
