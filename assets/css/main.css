@@ -609,7 +609,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -667,7 +667,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -766,7 +766,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -994,7 +994,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1241,7 +1241,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1410,7 +1410,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1518,7 +1518,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1647,7 +1647,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1935,7 +1935,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     outline: none;
     border-radius: var(--border-radius);
@@ -2115,7 +2115,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     outline: none;
     border-radius: var(--border-radius);
