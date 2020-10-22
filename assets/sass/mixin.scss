@@ -16,7 +16,7 @@
     text-transform: uppercase;
     box-shadow: 4px 4px 8px -5px var(--black);
     padding: 0 50px;
-    transition: background-color .2s ease-out, color .2s ease-out, box-shadow .2s ease-out;;
+    transition: background-color .2s ease-out, color .2s ease-out, box-shadow .2s ease-out;
     &:hover {
         background-color: #b10000;
         color: var(--white);
