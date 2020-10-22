@@ -42,6 +42,27 @@ hr.divider {
   background-color: var(--red);
 }
 
+.fixed {
+  height: 100px;
+  right: 30px;
+  width: 100px;
+  position: fixed;
+  background-color: var(--red-active);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 12px 12px 20px -10px var(--shadow);
+  bottom: 30px;
+  z-index: 1;
+}
+.fixed:hover {
+  background-color: var(--red-active);
+}
+.fixed svg {
+  width: 70px;
+  height: 70px;
+}
+
 :root {
   --bg-gray: #ECECEC;
   --dark-gray: #6B6B6B;
@@ -169,18 +190,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 500px;
   background-color: var(--white);
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   box-shadow: 5px 5px 10px -5px var(--shadow);
 }
 .card .img-card {
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   min-height: 200px;
   width: 100%;
 }
 .card .img-card img {
   width: 100%;
   object-fit: cover;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 .card .text-card {
   height: 100%;
@@ -210,6 +231,14 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   color: var(--black);
   font-size: 16px;
   font-weight: 500;
+}
+.card:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.03);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .header {
@@ -374,147 +403,151 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     align-items: center;
   }
 }
-.footer {
+#footer {
   background-color: var(--black);
   position: relative;
+  z-index: 3;
 }
-.footer > div {
+#footer > div {
   width: 100%;
   align-items: center;
   padding: var(--space-mobile) 0;
   flex-direction: column;
   margin: 0 50px;
 }
-.footer > div .footer-logo {
+#footer > div .footer-logo {
   display: none;
 }
-.footer > div .footer-logo img {
+#footer > div .footer-logo img {
   margin-bottom: 16px;
 }
-.footer > div .wrapper {
+#footer > div .wrapper {
   width: 100%;
   flex-direction: column;
 }
-.footer > div .wrapper ul {
+#footer > div .wrapper ul {
   margin: 0;
   padding: 0;
   flex-direction: column;
   margin-top: 50px;
   justify-content: center;
 }
-.footer > div .wrapper ul li {
+#footer > div .wrapper ul li {
   color: var(--white);
   font-size: 20px;
   font-weight: normal;
   margin-bottom: 14px;
 }
-.footer > div .wrapper ul li.title {
+#footer > div .wrapper ul li.title {
   font-size: 30px;
   font-weight: 600;
   margin-bottom: 16px;
 }
-.footer > div .wrapper ul li img {
+#footer > div .wrapper ul li img {
   height: 20px;
   width: 20px;
   margin-right: 10px;
   align-items: center;
 }
-.footer > div .wrapper ul li a {
+#footer > div .wrapper ul li a {
   text-decoration: none;
   color: var(--white);
 }
-.footer > div .wrapper ul li a:hover {
+#footer > div .wrapper ul li a:hover {
   color: var(--dark-gray);
 }
-.footer .credits {
+#footer .credits {
   position: absolute;
   height: fit-content;
   right: 20px;
   bottom: 0;
 }
-.footer .credits span {
+#footer .credits span {
   color: var(--white);
 }
-.footer .credits span.span a {
+#footer .credits span.span a {
   text-decoration: none;
   color: #5fd65a;
 }
 
 @media (min-width: 576px) {
-  .footer > div .wrapper {
+  #footer > div .wrapper {
     justify-content: space-between;
     flex-direction: row;
   }
-  .footer > div .wrapper ul li img {
+  #footer > div .wrapper ul li img {
     margin-right: 10px;
   }
 }
 @media (min-width: 768px) {
-  .footer > div {
+  #footer > div {
     flex-direction: row;
     justify-content: space-between;
   }
-  .footer > div .wrapper {
+  #footer > div .wrapper {
     justify-content: space-around;
   }
-  .footer > div .wrapper .footer-logo .logo-title {
+  #footer > div .wrapper .footer-logo .logo-title {
     font-size: 50px;
   }
-  .footer > div .wrapper ul {
+  #footer > div .wrapper ul {
     margin-top: 0;
   }
-  .footer > div .wrapper ul li {
+  #footer > div .wrapper ul li {
     font-size: 14px;
   }
-  .footer > div .wrapper ul li.title {
+  #footer > div .wrapper ul li.title {
     font-size: 24px;
   }
 }
 @media (min-width: 992px) {
-  .footer > div {
+  #footer > div {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
   }
-  .footer > div .footer-logo {
+  #footer > div .footer-logo {
     display: block;
     flex-direction: row;
   }
-  .footer > div .footer-logo img {
+  #footer > div .footer-logo img {
     width: 130px;
     height: 130px;
   }
-  .footer > div .footer-logo .logo-title {
+  #footer > div .footer-logo .logo-title {
     padding: 0;
     display: block;
     color: var(--white);
     font-size: 32px;
     text-align: center;
   }
-  .footer > div ul {
+  #footer > div ul {
     margin-top: 0;
   }
-  .footer > div ul li {
+  #footer > div ul li {
     font-size: 16px;
   }
-  .footer > div ul li.title {
+  #footer > div ul li.title {
     font-size: 24px;
   }
 }
 @media (min-width: 1200px) {
-  .footer .footer-logo .logo-title {
+  #footer .footer-logo .logo-title {
     font-size: 50px;
   }
 }
 @media (min-width: 1441px) {
-  .footer > div {
+  #footer > div {
     margin: auto;
     width: var(--space-big-desktop);
   }
 }
 #home {
   flex-direction: column;
+}
+#home #prime-hero {
+  height: 100vh;
 }
 #home #prime-hero .home-footer {
   position: relative;
@@ -535,7 +568,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   z-index: 2;
 }
 #home #prime-hero .home-footer .text-at-home {
-  margin-top: 170px;
   position: relative;
   z-index: 3;
   flex-direction: column;
@@ -547,7 +579,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #prime-hero .home-footer .text-at-home h3 {
   font-size: 50px;
   color: var(--white);
-  margin-bottom: 100px;
 }
 #home #prime-hero .home-footer .text-at-home h3 hr {
   position: absolute;
@@ -572,24 +603,20 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 290px;
 }
 #home #prime-hero .home-footer .text-at-home button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #prime-hero .home-footer .text-at-home button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #second-hero {
   flex-direction: column;
@@ -602,8 +629,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   align-items: center;
 }
 #home #second-hero .container .card {
+  width: 300px;
+  height: 100%;
   max-width: 100%;
   margin: 15px 15px;
+}
+#home #second-hero .container .card img {
+  min-height: 300px;
 }
 #home #second-hero .title {
   margin-top: 20px;
@@ -622,24 +654,21 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 #home #second-hero button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #second-hero button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #third-hero {
   position: relative;
@@ -688,8 +717,8 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
-  color: #555555;
-  border: 2px solid #555555;
+  background-color: var(--red);
+  color: var(--white);
   text-transform: uppercase;
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
@@ -698,15 +727,12 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 230px;
 }
 #home #bedroom-hero .wrapper button:hover {
-  background-color: #707070;
-  border-color: #707070;
+  background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
 #home #bedroom-hero .wrapper button:active {
-  background-color: rgba(131, 131, 131, 0.9);
-  color: var(--white);
-  border-color: rgba(131, 131, 131, 0.9);
+  background-color: #ed1b24EE;
 }
 #home #bedroom-hero img {
   display: none;
@@ -716,18 +742,57 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #home #second-hero {
     width: 100%;
     align-items: center;
+    margin: 50px 0;
   }
   #home #second-hero .container {
     flex-direction: row;
+    overflow: hidden;
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+  }
+  #home #second-hero .container .card {
+    width: initial;
+  }
+  #home #second-hero .container .card .text-card {
+    justify-content: space-around;
+    padding: 30px;
+  }
+  #home #second-hero .container .card .img-card {
+    min-height: initial;
+  }
+  #home #second-hero .container .card h3 {
+    margin: 0;
+  }
+  #home #second-hero .container .card .price {
+    margin: 0;
+  }
+  #home #second-hero button {
+    margin: 20px;
   }
   #home #third-hero .wrapper {
     flex-direction: row;
+    justify-content: space-between;
+    margin: 50px;
   }
   #home #third-hero .wrapper .text {
     width: 40%;
+    margin: 0;
+  }
+  #home #third-hero .wrapper .text .title {
+    width: 100%;
+  }
+  #home #third-hero .wrapper .text .title h2 {
+    text-align: left;
+  }
+  #home #third-hero .wrapper .text .description {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
   }
   #home #third-hero .wrapper .image {
-    padding-left: 15%;
+    width: 500px;
   }
 }
 #menu-page {
@@ -739,26 +804,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   flex-direction: column;
   width: 100%;
   margin-bottom: 20px;
-}
-#menu-page section .fixed {
-  height: 100px;
-  right: 30px;
-  width: 100px;
-  position: fixed;
-  background-color: var(--red-active);
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 12px 12px 20px -10px var(--shadow);
-  bottom: 30px;
-  z-index: 1;
-}
-#menu-page section .fixed:hover {
-  background-color: var(--red-active);
-}
-#menu-page section .fixed svg {
-  width: 70px;
-  height: 70px;
 }
 #menu-page section .title {
   margin-top: 150px;
@@ -944,27 +989,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   flex-direction: column;
   margin-bottom: 50px;
 }
-#about .hero .wrapper .text .title {
-  flex-direction: column;
-  margin-bottom: 36px;
-}
-#about .hero .wrapper .text .title h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 12px;
-  color: var(--black);
-}
-#about .hero .wrapper .text .title hr {
-  margin: 0;
-  border: 0;
-  width: 60px;
-  height: 5px;
-  background-color: var(--red);
-}
 #about .hero .wrapper .text .description {
   font-size: 20px;
-  color: var(--dark-gray);
+  color: var(--black);
   font-weight: 300;
 }
 #about .hero .wrapper .image {
@@ -1369,298 +1396,204 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     min-width: 500px;
   }
 }
-@media (min-width: 320px) {
-  section {
+#page-delivery section {
+  flex-direction: column;
+  margin-top: 130px;
+  padding: 15px;
+}
+#page-delivery section .tags {
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  /*position: fixed;*/
+}
+#page-delivery section .tags .btn-tag {
+  width: 75px;
+  height: 40px;
+  border: none;
+  background-color: var(--red);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+#page-delivery section .tags .btn-tag.selected {
+  background-color: var(--red-hover);
+}
+#page-delivery section .tags .btn-tag:hover {
+  background-color: var(--red-hover);
+}
+#page-delivery section .tags .btn-tag:active {
+  background-color: var(--red-active);
+}
+#page-delivery section .tags .btn-tag a {
+  text-decoration: none;
+  color: var(--white);
+}
+#page-delivery section .container {
+  flex-direction: column;
+}
+#page-delivery section .container .card {
+  max-width: 350px;
+  margin-bottom: 30px;
+}
+#page-delivery section .container .card .img-card img {
+  height: 200px;
+}
+#page-delivery section .container .card .text-card .text.combo {
+  text-align: initial;
+}
+#page-delivery section .container .card .text-card .add {
+  align-self: flex-end;
+  cursor: pointer;
+}
+#page-delivery section .container .card .text-card .add img {
+  width: 50px;
+  height: auto;
+}
+#page-delivery section .btn-continue {
+  height: 54px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: var(--red);
+  color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  display: none;
+}
+#page-delivery section .btn-continue:hover {
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
+}
+#page-delivery section .btn-continue:active {
+  background-color: #ed1b24EE;
+}
+#page-delivery section .fixed {
+  background-color: var(--bg-gray);
+}
+
+@media (min-width: 576px) {
+  #page-delivery section .title {
+    margin-left: 10px;
+  }
+  #page-delivery section .tags {
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+  }
+  #page-delivery section .tags .btn-tag {
+    margin-right: 15px;
+    width: 110px;
+  }
+  #page-delivery section .container {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
   }
-  section div div img {
-    margin: 0;
+  #page-delivery section .container .card {
+    max-width: 340px;
+    margin: 10px;
   }
-  section .container1:first-child {
-    margin-top: 140px;
-  }
-  section .container1 {
-    flex-direction: column;
-  }
-  section #menu-delivery {
-    align-items: center;
-    flex-direction: column;
+  #page-delivery section .container .card .text-card {
     justify-content: space-between;
-    margin-top: 120px;
-    height: 83px;
-    font-size: 18px;
-    align-items: center;
-  }
-  section #menu-delivery .btn-orange:first-child {
-    margin-left: 48px;
-  }
-  section #menu-delivery .btn-red {
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    height: 41px;
-    width: 127px;
-    font-size: 17px;
-    margin-right: 101px;
-    list-style-type: none;
-    margin-left: 48px;
-    margin-top: 20px;
-  }
-  section #menu-delivery .btn-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  section #menu-delivery .btn-red:active {
-    background-color: #ed1b24EE;
-  }
-  section #menu-delivery .btn-orange {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange);
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  section #menu-delivery .btn-orange-light {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange-light);
-    align-items: center;
-    margin-left: 10px;
-    margin-top: 20px;
-  }
-  section #menu-delivery a {
-    color: var(--white);
-    text-decoration: none;
-    align-items: center;
-  }
-
-  .card:first-child {
-    margin-top: 170px;
-  }
-
-  .card {
-    margin-left: 49px;
-    margin-right: 49px;
-    width: 277px;
-    margin-bottom: 20px;
-    background-color: var(--white);
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
-  }
-
-  .card .img-card {
-    border-radius: 20px 20px 0 0;
-    min-height: 200px;
-    width: 100%;
-    height: 274px;
-  }
-
-  .card .img-card img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-  }
-
-  .card .text-card {
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 30px;
-  }
-
-  .card .text-card h3 {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .card .text-card .text {
-    text-align: center;
-    font-size: 20px;
-    margin: 0;
-  }
-
-  .card .text-card .price {
-    color: var(--red);
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-
-  .card .text-card .price .black {
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 500;
   }
 }
 @media (min-width: 992px) {
-  section .container1:first-child {
-    margin-top: 0px;
-    margin-left: 101px;
+  #page-delivery section {
+    margin-top: 65px;
   }
-  section .container1 {
-    flex-direction: column;
+  #page-delivery section .tags .btn-tag {
+    width: 150px;
+    height: 50px;
+    font-size: 21px;
   }
-  section .card {
-    margin-left: 40px;
-    width: 350px;
-    margin-right: 20px;
-    margin-bottom: 45px;
-    background-color: var(--white);
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
+  #page-delivery section .container {
+    justify-content: initial;
   }
-  section .card .img-card {
-    border-radius: 20px 20px 0 0;
-    min-height: 200px;
-    width: 100%;
-    height: 274px;
+  #page-delivery section .container .card {
+    width: 310px;
   }
-  section .card .img-card img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
-  }
-  section .card .text-card {
-    height: 100%;
-    margin-top: 30px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 30px;
-  }
-  section .card .text-card h3 {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  section .card .text-card .text {
-    text-align: center;
-    font-size: 20px;
-    margin: 0;
-  }
-  section .card .text-card .price {
-    color: var(--red);
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-  }
-  section .card .text-card .price .black {
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 500;
-  }
-  section #menu-delivery {
-    bottom: 0px;
-    position: fixed;
-    background-color: #2E2E2E;
-    height: 83px;
-    width: 100%;
-    font-size: 18px;
-    align-items: center;
-    margin-left: 0px;
-    flex-direction: row;
-  }
-  section #menu-delivery div {
-    margin-left: 0px;
-  }
-  section #menu-delivery .btn-orange:first-child {
-    margin-left: 80px;
-  }
-  section #menu-delivery .btn-red {
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    margin-left: 400px;
-    margin-right: 101px;
-    list-style-type: none;
-  }
-  section #menu-delivery .btn-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  section #menu-delivery .btn-red:active {
-    background-color: #ed1b24EE;
-  }
-  section #menu-delivery .btn-orange {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange);
-  }
-  section #menu-delivery .btn-orange2 {
-    border-radius: 30%;
-    margin-top: 20px;
-    height: 30px;
-    background-color: var(--orange);
-  }
-  section #menu-delivery .btn-orange-light {
-    border-radius: 30%;
-    height: 30px;
-    background-color: var(--orange-light);
-    align-items: center;
-    margin-left: 10px;
-  }
-  section #menu-delivery a {
-    color: var(--white);
-    text-decoration: none;
-    align-items: center;
+  #page-delivery section .container .card .text-card .text {
+    font-size: 21px;
   }
 }
 @media (min-width: 1200px) {
-  section .card {
-    width: 411px;
-    margin-left: 101px;
-    margin-right: 20px;
-    margin-bottom: 45px;
-    background-color: var(--white);
-    flex-direction: column;
-    border-radius: 20px;
-    box-shadow: 12px 12px 20px -10px var(--shadow);
+  #page-delivery section {
+    padding: 30px;
+    padding-top: 0;
+    margin-top: 75px;
+  }
+  #page-delivery section .tags {
+    width: 100%;
+    position: fixed;
+    background-color: var(--shadow);
+    padding: 10px 30px;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    justify-content: flex-start;
+    z-index: 1;
+  }
+  #page-delivery section .tags .btn-tag {
+    width: 100px;
+    margin: 0;
+    margin-right: 15px;
+    font-size: 16px;
+    height: 44px;
+  }
+  #page-delivery section .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #page-delivery section .container .card {
+    margin: 20px 20px 20px 0;
+  }
+  #page-delivery section .container .card .text-card h3 {
+    font-size: 24px;
+  }
+  #page-delivery section .container .card .text-card .text {
+    font-size: 16px;
+  }
+  #page-delivery section .container .card .text-card .price {
+    font-size: 24px;
+  }
+  #page-delivery section .container .card .add img {
+    width: 45px;
+  }
+  #page-delivery section .btn-continue {
+    display: flex;
+    width: 200px;
+    align-self: center;
+    margin-top: 30px;
+  }
+  #page-delivery section .btn-continue a {
+    text-decoration: none;
+    color: var(--white);
+  }
+  #page-delivery section .fixed {
+    display: none;
   }
 }
 @media (min-width: 320px) {
-  section {
+  #page-entrega section {
     display: block;
   }
-  section .delivery {
+  #page-entrega section .delivery {
     margin: 0px;
     margin-left: 50px;
     margin-right: calc(100% - 70%);
@@ -1668,26 +1601,26 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-direction: column;
     margin-top: 120px;
   }
-  section .delivery h1 {
+  #page-entrega section .delivery h1 {
     margin: 0px;
     font-size: 48px;
     font-family: "Roboto";
     font-weight: bold;
   }
-  section .delivery h2 {
+  #page-entrega section .delivery h2 {
     margin: 0px;
     font-size: 24px;
     font-family: "Roboto";
     font-weight: 400;
   }
-  section .delivery hr {
+  #page-entrega section .delivery hr {
     width: 75px;
     margin: 0px;
     margin-bottom: 50px;
     height: 1px;
     border: solid 2px var(--red);
   }
-  section img {
+  #page-entrega section img {
     width: 274px;
     height: 274px;
     margin-left: 50px;
@@ -1703,15 +1636,20 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   section div .delivery h2 {
     margin-bottom: 50px;
   }
+  section img {
+    width: 400px;
+    height: 400px;
+    margin-right: 10%;
+  }
 }
 @media (min-width: 320px) {
-  section {
+  #delivery-form section {
     display: block;
   }
-  section container.precoPC {
+  #delivery-form section container.precoPC {
     display: none;
   }
-  section .delivery {
+  #delivery-form section .delivery {
     margin: 0px;
     margin-left: 50px;
     margin-right: calc(100% - 70%);
@@ -1719,70 +1657,71 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-direction: column;
     margin-top: 120px;
   }
-  section .delivery h1 {
+  #delivery-form section .delivery h1 {
     margin: 0px;
     font-size: 48px;
     font-family: "Roboto";
     font-weight: bold;
   }
-  section .delivery hr {
+  #delivery-form section .delivery hr {
     width: 75px;
     margin: 0px;
     margin-bottom: 50px;
     height: 1px;
     border: solid 2px var(--red);
   }
-  section .Pedido h1 {
+  #delivery-form section .Pedido h1 {
     margin: 0px;
     font-size: 40px;
     font-family: "Roboto";
     font-weight: bold;
     margin-left: 50px;
   }
-  section .Pedido span {
+  #delivery-form section .Pedido span {
     color: var(--red);
     font-size: 40px;
     font-family: "Roboto";
     margin-left: calc(100% - 80%);
   }
-  section form .field {
+  #delivery-form section form .field {
     height: 73px;
     width: 302px;
     margin-left: 48px;
     margin-bottom: 20px;
   }
-  section form .field label {
+  #delivery-form section form .field label {
     font-size: 21px;
     align-items: center;
     font-family: "Roboto";
     font-weight: bold;
     margin-top: 10px;
   }
-  section h3 {
+  #delivery-form section h3 {
     margin-left: 25px;
     font-size: 25px;
     font-family: "Roboto";
   }
-  section .valor {
+  #delivery-form section .valor {
     width: 80%;
   }
-  section .valor h3 {
+  #delivery-form section .valor h3 {
     margin: 0;
     margin-left: 25px;
     font-size: 25px;
     margin-bottom: 46px;
     font-family: "Roboto";
   }
-  section .valor span {
+  #delivery-form section .valor span {
     font-size: 25px;
     color: var(--red);
     margin-left: 198px;
     font-family: "Roboto";
   }
-  section .button {
-    text-align: center;
+  #delivery-form section container.precoCE div.botao1 {
+    flex-direction: column;
   }
-  section .button button {
+  #delivery-form section container.precoCE div.botao1 div.button-gray {
+    text-align: center;
     margin: 0;
     height: 54px;
     display: flex;
@@ -1803,23 +1742,70 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     padding: 0 50px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
     width: 270px;
-    height: 85px;
+    height: 60px;
     margin-left: calc(100% - 85%);
     margin-top: 40px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
+    margin-bottom: 20px;
   }
-  section .button button:hover {
+  #delivery-form section container.precoCE div.botao1 div.button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  section .button button:active {
+  #delivery-form section container.precoCE div.botao1 div.button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
+  }
+  #delivery-form section container.precoCE div.botao1 div.button-gray button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+  }
+  #delivery-form section container.precoCE div.botao1 {
+    flex-direction: column;
+  }
+  #delivery-form section container.precoCE div.botao1 div.button-red {
+    text-align: center;
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 60px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  #delivery-form section container.precoCE div.botao1 div.button-red:hover {
+    background-color: #b10000;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  #delivery-form section container.precoCE div.botao1 div.button-red:active {
+    background-color: #ed1b24EE;
+  }
+  #delivery-form section container.precoCE div.botao1 div.button-red button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+    background-color: #ed1b24EE;
   }
 }
 @media (min-width: 992px) {
@@ -1833,6 +1819,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
   section container.precoPC {
     display: block;
+    width: 30%;
   }
   section container.precoPC {
     margin: 0;
@@ -1894,10 +1881,25 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-left: 198px;
     font-family: "Roboto";
   }
-  section container.precoPC .button {
-    text-align: center;
+  section container form .field {
+    height: 73px;
+    width: 522px;
+    margin-left: 48px;
+    margin-bottom: 20px;
   }
-  section container.precoPC .button button {
+  section container form .field label {
+    font-size: 21px;
+    align-items: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  section container.precoPC .botao2 {
+    flex-direction: row;
+  }
+  section container.precoPC .botao2 .button-gray {
+    height: 50px;
+    text-align: center;
     margin: 0;
     height: 54px;
     display: flex;
@@ -1918,36 +1920,72 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     padding: 0 50px;
     transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
     width: 270px;
-    height: 85px;
+    height: 60px;
     margin-left: calc(100% - 85%);
     margin-top: 40px;
-    margin-bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: -100px;
   }
-  section container.precoPC .button button:hover {
+  section container.precoPC .botao2 .button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  section container.precoPC .button button:active {
+  section container.precoPC .botao2 .button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  section container form .field {
-    height: 73px;
-    width: 522px;
-    margin-left: 48px;
+  section container.precoPC .botao2 .button-gray button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+  }
+  section container.precoPC .botao2 {
+    flex-direction: row;
+  }
+  section container.precoPC .botao2 .button-red {
+    text-align: center;
+    height: 60px;
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 60px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
     margin-bottom: 20px;
   }
-  section container form .field label {
-    font-size: 21px;
-    align-items: center;
-    font-family: "Roboto";
+  section container.precoPC .botao2 .button-red:hover {
+    background-color: #b10000;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  section container.precoPC .botao2 .button-red:active {
+    background-color: #ed1b24EE;
+  }
+  section container.precoPC .botao2 .button-red button {
+    font-size: 35px;
     font-weight: bold;
-    margin-top: 10px;
+    border: none;
+    background-color: #ed1b24EE;
   }
 }
 
