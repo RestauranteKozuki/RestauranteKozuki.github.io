@@ -1,7 +1,6 @@
 @media (min-width:320px)  {
-
-section {
-    display: block;
+    #delivery-form {
+        display: block;
         container.precoPC {
                 display: none;
             
@@ -137,11 +136,12 @@ section {
             }
         }
     }
+
 }
 
 
 @media (min-width:992px)  {
-    section {
+    #delivery-form {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
