@@ -436,6 +436,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #footer .credits span.span a {
   text-decoration: none;
   color: #5fd65a;
+  cursor: initial;
 }
 
 @media (min-width: 576px) {
@@ -1022,6 +1023,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #about #third-hero .wrapper .image-gallery .item-img img {
   width: 100%;
+  object-fit: cover;
 }
 #about .btn-wrap {
   width: 100%;
@@ -1384,7 +1386,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     min-width: 500px;
   }
 }
-<<<<<<< HEAD
 @media (min-width: 320px) {
   section {
     justify-content: center;
@@ -2085,7 +2086,5 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     background-color: #ed1b24EE;
   }
 }
-=======
->>>>>>> d77dd948d2f250e1486102fa0df4de3244b296b6
 
 /*# sourceMappingURL=main.css.map */
