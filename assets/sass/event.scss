@@ -44,6 +44,18 @@
                     font-style: italic;
                 }
             }
+            .eventsok {
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                height: 300px;
+                margin: 0 20px;
+                span {
+                    font-size: 20px;
+                    
+                }
+            }
         }
             
    }  
