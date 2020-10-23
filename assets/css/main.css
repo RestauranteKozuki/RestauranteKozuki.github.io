@@ -1748,10 +1748,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
 }
 @media (min-width: 320px) {
-  #page-entrega section {
+  #entrega {
     display: block;
   }
-  #page-entrega section .delivery {
+  #entrega .delivery {
     margin: 0px;
     margin-left: 50px;
     margin-right: calc(100% - 70%);
@@ -1759,99 +1759,124 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-direction: column;
     margin-top: 120px;
   }
-}
-@media (min-width: 992px) {
-  #entrega section {
-    display: flex;
-  }
-  #entrega section div .delivery h2 {
-    margin-bottom: 50px;
-  }
-  #entrega section img {
-    width: 400px;
-    height: 400px;
-    margin-right: 10%;
-  }
-}
-@media (min-width: 320px) {
-  #deliveryform section {
-    display: block;
-  }
-  #deliveryform section container.precoPC {
-    display: none;
-  }
-  #deliveryform section .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  #deliveryform section .delivery h1 {
+  #entrega .delivery h1 {
     margin: 0px;
     font-size: 48px;
     font-family: "Roboto";
     font-weight: bold;
   }
-  #deliveryform section .delivery hr {
+  #entrega .delivery h2 {
+    margin: 0px;
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+  #entrega .delivery hr {
     width: 75px;
     margin: 0px;
     margin-bottom: 50px;
     height: 1px;
     border: solid 2px var(--red);
   }
-  #deliveryform section .Pedido h1 {
+  #entrega img {
+    width: 274px;
+    height: 274px;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+  }
+}
+@media (min-width: 992px) {
+  #entrega {
+    display: flex;
+  }
+  #entrega div .delivery h2 {
+    margin-bottom: 50px;
+  }
+  #entrega img {
+    width: 400px;
+    height: 400px;
+    margin-right: 10%;
+  }
+}
+@media (min-width: 320px) {
+  #deliveryform {
+    display: block;
+  }
+  #deliveryform container.precoPC {
+    display: none;
+  }
+  #deliveryform .delivery {
+    margin: 0px;
+    margin-left: 50px;
+    margin-right: calc(100% - 70%);
+    display: block;
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  #deliveryform .delivery h1 {
+    margin: 0px;
+    font-size: 48px;
+    font-family: "Roboto";
+    font-weight: bold;
+  }
+  #deliveryform .delivery hr {
+    width: 75px;
+    margin: 0px;
+    margin-bottom: 50px;
+    height: 1px;
+    border: solid 2px var(--red);
+  }
+  #deliveryform .Pedido h1 {
     margin: 0px;
     font-size: 40px;
     font-family: "Roboto";
     font-weight: bold;
     margin-left: 50px;
   }
-  #deliveryform section .Pedido span {
+  #deliveryform .Pedido span {
     color: var(--red);
     font-size: 40px;
     font-family: "Roboto";
     margin-left: calc(100% - 80%);
   }
-  #deliveryform section form .field {
+  #deliveryform form .field {
     height: 73px;
     width: 302px;
     margin-left: 48px;
     margin-bottom: 20px;
   }
-  #deliveryform section form .field label {
+  #deliveryform form .field label {
     font-size: 21px;
     align-items: center;
     font-family: "Roboto";
     font-weight: bold;
     margin-top: 10px;
   }
-  #deliveryform section h3 {
+  #deliveryform h3 {
     margin-left: 25px;
     font-size: 25px;
     font-family: "Roboto";
   }
-  #deliveryform section .valor {
+  #deliveryform .valor {
     width: 80%;
   }
-  #deliveryform section .valor h3 {
-    margin: 0;
+  #deliveryform .valor h3 {
     margin-left: 25px;
     font-size: 25px;
-    margin-bottom: 46px;
     font-family: "Roboto";
   }
-  #deliveryform section .valor span {
+  #deliveryform .valor span {
     font-size: 25px;
     color: var(--red);
     margin-left: 198px;
     font-family: "Roboto";
   }
-  #deliveryform section container.precoCE div.botao1 {
+  #deliveryform container.precoCE div.botao1 {
     flex-direction: column;
   }
-  #deliveryform section container.precoCE div.botao1 div.button-gray {
+  #deliveryform container.precoCE div.botao1 div.button-gray {
     text-align: center;
     margin: 0;
     height: 54px;
@@ -1878,26 +1903,26 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #deliveryform section container.precoCE div.botao1 div.button-gray:hover {
+  #deliveryform container.precoCE div.botao1 div.button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #deliveryform section container.precoCE div.botao1 div.button-gray:active {
+  #deliveryform container.precoCE div.botao1 div.button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  #deliveryform section container.precoCE div.botao1 div.button-gray button {
+  #deliveryform container.precoCE div.botao1 div.button-gray button {
     font-size: 35px;
     font-weight: bold;
     border: none;
   }
-  #deliveryform section container.precoCE div.botao1 {
+  #deliveryform container.precoCE div.botao1 {
     flex-direction: column;
   }
-  #deliveryform section container.precoCE div.botao1 div.button-red {
+  #deliveryform container.precoCE div.botao1 div.button-red {
     text-align: center;
     margin: 0;
     height: 54px;
@@ -1924,15 +1949,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #deliveryform section container.precoCE div.botao1 div.button-red:hover {
+  #deliveryform container.precoCE div.botao1 div.button-red:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #deliveryform section container.precoCE div.botao1 div.button-red:active {
+  #deliveryform container.precoCE div.botao1 div.button-red:active {
     background-color: #ed1b24EE;
   }
-  #deliveryform section container.precoCE div.botao1 div.button-red button {
+  #deliveryform container.precoCE div.botao1 div.button-red button {
     font-size: 35px;
     font-weight: bold;
     border: none;
@@ -1940,24 +1965,24 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
 }
 @media (min-width: 992px) {
-  #deliveryform section {
+  #deliveryform {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  #deliveryform section container.precoCE {
+  #deliveryform container.precoCE {
     display: none;
   }
-  #deliveryform section container.precoPC {
+  #deliveryform container.precoPC {
     display: block;
     width: 30%;
   }
-  #deliveryform section container.precoPC {
+  #deliveryform container.precoPC {
     margin: 0;
     margin-right: 60px;
     margin-top: 30px;
   }
-  #deliveryform section container.precoPC .delivery {
+  #deliveryform container.precoPC .delivery {
     margin: 0px;
     margin-left: 50px;
     margin-right: calc(100% - 70%);
@@ -1965,70 +1990,70 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-direction: column;
     margin-top: 120px;
   }
-  #deliveryform section container.precoPC .delivery h1 {
+  #deliveryform container.precoPC .delivery h1 {
     margin: 0px;
     font-size: 48px;
     font-family: "Roboto";
     font-weight: bold;
   }
-  #deliveryform section container.precoPC .delivery hr {
+  #deliveryform container.precoPC .delivery hr {
     width: 75px;
     margin: 0px;
     margin-bottom: 50px;
     height: 1px;
     border: solid 2px var(--red);
   }
-  #deliveryform section container.precoPC container.precoCE .Pedido h1 {
+  #deliveryform container.precoCE .Pedido h1 {
     margin: 0px;
     font-size: 40px;
     font-family: "Roboto";
     font-weight: bold;
     margin-left: 50px;
   }
-  #deliveryform section container.precoPC container.precoCE .Pedido span {
+  #deliveryform container.precoCE .Pedido span {
     color: var(--red);
     font-size: 40px;
     font-family: "Roboto";
     margin-left: calc(100% - 80%);
   }
-  #deliveryform section container.precoPC h3 {
+  #deliveryform h3 {
     margin-left: 25px;
     font-size: 25px;
     font-family: "Roboto";
   }
-  #deliveryform section container.precoPC .valor {
+  #deliveryform .valor {
     width: 80%;
   }
-  #deliveryform section container.precoPC .valor h3 {
+  #deliveryform .valor h3 {
     margin: 0;
     margin-left: 25px;
     font-size: 25px;
     margin-bottom: 46px;
     font-family: "Roboto";
   }
-  #deliveryform section container.precoPC .valor span {
+  #deliveryform .valor span {
     font-size: 25px;
     color: var(--red);
     margin-left: 198px;
     font-family: "Roboto";
   }
-  #deliveryform section container form .field {
+  #deliveryform container form .field {
     height: 73px;
     width: 522px;
     margin-left: 48px;
     margin-bottom: 20px;
   }
-  #deliveryform section container form .field label {
+  #deliveryform container form .field label {
     font-size: 21px;
     align-items: center;
     font-family: "Roboto";
     font-weight: bold;
     margin-top: 10px;
   }
-  #deliveryform section container.precoPC .botao2 {
+  #deliveryform container.precoPC .botao2 {
     flex-direction: row;
   }
-  #deliveryform section container.precoPC .botao2 .button-gray {
+  #deliveryform container.precoPC .botao2 .button-gray {
     height: 50px;
     text-align: center;
     margin: 0;
@@ -2057,26 +2082,26 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-bottom: 20px;
     margin-left: -100px;
   }
-  #deliveryform section container.precoPC .botao2 .button-gray:hover {
+  #deliveryform container.precoPC .botao2 .button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #deliveryform section container.precoPC .botao2 .button-gray:active {
+  #deliveryform container.precoPC .botao2 .button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  #deliveryform section container.precoPC .botao2 .button-gray button {
+  #deliveryform container.precoPC .botao2 .button-gray button {
     font-size: 35px;
     font-weight: bold;
     border: none;
   }
-  #deliveryform section container.precoPC .botao2 {
+  #deliveryform container.precoPC .botao2 {
     flex-direction: row;
   }
-  #deliveryform section container.precoPC .botao2 .button-red {
+  #deliveryform container.precoPC .botao2 .button-red {
     text-align: center;
     height: 60px;
     margin: 0;
@@ -2104,15 +2129,112 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #deliveryform section container.precoPC .botao2 .button-red:hover {
+  #deliveryform container.precoPC .botao2 .button-red:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #deliveryform section container.precoPC .botao2 .button-red:active {
+  #deliveryform container.precoPC .botao2 .button-red:active {
     background-color: #ed1b24EE;
   }
-  #deliveryform section container.precoPC .botao2 .button-red button {
+  #deliveryform container.precoPC .botao2 .button-red button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+    background-color: #ed1b24EE;
+  }
+  #deliveryform container.precoPC .botao2 .button-red button a {
+    text-decoration: none;
+    color: white;
+  }
+  #deliveryform container.precoPC .botao2 {
+    flex-direction: row;
+  }
+  #deliveryform container.precoPC .botao2 .button-gray {
+    height: 50px;
+    text-align: center;
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    color: #555555;
+    border: 2px solid #555555;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 60px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: -100px;
+  }
+  #deliveryform container.precoPC .botao2 .button-gray:hover {
+    background-color: #707070;
+    border-color: #707070;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  #deliveryform container.precoPC .botao2 .button-gray:active {
+    background-color: rgba(131, 131, 131, 0.9);
+    color: var(--white);
+    border-color: rgba(131, 131, 131, 0.9);
+  }
+  #deliveryform container.precoPC .botao2 .button-gray button {
+    font-size: 35px;
+    font-weight: bold;
+    border: none;
+  }
+  #deliveryform container.precoPC .botao2 {
+    flex-direction: row;
+  }
+  #deliveryform container.precoPC .botao2 .button-red {
+    text-align: center;
+    height: 60px;
+    margin: 0;
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    width: 270px;
+    height: 60px;
+    margin-left: calc(100% - 85%);
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  #deliveryform container.precoPC .botao2 .button-red:hover {
+    background-color: #b10000;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  #deliveryform container.precoPC .botao2 .button-red:active {
+    background-color: #ed1b24EE;
+  }
+  #deliveryform container.precoPC .botao2 .button-red button {
     font-size: 35px;
     font-weight: bold;
     border: none;

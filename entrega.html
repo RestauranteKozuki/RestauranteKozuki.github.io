@@ -4,16 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Kozuki</title>
+    <title>Delivery - Entrega</title>
     <meta name="description" content="O melhor restaurante japonês">
     <link rel="preload" href="assets/css/main.css" as="style" />
     <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
     <header class="header">
         <div>
-            <a class="skip-link" href="main#about">Skip to main</a>
+            <a class="skip-link" href="main#about">Main</a>
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/images/logo.svg" alt="Logo">
@@ -50,33 +67,31 @@
                     <div class="menu-item"><a href="delivery.html">Delivery</a></div>
                     <div class="menu-item"><a href="events.html">Eventos</a></div>
                     <div class="menu-item"><a href="reservation.html">Reserva</a></div>
-                    <div class="menu-item"><a href="contact.html">Contato</a></div>
+                    <div class="menu-item"><a id="contact-link" href="#footer" onclick="">Contato</a></div>
                 </div>
             </nav>
         </div>
     </header>
-    <main id="page-delivery">
-        <section>
-            <div  class="delivery">
-                <h1>Delivery</h1>       
-                <hr>
-                
-                <h2>Obrigado!</h2>
-                <h2>Seu pedido foi realizado com sucesso.</h2>
-                <h2>Logo você receberá seu pedido no conforto da sua casa!</h2>
 
-                
-            </div>
+    <section id="entrega">
+        <div  class="delivery">
+            <h1>Tudo pronto!</h1>       
+            <hr>
+            
+            <h2>Obrigado!</h2>
+            <h2>Seu pedido foi realizado com sucesso.</h2>
+            <h2>Logo você receberá seu pedido no conforto da sua casa!</h2>
 
             
-        
-            <img id="ImageCelular" src="assets/images/delivery_girl.png" alt="">
+        </div>
 
-        </section>
-    </main>
+            
+        <img id="ImageCelular" src="assets/images/delivery_girl.png" alt="">
+
+    </section>
 
 
-    <footer class="footer">
+    <footer id="footer">
         <div>
             <div class="wrapper">
                 <ul class="contact">
@@ -85,7 +100,7 @@
                     <li>Horário: 9:00 às 23:00 hrs</li>
                     <li>Avenida Paulista, 1234</li>
                     <li>+55 11 012345678</li>
-                    <li>kazukirj@kazuki.com.br</li>
+                    <li>kozukisp@kazuki.com.br</li>
                 </ul>
                 <ul class="contact">
                     <li class="title">Rio de Janeiro</li>
@@ -93,7 +108,7 @@
                     <li>Horário: 9:00 às 23:00 hrs</li>
                     <li>Avenida Brasil, 1234</li>
                     <li>+55 11 012345678</li>
-                    <li>kazukirj@kazuki.com.br</li>
+                    <li>kozukirj@kazuki.com.br</li>
                 </ul>
             </div>
 
@@ -116,6 +131,7 @@
                     <li>
                         <a href="delivery.html">Delivery</a>
                     </li>
+
                     <li>
                         <a href="about.html">Quem somos</a>
                     </li>
@@ -148,15 +164,15 @@
 
             </div>
         </div>
-        <h6 class="credits">
+        <span class="credits">
             <span>Feito com 💚 pela equipe</span>
             <span class="span">
                 <a href="https://xd.adobe.com/view/b655d453-8dcf-469a-80cf-6ebbfa38c939-e306/">verde</a>
             </span>
-        </h6>
+        </span>
     </footer>
 
-    <script src="assets/scripts/index.js"></script>
+<script src="assets/scripts/index.js"></script>
 
 </body>
 
