@@ -578,7 +578,14 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   border: none;
   align-self: center;
 }
-#home #prime-hero .home-footer .text-at-home button {
+#home #prime-hero .home-footer .text-at-home a {
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+#home #prime-hero .home-footer .text-at-home a button {
   height: 54px;
   display: flex;
   border: none;
@@ -597,20 +604,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-}
-#home #prime-hero .home-footer .text-at-home button:hover {
-  background-color: #b10000;
-  color: var(--white);
-  box-shadow: 4px 4px 8px -6px var(--black);
-}
-#home #prime-hero .home-footer .text-at-home button:active {
-  background-color: #ed1b24EE;
-}
-#home #prime-hero .home-footer .text-at-home button a {
   font-weight: 400;
   text-decoration: none;
   color: var(--white);
   text-transform: uppercase;
+}
+#home #prime-hero .home-footer .text-at-home a button:hover {
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
+}
+#home #prime-hero .home-footer .text-at-home a button:active {
+  background-color: #ed1b24EE;
 }
 #home #second-hero {
   flex-direction: column;
@@ -636,7 +641,14 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin-top: 20px;
   align-items: center;
 }
-#home #second-hero button {
+#home #second-hero a {
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+#home #second-hero a button {
   height: 54px;
   display: flex;
   border: none;
@@ -655,21 +667,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin: 20px 0;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
 }
-#home #second-hero button:hover {
+#home #second-hero a button:hover {
   background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
-#home #second-hero button:active {
+#home #second-hero a button:active {
   background-color: #ed1b24EE;
-}
-#home #second-hero button a {
-  font-weight: 400;
-  text-decoration: none;
-  color: var(--white);
-  margin: 20px;
 }
 #home #third-hero {
   position: relative;
@@ -736,7 +745,19 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   padding: 0 20px;
   text-align: center;
 }
-#home #fourth-hero .wrapper button {
+#home #fourth-hero .wrapper a {
+  margin-right: 33px;
+  position: relative;
+  right: 0;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
+  width: 230px;
+  white-space: pre;
+  margin-bottom: 50px;
+}
+#home #fourth-hero .wrapper a button {
   height: 54px;
   display: flex;
   border: none;
@@ -755,24 +776,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-  margin-bottom: 50px;
-  white-space: pre;
-  width: 230px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--white);
+  text-transform: uppercase;
 }
-#home #fourth-hero .wrapper button:hover {
+#home #fourth-hero .wrapper a button:hover {
   background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
-#home #fourth-hero .wrapper button:active {
+#home #fourth-hero .wrapper a button:active {
   background-color: #ed1b24EE;
-}
-#home #fourth-hero .wrapper button a {
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--white);
-  letter-spacing: 1px;
 }
 #home .img {
   width: 100%;

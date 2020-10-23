@@ -49,10 +49,14 @@
                         align-self: center;
                     }
                 }
-                
-                button {
-                    @include btn-red;
-                    a {
+                a {
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: var(--white);
+                    text-transform: uppercase;
+                    margin: 20px 0;
+                    button {
+                        @include btn-red;
                         font-weight: 400;
                         text-decoration: none;
                         color: var(--white);
@@ -86,16 +90,19 @@
             margin-top: 20px;
             align-items: center;
         }
-        button {
-            @include btn-red;
+        a {
+            font-weight: 400;
+            text-decoration: none;
+            color: var(--white);
+            text-transform: uppercase;
             margin: 20px 0;
-            a {
+            button {
+                @include btn-red;
                 font-weight: 400;
                 text-decoration: none;
                 color: var(--white);
-                margin: 20px;
+                text-transform: uppercase;
             }
-            
         }
     }
     #third-hero {
@@ -163,17 +170,23 @@
                     text-align: center;
                 }
             }
-            button {
-                @include btn-red;
-                margin-bottom: 50px;
-                white-space: pre;
+            a {
+                margin-right: 33px;
+                position: relative;
+                right: 0;
+                font-weight: 400;
+                text-decoration: none;
+                color: var(--white);
+                text-transform: uppercase;
                 width: 230px;
-                a {
+                white-space: pre;
+                margin-bottom: 50px;
+                button {
+                    @include btn-red;
                     font-weight: 400;
                     text-decoration: none;
-                    text-transform: uppercase;
                     color: var(--white);
-                    letter-spacing: 1px;
+                    text-transform: uppercase;
                 }
             }
         }
