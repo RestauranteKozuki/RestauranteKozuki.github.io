@@ -10,7 +10,8 @@
             flex-direction: row;
             background: url(../images/comida-japonesa.jpg);
             background-repeat: no-repeat;
-            background-size: cover ;     
+            background-size: cover;
+            background-attachment: fixed;
             align-items: center;
             justify-content: center;
             #overlay {
@@ -40,9 +41,9 @@
                         hr {
                         position: absolute;
                         background-color: red;
-                        left: calc(50% - 25px);
+                        left: calc(50% - 40px);
                         height: 5px;
-                        width: 50px;
+                        width: 80px;
                         margin: 15px 0;
                         border: none;
                         align-self: center;
@@ -114,6 +115,7 @@
                 .title {
                     position: relative;
                     h2 {
+                        white-space: pre;
                         margin-bottom: 15px;
                     }
                     hr {
@@ -142,7 +144,7 @@
         .wrapper {
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 50px;
             .text{
                 align-items: center;
                 flex-direction: column;
@@ -158,7 +160,7 @@
                     margin-bottom: 20px;
                     font-size: 20px;
                     padding: 0 20px;
-                    text-align: right;
+                    text-align: center;
                 }
             }
             button {
@@ -208,20 +210,9 @@
     }
 }
 
-@media (min-width: 768px) {
-    #home {
-        #fourth-hero {
-            .wrapper {
-                margin-top: 0;
-            }
-        }
-    }
-}
-
 @media (min-width: 850px) {
     #home {
         #prime-hero {
-            height: 80vh;
             .home-footer {
                 background-attachment: fixed;
             }
@@ -229,6 +220,7 @@
         #fourth-hero {
             position: relative;
             .wrapper {
+                margin-top: 0;
                 height: 100%;
                 position: relative;
                 z-index: 2;
@@ -251,6 +243,7 @@
                         }
                     }
                     .description {
+                        text-align: right;
                         padding: 0;
                     }
                 }
