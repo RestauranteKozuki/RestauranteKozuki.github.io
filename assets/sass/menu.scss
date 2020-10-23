@@ -1,5 +1,4 @@
 #menu-page {
-   
     max-width: 100vw;
     overflow: hidden;
     padding: 20px;
@@ -9,8 +8,6 @@
         width:100%;
         margin-bottom: 20px;
 
-       
-        
        .title {
            margin-top:100px;
            &.sub {
@@ -36,9 +33,7 @@
               }
           }
 
-     
-         
-            .arrow-container {
+        .arrow-container {
                 display: none;
             }
         }
@@ -54,8 +49,6 @@
             }
         }
 
-        
-      
     }
 }
 
@@ -96,8 +89,7 @@
 
 @media (min-width: 768px)  {
 #menu-page {
-   
-    section {
+   section {
         .container {
            flex-direction: row;
            flex-wrap: wrap;
@@ -131,26 +123,25 @@
                   .card {
                       margin:10px;
                       min-width:200px;
-                      .text-card {
-                        padding: 12px 12px;
-                        height: 100%;
-                        
-                        justify-content: space-around;
-                          h3 {
-                              font-size:24px;
-                          }
-                          .text {
-                              font-size:14px;
-                          }
-                          .price {
-                              font-size: 20px;
-                          }
-                      }
-                      &.hide-mobile {
-                          display: flex;
-                      }
-                  }
-                        .arrow-container{
+                        .text-card {
+                            padding: 12px 12px;
+                            height: 100%;
+                            justify-content: space-around;
+                                h3 {
+                                    font-size:24px;
+                                }
+                                .text {
+                                    font-size:14px;
+                                }
+                                .price {
+                                    font-size: 20px;
+                                }
+                            }
+                        &.hide-mobile {
+                            display: flex;
+                        }
+                    }
+                    .arrow-container{
                             display: flex;
                             position: absolute;
                             left: calc(100vw - 142px);
