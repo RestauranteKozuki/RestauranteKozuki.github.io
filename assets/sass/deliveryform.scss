@@ -4,7 +4,7 @@
     .precoPC {
         display: none;
     }
-    hr {
+    .hr {
         display: none;
     }
     .wrapper {
@@ -76,14 +76,26 @@
             }
         }
         .buttons-mobile {
+            display: block;
             flex-direction: column;
-            max-width: 300px;
-            button[type="button"] {
-                @include btn-gray;
-                margin-bottom: 20px;
-            }
-            button[type="submit"] {
-                @include btn-red;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            a {
+                text-decoration: none;
+                button[type="button"] {
+                    @include btn-gray;
+                    display: inline;
+                    width: 100%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                    margin-right: 17px;
+                }
+                button[type="submit"] {
+                    @include btn-red;
+                    width: 100%;
+                    display: inline;
+                    margin: 0;
+                }
             }
         }
     }
@@ -112,17 +124,20 @@
                     flex-direction: row;
                     flex-wrap: nowrap;
                     justify-content: space-between;
-                    button[type="button"] {
-                        @include btn-gray;
-                        display: inline;
-                        margin: 0;
-                        margin-bottom: 20px;
-                        margin-right: 17px;
-                    }
-                    button[type="submit"] {
-                        @include btn-red;
-                        display: inline;
-                        margin: 0;
+                    a {
+                        text-decoration: none;
+                        button[type="button"] {
+                            @include btn-gray;
+                            display: inline;
+                            margin: 0;
+                            margin-bottom: 20px;
+                            margin-right: 17px;
+                        }
+                        button[type="submit"] {
+                            @include btn-red;
+                            display: inline;
+                            margin: 0;
+                        }
                     }
                 }
             }
@@ -150,7 +165,7 @@
                 width: 300px;
             }
         }
-        hr {
+        .hr {
             display: block;
         }
     }

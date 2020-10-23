@@ -1793,7 +1793,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #deliveryform .precoPC {
   display: none;
 }
-#deliveryform hr {
+#deliveryform .hr {
   display: none;
 }
 #deliveryform .wrapper {
@@ -1864,10 +1864,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   color: var(--red);
 }
 #deliveryform .precoCE .buttons-mobile {
+  display: block;
   flex-direction: column;
-  max-width: 300px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
-#deliveryform .precoCE .buttons-mobile button[type=button] {
+#deliveryform .precoCE .buttons-mobile a {
+  text-decoration: none;
+}
+#deliveryform .precoCE .buttons-mobile a button[type=button] {
   height: 54px;
   display: flex;
   border: none;
@@ -1886,20 +1891,24 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  display: inline;
+  width: 100%;
+  margin: 0;
   margin-bottom: 20px;
+  margin-right: 17px;
 }
-#deliveryform .precoCE .buttons-mobile button[type=button]:hover {
+#deliveryform .precoCE .buttons-mobile a button[type=button]:hover {
   background-color: #707070;
   border-color: #707070;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
-#deliveryform .precoCE .buttons-mobile button[type=button]:active {
+#deliveryform .precoCE .buttons-mobile a button[type=button]:active {
   background-color: rgba(131, 131, 131, 0.9);
   color: var(--white);
   border-color: rgba(131, 131, 131, 0.9);
 }
-#deliveryform .precoCE .buttons-mobile button[type=submit] {
+#deliveryform .precoCE .buttons-mobile a button[type=submit] {
   height: 54px;
   display: flex;
   border: none;
@@ -1918,13 +1927,16 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   box-shadow: 4px 4px 8px -5px var(--black);
   padding: 0 50px;
   transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  width: 100%;
+  display: inline;
+  margin: 0;
 }
-#deliveryform .precoCE .buttons-mobile button[type=submit]:hover {
+#deliveryform .precoCE .buttons-mobile a button[type=submit]:hover {
   background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
-#deliveryform .precoCE .buttons-mobile button[type=submit]:active {
+#deliveryform .precoCE .buttons-mobile a button[type=submit]:active {
   background-color: #ed1b24EE;
 }
 
@@ -1952,7 +1964,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-wrap: nowrap;
     justify-content: space-between;
   }
-  #deliveryform .wrapper form .buttons-desktop button[type=button] {
+  #deliveryform .wrapper form .buttons-desktop a {
+    text-decoration: none;
+  }
+  #deliveryform .wrapper form .buttons-desktop a button[type=button] {
     height: 54px;
     display: flex;
     border: none;
@@ -1976,18 +1991,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-bottom: 20px;
     margin-right: 17px;
   }
-  #deliveryform .wrapper form .buttons-desktop button[type=button]:hover {
+  #deliveryform .wrapper form .buttons-desktop a button[type=button]:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #deliveryform .wrapper form .buttons-desktop button[type=button]:active {
+  #deliveryform .wrapper form .buttons-desktop a button[type=button]:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  #deliveryform .wrapper form .buttons-desktop button[type=submit] {
+  #deliveryform .wrapper form .buttons-desktop a button[type=submit] {
     height: 54px;
     display: flex;
     border: none;
@@ -2009,12 +2024,12 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     display: inline;
     margin: 0;
   }
-  #deliveryform .wrapper form .buttons-desktop button[type=submit]:hover {
+  #deliveryform .wrapper form .buttons-desktop a button[type=submit]:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #deliveryform .wrapper form .buttons-desktop button[type=submit]:active {
+  #deliveryform .wrapper form .buttons-desktop a button[type=submit]:active {
     background-color: #ed1b24EE;
   }
   #deliveryform .precoCE {
@@ -2034,7 +2049,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   #deliveryform .precoCE .orders-wrapper {
     width: 300px;
   }
-  #deliveryform hr {
+  #deliveryform .hr {
     display: block;
   }
 }
