@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda+One&display=swap");
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -85,12 +87,6 @@ hr.divider {
 
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Roboto";
   src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
@@ -115,32 +111,14 @@ hr.divider {
 }
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Medium Italic"), url("../fonts/Roboto-MediumItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto";
   src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Bold Italic"), url("../fonts/Roboto-BoldItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Roboto";
   src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format("truetype");
   font-style: normal;
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Black Italic"), url("../fonts/Roboto-BlackItalic.ttf") format("truetype");
-  font-style: italic;
   font-weight: 900;
 }
 form {
@@ -439,7 +417,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #footer > div .wrapper ul li {
   color: var(--white);
   font-size: 20px;
-  font-weight: normal;
   margin-bottom: 14px;
 }
 #footer > div .wrapper ul li.title {
@@ -524,6 +501,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     padding: 0;
     display: block;
     color: var(--white);
+    font-family: "Merienda One", cursive;
     font-size: 32px;
     text-align: center;
   }
@@ -561,6 +539,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   background: url(../images/comida-japonesa.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   align-items: center;
   justify-content: center;
 }
@@ -583,6 +562,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin-top: 50px;
 }
 #home #prime-hero .home-footer .text-at-home h2 {
+  font-family: "Merienda One", cursive;
   font-size: 40px;
   color: var(--white);
   font-weight: 400;
@@ -591,9 +571,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #prime-hero .home-footer .text-at-home h2 hr {
   position: absolute;
   background-color: red;
-  left: calc(50% - 25px);
+  left: calc(50% - 40px);
   height: 5px;
-  width: 50px;
+  width: 80px;
   margin: 15px 0;
   border: none;
   align-self: center;
@@ -607,7 +587,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -665,7 +645,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -712,6 +692,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   position: relative;
 }
 #home #third-hero .wrapper .text .title h2 {
+  white-space: pre;
   margin-bottom: 15px;
 }
 #home #third-hero .wrapper .text .title hr {
@@ -731,13 +712,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #fourth-hero {
   background-color: #fafafa;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 0;
   width: 100%;
 }
 #home #fourth-hero .wrapper {
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 #home #fourth-hero .wrapper .text {
   align-items: center;
@@ -753,7 +734,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin-bottom: 20px;
   font-size: 20px;
   padding: 0 20px;
-  text-align: right;
+  text-align: center;
 }
 #home #fourth-hero .wrapper button {
   height: 54px;
@@ -764,7 +745,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -797,8 +778,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 100%;
   height: 300px;
   background-image: url("/assets/images/bag1920.jpg");
-  background-size: cover;
+  background-size: 700px;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 0 -30px;
 }
 
 @media (min-width: 576px) {
@@ -818,19 +801,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     width: 100%;
   }
 }
-@media (min-width: 768px) {
-  #home #fourth-hero .wrapper {
-    margin-top: 20px;
-  }
-}
 @media (min-width: 850px) {
-  #home #prime-hero {
-    height: 80vh;
+  #home #prime-hero .home-footer {
+    background-attachment: fixed;
   }
   #home #fourth-hero {
     position: relative;
   }
   #home #fourth-hero .wrapper {
+    margin-top: 0;
     height: 100%;
     position: relative;
     z-index: 2;
@@ -855,11 +834,16 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     bottom: -5px;
   }
   #home #fourth-hero .wrapper .text .description {
+    text-align: right;
     padding: 0;
   }
   #home #fourth-hero .img {
     height: 500px;
     z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: -100px;
   }
 }
 @media (min-width: 1100px) {
@@ -928,16 +912,16 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     width: 500px;
   }
   #home #fourth-hero .img {
-    background-size: contain;
+    background-size: cover;
   }
 }
 @media (min-width: 1441px) {
   #home #second-hero {
-    max-width: 1200px;
+    max-width: var(--space-big-desktop);
     margin: 50px auto;
   }
   #home #third-hero .wrapper {
-    max-width: 1200px;
+    max-width: var(--space-big-desktop);
     margin: 50px auto;
   }
 }
@@ -983,7 +967,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1230,7 +1214,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1399,7 +1383,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1507,7 +1491,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1636,7 +1620,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-decoration: none;
   outline: none;
   border-radius: var(--border-radius);
@@ -1764,10 +1748,10 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
 }
 @media (min-width: 320px) {
-  #page-entrega section {
+  #entrega {
     display: block;
   }
-  #page-entrega section .delivery {
+  #entrega .delivery {
     margin: 0px;
     margin-left: 50px;
     margin-right: calc(100% - 70%);
@@ -1775,99 +1759,126 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-direction: column;
     margin-top: 120px;
   }
-}
-@media (min-width: 992px) {
-  #entrega section {
-    display: flex;
-  }
-  #entrega section div .delivery h2 {
-    margin-bottom: 50px;
-  }
-  #entrega section img {
-    width: 400px;
-    height: 400px;
-    margin-right: 10%;
-  }
-}
-@media (min-width: 320px) {
-  #delivery-form section {
-    display: block;
-  }
-  #delivery-form section container.precoPC {
-    display: none;
-  }
-  #delivery-form section .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  #delivery-form section .delivery h1 {
+  #entrega .delivery h1 {
     margin: 0px;
     font-size: 48px;
     font-family: "Roboto";
     font-weight: bold;
   }
-  #delivery-form section .delivery hr {
+  #entrega .delivery h2 {
+    margin: 0px;
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+  #entrega .delivery hr {
     width: 75px;
     margin: 0px;
     margin-bottom: 50px;
     height: 1px;
     border: solid 2px var(--red);
   }
-  #delivery-form section .Pedido h1 {
+  #entrega img {
+    width: 274px;
+    height: 274px;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+  }
+}
+@media (min-width: 992px) {
+  #entrega {
+    display: flex;
+  }
+  #entrega div .delivery h2 {
+    margin-bottom: 50px;
+  }
+  #entrega img {
+    width: 400px;
+    height: 400px;
+    margin-right: 10%;
+  }
+}
+@media (min-width: 320px) {
+  #deliveryform {
+    display: block;
+  }
+  #deliveryform container.precoPC {
+    display: none;
+  }
+  #deliveryform .delivery {
+    margin: 0px;
+    margin-left: 50px;
+    margin-right: calc(100% - 70%);
+    display: block;
+    flex-direction: column;
+    margin-top: 120px;
+  }
+  #deliveryform .delivery h1 {
+    margin: 0px;
+    font-size: 48px;
+    font-family: "Roboto";
+    font-weight: bold;
+  }
+  #deliveryform .delivery hr {
+    width: 75px;
+    margin: 0px;
+    margin-bottom: 50px;
+    height: 1px;
+    border: solid 2px var(--red);
+  }
+  #deliveryform .Pedido h1 {
     margin: 0px;
     font-size: 40px;
     font-family: "Roboto";
     font-weight: bold;
     margin-left: 50px;
   }
-  #delivery-form section .Pedido span {
+  #deliveryform .Pedido span {
     color: var(--red);
     font-size: 40px;
     font-family: "Roboto";
     margin-left: calc(100% - 80%);
   }
-  #delivery-form section form .field {
+  #deliveryform form .field {
     height: 73px;
     width: 302px;
     margin-left: 48px;
     margin-bottom: 20px;
   }
-  #delivery-form section form .field label {
+  #deliveryform form .field label {
     font-size: 21px;
     align-items: center;
     font-family: "Roboto";
     font-weight: bold;
     margin-top: 10px;
   }
-  #delivery-form section h3 {
+  #deliveryform h3 {
     margin-left: 25px;
     font-size: 25px;
     font-family: "Roboto";
   }
-  #delivery-form section .valor {
+  #deliveryform .valor {
     width: 80%;
   }
-  #delivery-form section .valor h3 {
+  #deliveryform .valor h3 {
     margin: 0;
     margin-left: 25px;
     font-size: 25px;
     margin-bottom: 46px;
     font-family: "Roboto";
   }
-  #delivery-form section .valor span {
+  #deliveryform .valor span {
     font-size: 25px;
     color: var(--red);
     margin-left: 198px;
     font-family: "Roboto";
   }
-  #delivery-form section container.precoCE div.botao1 {
+  #deliveryform container.precoCE div.botao1 {
     flex-direction: column;
   }
-  #delivery-form section container.precoCE div.botao1 div.button-gray {
+  #deliveryform container.precoCE div.botao1 div.button-gray {
     text-align: center;
     margin: 0;
     height: 54px;
@@ -1894,26 +1905,26 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #delivery-form section container.precoCE div.botao1 div.button-gray:hover {
+  #deliveryform container.precoCE div.botao1 div.button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #delivery-form section container.precoCE div.botao1 div.button-gray:active {
+  #deliveryform container.precoCE div.botao1 div.button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  #delivery-form section container.precoCE div.botao1 div.button-gray button {
+  #deliveryform container.precoCE div.botao1 div.button-gray button {
     font-size: 35px;
     font-weight: bold;
     border: none;
   }
-  #delivery-form section container.precoCE div.botao1 {
+  #deliveryform container.precoCE div.botao1 {
     flex-direction: column;
   }
-  #delivery-form section container.precoCE div.botao1 div.button-red {
+  #deliveryform container.precoCE div.botao1 div.button-red {
     text-align: center;
     margin: 0;
     height: 54px;
@@ -1924,7 +1935,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     outline: none;
     border-radius: var(--border-radius);
@@ -1940,15 +1951,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #delivery-form section container.precoCE div.botao1 div.button-red:hover {
+  #deliveryform container.precoCE div.botao1 div.button-red:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #delivery-form section container.precoCE div.botao1 div.button-red:active {
+  #deliveryform container.precoCE div.botao1 div.button-red:active {
     background-color: #ed1b24EE;
   }
-  #delivery-form section container.precoCE div.botao1 div.button-red button {
+  #deliveryform container.precoCE div.botao1 div.button-red button {
     font-size: 35px;
     font-weight: bold;
     border: none;
@@ -1956,24 +1967,24 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   }
 }
 @media (min-width: 992px) {
-  #delivery-form {
+  #deliveryform {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  #delivery-form container.precoCE {
+  #deliveryform container.precoCE {
     display: none;
   }
-  #delivery-form container.precoPC {
+  #deliveryform container.precoPC {
     display: block;
     width: 30%;
   }
-  #delivery-form container.precoPC {
+  #deliveryform container.precoPC {
     margin: 0;
     margin-right: 60px;
     margin-top: 30px;
   }
-  #delivery-form container.precoPC .delivery {
+  #deliveryform container.precoPC .delivery {
     margin: 0px;
     margin-left: 50px;
     margin-right: calc(100% - 70%);
@@ -1981,70 +1992,70 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-direction: column;
     margin-top: 120px;
   }
-  #delivery-form container.precoPC .delivery h1 {
+  #deliveryform container.precoPC .delivery h1 {
     margin: 0px;
     font-size: 48px;
     font-family: "Roboto";
     font-weight: bold;
   }
-  #delivery-form container.precoPC .delivery hr {
+  #deliveryform container.precoPC .delivery hr {
     width: 75px;
     margin: 0px;
     margin-bottom: 50px;
     height: 1px;
     border: solid 2px var(--red);
   }
-  #delivery-form container.precoPC container.precoCE .Pedido h1 {
+  #deliveryform container.precoPC container.precoCE .Pedido h1 {
     margin: 0px;
     font-size: 40px;
     font-family: "Roboto";
     font-weight: bold;
     margin-left: 50px;
   }
-  #delivery-form container.precoPC container.precoCE .Pedido span {
+  #deliveryform container.precoPC container.precoCE .Pedido span {
     color: var(--red);
     font-size: 40px;
     font-family: "Roboto";
     margin-left: calc(100% - 80%);
   }
-  #delivery-form container.precoPC h3 {
+  #deliveryform container.precoPC h3 {
     margin-left: 25px;
     font-size: 25px;
     font-family: "Roboto";
   }
-  #delivery-form container.precoPC .valor {
+  #deliveryform container.precoPC .valor {
     width: 80%;
   }
-  #delivery-form container.precoPC .valor h3 {
+  #deliveryform container.precoPC .valor h3 {
     margin: 0;
     margin-left: 25px;
     font-size: 25px;
     margin-bottom: 46px;
     font-family: "Roboto";
   }
-  #delivery-form container.precoPC .valor span {
+  #deliveryform container.precoPC .valor span {
     font-size: 25px;
     color: var(--red);
     margin-left: 198px;
     font-family: "Roboto";
   }
-  #delivery-form container form .field {
+  #deliveryform container form .field {
     height: 73px;
     width: 522px;
     margin-left: 48px;
     margin-bottom: 20px;
   }
-  #delivery-form container form .field label {
+  #deliveryform container form .field label {
     font-size: 21px;
     align-items: center;
     font-family: "Roboto";
     font-weight: bold;
     margin-top: 10px;
   }
-  #delivery-form container.precoPC .botao2 {
+  #deliveryform container.precoPC .botao2 {
     flex-direction: row;
   }
-  #delivery-form container.precoPC .botao2 .button-gray {
+  #deliveryform container.precoPC .botao2 .button-gray {
     height: 50px;
     text-align: center;
     margin: 0;
@@ -2073,26 +2084,26 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-bottom: 20px;
     margin-left: -100px;
   }
-  #delivery-form container.precoPC .botao2 .button-gray:hover {
+  #deliveryform container.precoPC .botao2 .button-gray:hover {
     background-color: #707070;
     border-color: #707070;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #delivery-form container.precoPC .botao2 .button-gray:active {
+  #deliveryform container.precoPC .botao2 .button-gray:active {
     background-color: rgba(131, 131, 131, 0.9);
     color: var(--white);
     border-color: rgba(131, 131, 131, 0.9);
   }
-  #delivery-form container.precoPC .botao2 .button-gray button {
+  #deliveryform container.precoPC .botao2 .button-gray button {
     font-size: 35px;
     font-weight: bold;
     border: none;
   }
-  #delivery-form container.precoPC .botao2 {
+  #deliveryform container.precoPC .botao2 {
     flex-direction: row;
   }
-  #delivery-form container.precoPC .botao2 .button-red {
+  #deliveryform container.precoPC .botao2 .button-red {
     text-align: center;
     height: 60px;
     margin: 0;
@@ -2104,7 +2115,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     outline: none;
     border-radius: var(--border-radius);
@@ -2120,19 +2131,23 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-top: 40px;
     margin-bottom: 20px;
   }
-  #delivery-form container.precoPC .botao2 .button-red:hover {
+  #deliveryform container.precoPC .botao2 .button-red:hover {
     background-color: #b10000;
     color: var(--white);
     box-shadow: 4px 4px 8px -6px var(--black);
   }
-  #delivery-form container.precoPC .botao2 .button-red:active {
+  #deliveryform container.precoPC .botao2 .button-red:active {
     background-color: #ed1b24EE;
   }
-  #delivery-form container.precoPC .botao2 .button-red button {
+  #deliveryform container.precoPC .botao2 .button-red button {
     font-size: 35px;
     font-weight: bold;
     border: none;
     background-color: #ed1b24EE;
+  }
+  #deliveryform container.precoPC .botao2 .button-red button a {
+    text-decoration: none;
+    color: white;
   }
 }
 #error {
