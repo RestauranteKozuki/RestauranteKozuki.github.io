@@ -87,12 +87,6 @@ hr.divider {
 
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Thin"), url("../fonts/Roboto-Thin.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Roboto";
   src: local("Roboto Light"), url("../fonts/Roboto-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
@@ -117,32 +111,14 @@ hr.divider {
 }
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Medium Italic"), url("../fonts/Roboto-MediumItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto";
   src: local("Roboto Bold"), url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto Bold Italic"), url("../fonts/Roboto-BoldItalic.ttf") format("truetype");
-  font-style: italic;
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Roboto";
   src: local("Roboto Black"), url("../fonts/Roboto-Black.ttf") format("truetype");
   font-style: normal;
-  font-weight: 900;
-}
-@font-face {
-  font-family: "Roboto";
-  src: local("Roboto Black Italic"), url("../fonts/Roboto-BlackItalic.ttf") format("truetype");
-  font-style: italic;
   font-weight: 900;
 }
 form {
@@ -563,6 +539,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   background: url(../images/comida-japonesa.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   align-items: center;
   justify-content: center;
 }
@@ -594,9 +571,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #prime-hero .home-footer .text-at-home h2 hr {
   position: absolute;
   background-color: red;
-  left: calc(50% - 25px);
+  left: calc(50% - 40px);
   height: 5px;
-  width: 50px;
+  width: 80px;
   margin: 15px 0;
   border: none;
   align-self: center;
@@ -715,6 +692,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   position: relative;
 }
 #home #third-hero .wrapper .text .title h2 {
+  white-space: pre;
   margin-bottom: 15px;
 }
 #home #third-hero .wrapper .text .title hr {
@@ -740,7 +718,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #fourth-hero .wrapper {
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 #home #fourth-hero .wrapper .text {
   align-items: center;
@@ -756,7 +734,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin-bottom: 20px;
   font-size: 20px;
   padding: 0 20px;
-  text-align: right;
+  text-align: center;
 }
 #home #fourth-hero .wrapper button {
   height: 54px;
@@ -823,15 +801,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     width: 100%;
   }
 }
-@media (min-width: 768px) {
-  #home #fourth-hero .wrapper {
-    margin-top: 0;
-  }
-}
 @media (min-width: 850px) {
-  #home #prime-hero {
-    height: 80vh;
-  }
   #home #prime-hero .home-footer {
     background-attachment: fixed;
   }
@@ -839,6 +809,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     position: relative;
   }
   #home #fourth-hero .wrapper {
+    margin-top: 0;
     height: 100%;
     position: relative;
     z-index: 2;
@@ -863,6 +834,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     bottom: -5px;
   }
   #home #fourth-hero .wrapper .text .description {
+    text-align: right;
     padding: 0;
   }
   #home #fourth-hero .img {
