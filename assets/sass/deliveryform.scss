@@ -1,347 +1,172 @@
-@media (min-width:320px)  {
-
 #deliveryform {
-    
-        display: block;
-            container.precoPC {
-                    display: none;
-                
+    display: block;
+    margin: 100px 20px;
+    .precoPC {
+        display: none;
+    }
+    hr {
+        display: none;
+    }
+    .wrapper {
+        flex-direction: column;
+        margin-bottom: 50px;
+        form {
+            max-width: 300px;
+            .field {
+                margin: 0;
+                margin-bottom: 20px;
             }
-
-            .delivery {
-                margin: 0px;
-                margin-left: 50px;
-                margin-right: calc(100% - 70%);
-                display: block;
+            .buttons-desktop {
+                display: none;
+            }
+        }
+    }
+    .precoCE {
+        flex-direction: column;
+        max-width: 300px;
+        .title-order {
+            h2 {
+                font-size: 30px;
+            }
+        }
+        .orders-wrapper {
+            flex-direction: column;
+            margin-bottom: 50px;
+            .order {
                 flex-direction: column;
-                margin-top: 120px;
-                
-                h1 {
-                    margin: 0px;       
-                    font-size: 48px;
-                    font-family: 'Roboto';
-                    font-weight: bold;            
-                }
-                
-                hr {           
-                    width: 75px;
-                    margin: 0px;
-                    margin-bottom: 50px;
-                    height: 1px;
-                    border: solid 2px var(--red);
-                    
-                }
-                
-            }
-        
-            .Pedido {
-                h1 {
-                    margin: 0px;       
-                    font-size: 40px;
-                    font-family: 'Roboto';
-                    font-weight: bold;
-                    margin-left: 50px;
-                }
-                span {
-                    color: var(--red);
-                    font-size: 40px;
-                    font-family: 'Roboto';
-                    margin-left: calc(100% - 80%);
-                    
-                }
-            }
-        
-
-            form {
-                .field {
-                    height: 73px;
-                    width: 302px;
-                    margin-left: 48px;
-                    margin-bottom: 20px;
-                    label {
-                        font-size: 21px;
-                        align-items: center;
-                        font-family: 'Roboto';
-                        font-weight: bold;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        
-            h3 {
-                margin-left: 25px;
-                font-size: 25px;
-                font-family: 'Roboto';
-            }
-        
-        
-            .valor {
-                width: 80%;
+                position: relative;
+                height: 100px;
+                margin-bottom: 20px;
+                max-width: 300px;
                 h3 {
-                    margin-left: 25px;
-                    font-size: 25px;
-                    font-family: 'Roboto';
+                    font-size: 24px;
+                    margin: 0;
                 }
-                span {
-                    font-size: 25px;               
-                    color: var(--red);
-                    margin-left: 198px;
-                    font-family: 'Roboto';           
+                .number {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: 24px;
+                    font-weight: 400;
                 }
-            }
-        
-
-            container.precoCE {
-                div.botao1 {
-                    flex-direction: column;            
-                    div.button-gray {
-                        text-align: center;                                            
-                        margin: 0;
-                        @include btn-gray;
-                        width: 270px;
-                        height: 60px; 
-                        margin-left: calc(100% - 85%);
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        button {          
-                            font-size: 35px;
-                            font-weight: bold;
-                            border: none;        
-                        }
-                    }
-                
-                }
-            }
-
-            container.precoCE {
-                div.botao1 {
-                    flex-direction: column;            
-                    div.button-red {
-                        text-align: center;                                            
-                        margin: 0;
-                        @include btn-red;
-                        width: 270px;
-                        height: 60px; 
-                        margin-left: calc(100% - 85%);
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        button {          
-                            font-size: 35px;
-                            font-weight: bold;
-                            border: none;
-                            background-color:#ed1b24EE;        
-                        }
-                    }
-                
+                .price {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 24px;
+                    font-weight: 600;
                 }
             }
         }
-    
+        .total {
+            flex-direction: row;
+            height: 50px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+                margin: 0;
+            }
+            span {
+                font-size: 32px;
+                font-weight: 600;
+                color: var(--red);
+            }
+        }
+        .buttons-mobile {
+            flex-direction: column;
+            max-width: 300px;
+            button[type="button"] {
+                @include btn-gray;
+                margin-bottom: 20px;
+            }
+            button[type="submit"] {
+                @include btn-red;
+            }
+        }
+    }
 }
 
+@media (min-width: 420px) {
+    #deliveryform {
+        margin: 120px 70px;
+    }
+}
 
-@media (min-width:992px)  {
+@media (min-width: 850px)  {
     #deliveryform {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
-        container.precoCE {
-            display: none;
-            
-        }
-        container.precoPC {
-            display: block;
-            width: 30%;
-        }
-
-        container.precoPC {
-            margin: 0;
-            margin-right: 60px;
-            margin-top: 30px;
-
-            .delivery {
-                margin: 0px;
-                margin-left: 50px;
-                margin-right: calc(100% - 70%);
-                display: block;
-                flex-direction: column;
-                margin-top: 120px;
-                
-                h1 {
-                    margin: 0px;       
-                    font-size: 48px;
-                    font-family: 'Roboto';
-                    font-weight: bold;            
-                }
-                
-                hr {           
-                    width: 75px;
-                    margin: 0px;
-                    margin-bottom: 50px;
-                    height: 1px;
-                    border: solid 2px var(--red);
-                    
-                }
-            }
-        }
-        
-        container.precoCE {
-            .Pedido {
-                h1 {
-                    margin: 0px;       
-                    font-size: 40px;
-                    font-family: 'Roboto';
-                    font-weight: bold;
-                    margin-left: 50px;
-                }
-                span {
-                    color: var(--red);
-                    font-size: 40px;
-                    font-family: 'Roboto';
-                    margin-left: calc(100% - 80%);
-                    
-                }
-            }
-        }
-        
-        h3 {
-            margin-left: 25px;
-            font-size: 25px;
-            font-family: 'Roboto';
-        }
-        
-        
-        .valor {
-            width: 80%;
-            h3 {
-                margin: 0;
-                margin-left: 25px;
-                font-size: 25px;
-                margin-bottom: 46px;
-                font-family: 'Roboto';
-            }
-            span {
-                font-size: 25px;               
-                color: var(--red);
-                margin-left: 198px;
-                font-family: 'Roboto';           
-            }
-        }
-        container {
+        margin: 100px 50px 50px;
+        .wrapper {
             form {
+                max-width: initial;
                 .field {
-                    height: 73px;
-                    width: 522px;
-                    margin-left: 48px;
-                    margin-bottom: 20px;
-                    label {
-                        font-size: 21px;
-                        align-items: center;
-                        font-family: 'Roboto';
-                        font-weight: bold;
-                        margin-top: 10px;
+                    width: 400px;
+                }
+                .buttons-desktop {
+                    display: block;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    button[type="button"] {
+                        @include btn-gray;
+                        display: inline;
+                        margin: 0;
+                        margin-bottom: 20px;
+                        margin-right: 17px;
+                    }
+                    button[type="submit"] {
+                        @include btn-red;
+                        display: inline;
+                        margin: 0;
                     }
                 }
             }
         }
-        container.precoPC {
-            .botao2 {
-                flex-direction: row;            
-                .button-gray {
-                    height: 50px;
-                    text-align: center;                                            
-                    margin: 0;
-                    @include btn-gray;
-                    width: 270px;
-                    height: 60px; 
-                    margin-left: calc(100% - 85%);
-                    margin-top: 40px;
-                    margin-bottom: 20px;
-                    margin-left: -100px;
-                    button {          
-                        font-size: 35px;
-                        font-weight: bold;
-                        border: none;        
-                    }
+        .precoCE {
+            max-width: initial;
+            .orders-wrapper {
+                width: 200px;
+                .order {
+                    max-width: initial;
                 }
             }
+            .buttons-mobile {
+                display: none;
+            }
         }
+            
+    }
+}
 
-        container.precoPC {
-            .botao2 {
-                flex-direction: row;            
-                .button-red {
-                    text-align: center;
-                    height: 60px;                                            
-                    margin: 0;
-                    @include btn-red;
-                    width: 270px;
-                    height: 60px; 
-                    margin-left: calc(100% - 85%);
-                    margin-top: 40px;
-                    margin-bottom: 20px;
-                    button {          
-                        font-size: 35px;
-                        font-weight: bold;
-                        border: none;
-                        background-color:#ed1b24EE;  
-                        a {
-                            text-decoration: none;
-                            color: white;
-                        }   
-                    }
-                }
+@media (min-width: 992px) {
+    #deliveryform {
+        .precoCE {
+            .orders-wrapper {
+                width: 300px;
             }
         }
-        container.precoPC {
-            .botao2 {
-                flex-direction: row;            
-                .button-gray {
-                    height: 50px;
-                    text-align: center;                                            
-                    margin: 0;
-                    @include btn-gray;
-                    width: 270px;
-                    height: 60px; 
-                    margin-left: calc(100% - 85%);
-                    margin-top: 40px;
-                    margin-bottom: 20px;
-                    margin-left: -100px;
-                    button {          
-                        font-size: 35px;
-                        
-                        font-weight: bold;
-                        border: none;        
-                    }
-                }
-            
-            }
+        hr {
+            display: block;
         }
+    }
+}
+@media (min-width: 1100px) {
+    #deliveryform {
+        .precoCE {
+            margin-right: 100px;
+        }
+    }
+}
 
-        container.precoPC {
-            .botao2 {
-                flex-direction: row;            
-                .button-red {
-                    text-align: center;
-                    height: 60px;                                            
-                    margin: 0;
-                    @include btn-red;
-                    width: 270px;
-                    height: 60px; 
-                    margin-left: calc(100% - 85%);
-                    margin-top: 40px;
-                    margin-bottom: 20px;
-                    button {          
-                        font-size: 35px;
-                        font-weight: bold;
-                        border: none;
-                        background-color:#ed1b24EE;        
-                    }
-                }
-            
-            }
-        }
-            
+@media (min-width: 1441px) {
+    #deliveryform {
+        max-width: 1200px;
+        width: 100%;
+        margin: 100px auto 50px;
     }
 }

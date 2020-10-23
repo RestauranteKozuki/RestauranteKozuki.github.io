@@ -1800,445 +1800,268 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     margin-right: 10%;
   }
 }
-@media (min-width: 320px) {
+#deliveryform {
+  display: block;
+  margin: 100px 20px;
+}
+#deliveryform .precoPC {
+  display: none;
+}
+#deliveryform hr {
+  display: none;
+}
+#deliveryform .wrapper {
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+#deliveryform .wrapper form {
+  max-width: 300px;
+}
+#deliveryform .wrapper form .field {
+  margin: 0;
+  margin-bottom: 20px;
+}
+#deliveryform .wrapper form .buttons-desktop {
+  display: none;
+}
+#deliveryform .precoCE {
+  flex-direction: column;
+  max-width: 300px;
+}
+#deliveryform .precoCE .title-order h2 {
+  font-size: 30px;
+}
+#deliveryform .precoCE .orders-wrapper {
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+#deliveryform .precoCE .orders-wrapper .order {
+  flex-direction: column;
+  position: relative;
+  height: 100px;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+#deliveryform .precoCE .orders-wrapper .order h3 {
+  font-size: 24px;
+  margin: 0;
+}
+#deliveryform .precoCE .orders-wrapper .order .number {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+#deliveryform .precoCE .orders-wrapper .order .price {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+#deliveryform .precoCE .total {
+  flex-direction: row;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+#deliveryform .precoCE .total h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+#deliveryform .precoCE .total span {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--red);
+}
+#deliveryform .precoCE .buttons-mobile {
+  flex-direction: column;
+  max-width: 300px;
+}
+#deliveryform .precoCE .buttons-mobile button[type=button] {
+  height: 54px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  color: #555555;
+  border: 2px solid #555555;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  margin-bottom: 20px;
+}
+#deliveryform .precoCE .buttons-mobile button[type=button]:hover {
+  background-color: #707070;
+  border-color: #707070;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
+}
+#deliveryform .precoCE .buttons-mobile button[type=button]:active {
+  background-color: rgba(131, 131, 131, 0.9);
+  color: var(--white);
+  border-color: rgba(131, 131, 131, 0.9);
+}
+#deliveryform .precoCE .buttons-mobile button[type=submit] {
+  height: 54px;
+  display: flex;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  outline: none;
+  border-radius: var(--border-radius);
+  background-color: var(--red);
+  color: var(--white);
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px -5px var(--black);
+  padding: 0 50px;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+#deliveryform .precoCE .buttons-mobile button[type=submit]:hover {
+  background-color: #b10000;
+  color: var(--white);
+  box-shadow: 4px 4px 8px -6px var(--black);
+}
+#deliveryform .precoCE .buttons-mobile button[type=submit]:active {
+  background-color: #ed1b24EE;
+}
+
+@media (min-width: 420px) {
   #deliveryform {
-    display: block;
-  }
-  #deliveryform container.precoPC {
-    display: none;
-  }
-  #deliveryform .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  #deliveryform .delivery h1 {
-    margin: 0px;
-    font-size: 48px;
-    font-family: "Roboto";
-    font-weight: bold;
-  }
-  #deliveryform .delivery hr {
-    width: 75px;
-    margin: 0px;
-    margin-bottom: 50px;
-    height: 1px;
-    border: solid 2px var(--red);
-  }
-  #deliveryform .Pedido h1 {
-    margin: 0px;
-    font-size: 40px;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-left: 50px;
-  }
-  #deliveryform .Pedido span {
-    color: var(--red);
-    font-size: 40px;
-    font-family: "Roboto";
-    margin-left: calc(100% - 80%);
-  }
-  #deliveryform form .field {
-    height: 73px;
-    width: 302px;
-    margin-left: 48px;
-    margin-bottom: 20px;
-  }
-  #deliveryform form .field label {
-    font-size: 21px;
-    align-items: center;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  #deliveryform h3 {
-    margin-left: 25px;
-    font-size: 25px;
-    font-family: "Roboto";
-  }
-  #deliveryform .valor {
-    width: 80%;
-  }
-  #deliveryform .valor h3 {
-    margin-left: 25px;
-    font-size: 25px;
-    font-family: "Roboto";
-  }
-  #deliveryform .valor span {
-    font-size: 25px;
-    color: var(--red);
-    margin-left: 198px;
-    font-family: "Roboto";
-  }
-  #deliveryform container.precoCE div.botao1 {
-    flex-direction: column;
-  }
-  #deliveryform container.precoCE div.botao1 div.button-gray {
-    text-align: center;
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    color: #555555;
-    border: 2px solid #555555;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 60px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  #deliveryform container.precoCE div.botao1 div.button-gray:hover {
-    background-color: #707070;
-    border-color: #707070;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  #deliveryform container.precoCE div.botao1 div.button-gray:active {
-    background-color: rgba(131, 131, 131, 0.9);
-    color: var(--white);
-    border-color: rgba(131, 131, 131, 0.9);
-  }
-  #deliveryform container.precoCE div.botao1 div.button-gray button {
-    font-size: 35px;
-    font-weight: bold;
-    border: none;
-  }
-  #deliveryform container.precoCE div.botao1 {
-    flex-direction: column;
-  }
-  #deliveryform container.precoCE div.botao1 div.button-red {
-    text-align: center;
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 60px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  #deliveryform container.precoCE div.botao1 div.button-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  #deliveryform container.precoCE div.botao1 div.button-red:active {
-    background-color: #ed1b24EE;
-  }
-  #deliveryform container.precoCE div.botao1 div.button-red button {
-    font-size: 35px;
-    font-weight: bold;
-    border: none;
-    background-color: #ed1b24EE;
+    margin: 120px 70px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 850px) {
   #deliveryform {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 100px 50px 50px;
   }
-  #deliveryform container.precoCE {
+  #deliveryform .wrapper form {
+    max-width: initial;
+  }
+  #deliveryform .wrapper form .field {
+    width: 400px;
+  }
+  #deliveryform .wrapper form .buttons-desktop {
+    display: block;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  #deliveryform .wrapper form .buttons-desktop button[type=button] {
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    color: #555555;
+    border: 2px solid #555555;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    display: inline;
+    margin: 0;
+    margin-bottom: 20px;
+    margin-right: 17px;
+  }
+  #deliveryform .wrapper form .buttons-desktop button[type=button]:hover {
+    background-color: #707070;
+    border-color: #707070;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  #deliveryform .wrapper form .buttons-desktop button[type=button]:active {
+    background-color: rgba(131, 131, 131, 0.9);
+    color: var(--white);
+    border-color: rgba(131, 131, 131, 0.9);
+  }
+  #deliveryform .wrapper form .buttons-desktop button[type=submit] {
+    height: 54px;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    box-shadow: 4px 4px 8px -5px var(--black);
+    padding: 0 50px;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+    display: inline;
+    margin: 0;
+  }
+  #deliveryform .wrapper form .buttons-desktop button[type=submit]:hover {
+    background-color: #b10000;
+    color: var(--white);
+    box-shadow: 4px 4px 8px -6px var(--black);
+  }
+  #deliveryform .wrapper form .buttons-desktop button[type=submit]:active {
+    background-color: #ed1b24EE;
+  }
+  #deliveryform .precoCE {
+    max-width: initial;
+  }
+  #deliveryform .precoCE .orders-wrapper {
+    width: 200px;
+  }
+  #deliveryform .precoCE .orders-wrapper .order {
+    max-width: initial;
+  }
+  #deliveryform .precoCE .buttons-mobile {
     display: none;
   }
-  #deliveryform container.precoPC {
+}
+@media (min-width: 992px) {
+  #deliveryform .precoCE .orders-wrapper {
+    width: 300px;
+  }
+  #deliveryform hr {
     display: block;
-    width: 30%;
   }
-  #deliveryform container.precoPC {
-    margin: 0;
-    margin-right: 60px;
-    margin-top: 30px;
+}
+@media (min-width: 1100px) {
+  #deliveryform .precoCE {
+    margin-right: 100px;
   }
-  #deliveryform container.precoPC .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  #deliveryform container.precoPC .delivery h1 {
-    margin: 0px;
-    font-size: 48px;
-    font-family: "Roboto";
-    font-weight: bold;
-  }
-  #deliveryform container.precoPC .delivery hr {
-    width: 75px;
-    margin: 0px;
-    margin-bottom: 50px;
-    height: 1px;
-    border: solid 2px var(--red);
-  }
-  #deliveryform container.precoCE .Pedido h1 {
-    margin: 0px;
-    font-size: 40px;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-left: 50px;
-  }
-  #deliveryform container.precoCE .Pedido span {
-    color: var(--red);
-    font-size: 40px;
-    font-family: "Roboto";
-    margin-left: calc(100% - 80%);
-  }
-  #deliveryform h3 {
-    margin-left: 25px;
-    font-size: 25px;
-    font-family: "Roboto";
-  }
-  #deliveryform .valor {
-    width: 80%;
-  }
-  #deliveryform .valor h3 {
-    margin: 0;
-    margin-left: 25px;
-    font-size: 25px;
-    margin-bottom: 46px;
-    font-family: "Roboto";
-  }
-  #deliveryform .valor span {
-    font-size: 25px;
-    color: var(--red);
-    margin-left: 198px;
-    font-family: "Roboto";
-  }
-  #deliveryform container form .field {
-    height: 73px;
-    width: 522px;
-    margin-left: 48px;
-    margin-bottom: 20px;
-  }
-  #deliveryform container form .field label {
-    font-size: 21px;
-    align-items: center;
-    font-family: "Roboto";
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  #deliveryform container.precoPC .botao2 {
-    flex-direction: row;
-  }
-  #deliveryform container.precoPC .botao2 .button-gray {
-    height: 50px;
-    text-align: center;
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    color: #555555;
-    border: 2px solid #555555;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 60px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin-left: -100px;
-  }
-  #deliveryform container.precoPC .botao2 .button-gray:hover {
-    background-color: #707070;
-    border-color: #707070;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  #deliveryform container.precoPC .botao2 .button-gray:active {
-    background-color: rgba(131, 131, 131, 0.9);
-    color: var(--white);
-    border-color: rgba(131, 131, 131, 0.9);
-  }
-  #deliveryform container.precoPC .botao2 .button-gray button {
-    font-size: 35px;
-    font-weight: bold;
-    border: none;
-  }
-  #deliveryform container.precoPC .botao2 {
-    flex-direction: row;
-  }
-  #deliveryform container.precoPC .botao2 .button-red {
-    text-align: center;
-    height: 60px;
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 60px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  #deliveryform container.precoPC .botao2 .button-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  #deliveryform container.precoPC .botao2 .button-red:active {
-    background-color: #ed1b24EE;
-  }
-  #deliveryform container.precoPC .botao2 .button-red button {
-    font-size: 35px;
-    font-weight: bold;
-    border: none;
-    background-color: #ed1b24EE;
-  }
-  #deliveryform container.precoPC .botao2 .button-red button a {
-    text-decoration: none;
-    color: white;
-  }
-  #deliveryform container.precoPC .botao2 {
-    flex-direction: row;
-  }
-  #deliveryform container.precoPC .botao2 .button-gray {
-    height: 50px;
-    text-align: center;
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    color: #555555;
-    border: 2px solid #555555;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 60px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 20px;
-    margin-left: -100px;
-  }
-  #deliveryform container.precoPC .botao2 .button-gray:hover {
-    background-color: #707070;
-    border-color: #707070;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  #deliveryform container.precoPC .botao2 .button-gray:active {
-    background-color: rgba(131, 131, 131, 0.9);
-    color: var(--white);
-    border-color: rgba(131, 131, 131, 0.9);
-  }
-  #deliveryform container.precoPC .botao2 .button-gray button {
-    font-size: 35px;
-    font-weight: bold;
-    border: none;
-  }
-  #deliveryform container.precoPC .botao2 {
-    flex-direction: row;
-  }
-  #deliveryform container.precoPC .botao2 .button-red {
-    text-align: center;
-    height: 60px;
-    margin: 0;
-    height: 54px;
-    display: flex;
-    border: none;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-decoration: none;
-    outline: none;
-    border-radius: var(--border-radius);
-    background-color: var(--red);
-    color: var(--white);
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px -5px var(--black);
-    padding: 0 50px;
-    transition: background-color 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
-    width: 270px;
-    height: 60px;
-    margin-left: calc(100% - 85%);
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  #deliveryform container.precoPC .botao2 .button-red:hover {
-    background-color: #b10000;
-    color: var(--white);
-    box-shadow: 4px 4px 8px -6px var(--black);
-  }
-  #deliveryform container.precoPC .botao2 .button-red:active {
-    background-color: #ed1b24EE;
-  }
-  #deliveryform container.precoPC .botao2 .button-red button {
-    font-size: 35px;
-    font-weight: bold;
-    border: none;
-    background-color: #ed1b24EE;
+}
+@media (min-width: 1441px) {
+  #deliveryform {
+    max-width: 1200px;
+    width: 100%;
+    margin: 100px auto 50px;
   }
 }
 #error {
