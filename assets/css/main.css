@@ -936,7 +936,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin-bottom: 20px;
 }
 #menu-page section .title {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 #menu-page section .title.sub {
   margin-top: 50px;
