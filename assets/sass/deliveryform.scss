@@ -165,7 +165,7 @@
 
 @media (min-width: 1441px) {
     #deliveryform {
-        max-width: 1200px;
+        max-width: var(--space-big-desktop);
         width: 100%;
         margin: 100px auto 50px;
     }

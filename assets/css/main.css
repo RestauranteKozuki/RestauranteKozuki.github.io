@@ -1747,57 +1747,43 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     display: none;
   }
 }
-@media (min-width: 320px) {
-  #entrega {
-    display: block;
-  }
-  #entrega .delivery {
-    margin: 0px;
-    margin-left: 50px;
-    margin-right: calc(100% - 70%);
-    display: block;
-    flex-direction: column;
-    margin-top: 120px;
-  }
-  #entrega .delivery h1 {
-    margin: 0px;
-    font-size: 48px;
-    font-family: "Roboto";
-    font-weight: bold;
-  }
-  #entrega .delivery h2 {
-    margin: 0px;
-    font-size: 24px;
-    font-family: "Roboto";
-    font-weight: 400;
-  }
-  #entrega .delivery hr {
-    width: 75px;
-    margin: 0px;
-    margin-bottom: 50px;
-    height: 1px;
-    border: solid 2px var(--red);
-  }
-  #entrega img {
-    width: 274px;
-    height: 274px;
-    margin-left: 50px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 80px;
-  }
+#entrega {
+  display: block;
+  margin: 120px 20px 20px;
 }
+#entrega .delivery {
+  display: block;
+  flex-direction: column;
+}
+#entrega .delivery .title {
+  margin-bottom: 50px;
+}
+#entrega .delivery p {
+  font-size: 24px;
+}
+#entrega img {
+  width: 100%;
+  max-width: 400px;
+}
+
 @media (min-width: 992px) {
   #entrega {
     display: flex;
+    justify-content: space-between;
+    margin: 120px 100px 20px;
   }
-  #entrega div .delivery h2 {
+  #entrega .delivery {
+    align-items: center;
+    width: 500px;
+  }
+  #entrega .delivery h2 {
     margin-bottom: 50px;
   }
-  #entrega img {
-    width: 400px;
-    height: 400px;
-    margin-right: 10%;
+}
+@media (min-width: 1441px) {
+  #entrega {
+    max-width: var(--space-big-desktop);
+    margin: 120px auto 20px;
   }
 }
 #deliveryform {
@@ -2059,7 +2045,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 @media (min-width: 1441px) {
   #deliveryform {
-    max-width: 1200px;
+    max-width: var(--space-big-desktop);
     width: 100%;
     margin: 100px auto 50px;
   }

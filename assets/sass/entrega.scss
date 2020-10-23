@@ -1,73 +1,41 @@
-@media (min-width: 320px){
 #entrega {
-    
+    display: block;
+    margin: 120px 20px 20px;
+    .delivery {
         display: block;
-        .delivery {
-            margin: 0px;
-            margin-left: 50px;
-            margin-right: calc(100% - 70%);
-            display: block;
-            flex-direction: column;
-            margin-top: 120px;
-            
-            h1 {
-                margin: 0px;       
-                font-size: 48px;
-                font-family: 'Roboto';
-                font-weight: bold;
-                
-            }
-            h2 {
-                margin: 0px;       
-                font-size: 24px;
-                font-family: 'Roboto';
-                font-weight: 400;
-            }
-            hr {           
-                width: 75px;
-                margin: 0px;
-                margin-bottom: 50px;
-                height: 1px;
-                border: solid 2px var(--red);
-                
-            }
-            
+        flex-direction: column;
+        .title {
+            margin-bottom: 50px;
         }
-        
-        img {
-            width: 274px;
-            height: 274px;
-            margin-left: 50px;
-            margin-top: 100px;
-            margin-bottom: 100px;
-            margin-right: 80px;
-
+        p {
+            font-size: 24px;
         }
-        
     }
-    
+    img {
+        width: 100%;
+        max-width: 400px;
+    }
 }
 
 @media (min-width: 992px) {
     #entrega {
-      
-            display: flex;
-            
-            div {
-                .delivery {
-                    
-                    h2 {
-                        margin-bottom: 50px;
-                    }
-                }
-                
+        display: flex;
+        justify-content: space-between;
+        margin: 120px 100px 20px;
+
+        .delivery {
+            align-items: center;
+            width: 500px;
+            h2 {
+                margin-bottom: 50px;
             }
-            img {
-                width: 400px;
-                height: 400px;
-                margin-right: 10%;
-            }
-                    
-        
+        }       
+    }
+}
+
+@media (min-width: 1441px) {
+    #entrega {
+        max-width: var(--space-big-desktop);
+        margin: 120px auto 20px;
     }
 }
