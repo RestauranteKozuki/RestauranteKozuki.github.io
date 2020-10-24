@@ -24,6 +24,11 @@
               &.hide-mobile {
                   display: none;
               }
+              .img-card {
+                img {
+                    max-height: 200px;
+                }
+            }
               .text-card {
                 
                   > h3 {
@@ -59,11 +64,7 @@
         section {
             .container {
               .card {
-                  .img-card {
-                      img {
-                          max-height: 200px;
-                      }
-                  }
+                  
                 .text-card {
                     height: 100%;
                     justify-content: space-between;
