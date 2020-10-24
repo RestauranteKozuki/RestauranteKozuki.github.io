@@ -22,7 +22,6 @@
             margin: 25px;
             width: 300px;
             background-color: var(--bg-gray);
-            height: 700px;
             .title {
                 h2 {
                     font-size: 40px;
@@ -51,6 +50,14 @@
                 text-align: center;
                 height: 300px;
                 margin: 0 20px;
+                .title {
+                    position: relative;
+                    hr {
+                        position: absolute;
+                        bottom: 0;
+                        left: calc(50% - 35px);
+                    }
+                }
                 span {
                     font-size: 20px;
                     

@@ -22,11 +22,12 @@
             margin: 25px;
             width: 300px;
             background-color: var(--bg-gray);
-            height: 750px;
             .title {
-                h2 {
-                    margin-top: 10px;
-                    font-size: 40px;
+                position: relative;
+                hr {
+                    position: absolute;
+                    bottom: 0;
+                    left: calc(50% - 35px);
                 }
             }
             form {

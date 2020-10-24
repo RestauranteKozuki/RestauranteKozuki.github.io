@@ -1379,11 +1379,14 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin: 25px;
   width: 300px;
   background-color: var(--bg-gray);
-  height: 750px;
 }
-#reservation .wrap #squarereservation .title h2 {
-  margin-top: 10px;
-  font-size: 40px;
+#reservation .wrap #squarereservation .title {
+  position: relative;
+}
+#reservation .wrap #squarereservation .title hr {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 35px);
 }
 #reservation .wrap #squarereservation form button {
   height: 54px;
@@ -1488,7 +1491,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin: 25px;
   width: 300px;
   background-color: var(--bg-gray);
-  height: 700px;
 }
 #event .wrap #squarereservation .title h2 {
   font-size: 40px;
@@ -1537,6 +1539,14 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   height: 300px;
   margin: 0 20px;
 }
+#event .wrap #squarereservation .eventsok .title {
+  position: relative;
+}
+#event .wrap #squarereservation .eventsok .title hr {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 35px);
+}
 #event .wrap #squarereservation .eventsok span {
   font-size: 20px;
 }
@@ -1568,7 +1578,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #page-delivery section {
   flex-direction: column;
   margin-top: 130px;
-  padding: 15px;
+  padding: 15px 12px;
 }
 #page-delivery section .tags {
   justify-content: space-between;
@@ -1607,7 +1617,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   flex-direction: column;
 }
 #page-delivery section .container .card {
-  max-width: 350px;
+  max-width: 330px;
   margin-bottom: 30px;
 }
 #page-delivery section .container .card .img-card img {
