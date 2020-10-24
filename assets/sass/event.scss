@@ -50,14 +50,7 @@
                 text-align: center;
                 height: 300px;
                 margin: 0 20px;
-                .title {
-                    position: relative;
-                    hr {
-                        position: absolute;
-                        bottom: 0;
-                        left: calc(50% - 35px);
-                    }
-                }
+                .title
                 span {
                     font-size: 20px;
                     

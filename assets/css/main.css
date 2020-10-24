@@ -688,10 +688,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #third-hero .wrapper {
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 #home #third-hero .wrapper .text {
-  margin: 30px 50px;
+  margin: 30px 40px;
   color: var(--white);
   flex-direction: column;
   text-align: center;
@@ -1380,13 +1379,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   width: 300px;
   background-color: var(--bg-gray);
 }
-#reservation .wrap #squarereservation .title {
-  position: relative;
-}
-#reservation .wrap #squarereservation .title hr {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 35px);
+#reservation .wrap #squarereservation .title h2 {
+  margin-top: 10px;
+  font-size: 40px;
 }
 #reservation .wrap #squarereservation form button {
   height: 54px;
@@ -1539,15 +1534,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   height: 300px;
   margin: 0 20px;
 }
-#event .wrap #squarereservation .eventsok .title {
-  position: relative;
-}
-#event .wrap #squarereservation .eventsok .title hr {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - 35px);
-}
-#event .wrap #squarereservation .eventsok span {
+#event .wrap #squarereservation .eventsok .title span {
   font-size: 20px;
 }
 

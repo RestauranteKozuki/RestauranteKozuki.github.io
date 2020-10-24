@@ -23,11 +23,9 @@
             width: 300px;
             background-color: var(--bg-gray);
             .title {
-                position: relative;
-                hr {
-                    position: absolute;
-                    bottom: 0;
-                    left: calc(50% - 35px);
+                h2 {
+                    margin-top: 10px;
+                    font-size: 40px;
                 }
             }
             form {
