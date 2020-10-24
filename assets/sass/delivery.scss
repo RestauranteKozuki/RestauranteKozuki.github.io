@@ -1,15 +1,12 @@
 #page-delivery {
     section {
-        
         flex-direction: column;
         margin-top: 130px;
-        padding: 15px;
+        padding: 15px 12px;
         .tags {
             justify-content: space-between;
             margin-bottom: 15px;
             flex-wrap: wrap;
-           
-           
                 nav {
                     flex-wrap: wrap;
                 .btn-tag {
@@ -46,6 +43,7 @@
                 .card {
                     
                     width:100%;
+                    max-width:330px;
                     margin-bottom:30px ;
                     .img-card {
                         img {

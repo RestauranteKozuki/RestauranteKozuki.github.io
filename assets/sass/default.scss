@@ -65,3 +65,11 @@ hr {
     }
     
 }
+
+@media (min-width:576px) {
+    .fixed {
+        height: 100px;
+        right: 40px;
+        width: 100px; 
+    }
+}

@@ -65,6 +65,13 @@ hr.divider {
   height: 60px;
 }
 
+@media (min-width: 576px) {
+  .fixed {
+    height: 100px;
+    right: 40px;
+    width: 100px;
+  }
+}
 :root {
   --bg-gray: #ECECEC;
   --dark-gray: #6B6B6B;
@@ -688,10 +695,9 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #home #third-hero .wrapper {
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 #home #third-hero .wrapper .text {
-  margin: 30px 50px;
+  margin: 30px 40px;
   color: var(--white);
   flex-direction: column;
   text-align: center;
@@ -1379,7 +1385,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin: 25px;
   width: 300px;
   background-color: var(--bg-gray);
-  height: 750px;
 }
 #reservation .wrap #squarereservation .title h2 {
   margin-top: 10px;
@@ -1488,7 +1493,6 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   margin: 25px;
   width: 300px;
   background-color: var(--bg-gray);
-  height: 700px;
 }
 #event .wrap #squarereservation .title h2 {
   font-size: 40px;
@@ -1537,7 +1541,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   height: 300px;
   margin: 0 20px;
 }
-#event .wrap #squarereservation .eventsok span {
+#event .wrap #squarereservation .eventsok .title span {
   font-size: 20px;
 }
 
@@ -1568,7 +1572,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #page-delivery section {
   flex-direction: column;
   margin-top: 130px;
-  padding: 15px;
+  padding: 15px 12px;
 }
 #page-delivery section .tags {
   justify-content: space-between;
@@ -1608,6 +1612,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #page-delivery section .container .card {
   width: 100%;
+  max-width: 330px;
   margin-bottom: 30px;
 }
 #page-delivery section .container .card .img-card img {
