@@ -958,7 +958,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #menu-page section .container .arrow-container {
   display: none;
 }
-#menu-page section button {
+#menu-page section .btn-mobile, #menu-page section .btn-desktop {
   height: 54px;
   display: flex;
   border: none;
@@ -982,15 +982,15 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-size: 24px;
   margin-top: 30px;
 }
-#menu-page section button:hover {
+#menu-page section .btn-mobile:hover, #menu-page section .btn-desktop:hover {
   background-color: #b10000;
   color: var(--white);
   box-shadow: 4px 4px 8px -6px var(--black);
 }
-#menu-page section button:active {
+#menu-page section .btn-mobile:active, #menu-page section .btn-desktop:active {
   background-color: #ed1b24EE;
 }
-#menu-page section button.btn-desktop {
+#menu-page section .btn-desktop {
   display: none;
 }
 
@@ -1091,15 +1091,11 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     width: 24px;
     height: 24px;
   }
-  #menu-page section button {
+  #menu-page section .btn-mobile {
     display: none;
   }
-  #menu-page section button.btn-desktop {
+  #menu-page section .btn-desktop {
     display: flex;
-  }
-  #menu-page section button.btn-desktop a {
-    text-decoration: none;
-    color: var(--white);
   }
   #menu-page section .fixed {
     display: none;
@@ -1563,9 +1559,12 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   justify-content: space-between;
   margin-bottom: 15px;
   flex-wrap: wrap;
-  /*position: fixed;*/
 }
-#page-delivery section .tags .btn-tag {
+#page-delivery section .tags nav {
+  flex-wrap: wrap;
+}
+#page-delivery section .tags nav .btn-tag {
+  display: flex;
   width: 75px;
   height: 40px;
   border: none;
@@ -1576,19 +1575,18 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
   font-size: 16px;
   color: var(--white);
   margin-bottom: 10px;
-}
-#page-delivery section .tags .btn-tag.selected {
-  background-color: var(--red-hover);
-}
-#page-delivery section .tags .btn-tag:hover {
-  background-color: var(--red-hover);
-}
-#page-delivery section .tags .btn-tag:active {
-  background-color: var(--red-active);
-}
-#page-delivery section .tags .btn-tag a {
   text-decoration: none;
-  color: var(--white);
+  margin-right: 10px;
+  font-weight: 400;
+}
+#page-delivery section .tags nav .btn-tag.selected {
+  background-color: var(--red-hover);
+}
+#page-delivery section .tags nav .btn-tag:hover {
+  background-color: var(--red-hover);
+}
+#page-delivery section .tags nav .btn-tag:active {
+  background-color: var(--red-active);
 }
 #page-delivery section .container {
   flex-direction: column;
@@ -1654,7 +1652,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     flex-wrap: wrap;
     margin-left: 10px;
   }
-  #page-delivery section .tags .btn-tag {
+  #page-delivery section .tags nav .btn-tag {
     margin-right: 15px;
     width: 110px;
   }
@@ -1696,7 +1694,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     padding-top: 0;
     margin-top: 75px;
   }
-  #page-delivery section .tags {
+  #page-delivery section .tags nav {
     width: 100%;
     position: fixed;
     background-color: var(--shadow);
@@ -1707,12 +1705,13 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     justify-content: flex-start;
     z-index: 1;
   }
-  #page-delivery section .tags .btn-tag {
+  #page-delivery section .tags nav .btn-tag {
     width: 100px;
     margin: 0;
     margin-right: 15px;
     font-size: 16px;
     height: 44px;
+    margin-bottom: 0;
   }
   #page-delivery section .container {
     flex-direction: row;
