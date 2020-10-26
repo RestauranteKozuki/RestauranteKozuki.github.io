@@ -554,6 +554,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 }
 #home #prime-hero {
   height: 700px;
+  width: 100%;
 }
 #home #prime-hero .home-footer {
   position: relative;
@@ -963,6 +964,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
     width: 500px;
   }
   #home #fourth-hero .img {
+    width: 100%;
     background-size: cover;
   }
 }
@@ -1643,6 +1645,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #page-delivery section .container .card {
   width: 100%;
   max-width: 330px;
+  max-height: 590px;
   margin-bottom: 30px;
 }
 #page-delivery section .container .card .img-card img {

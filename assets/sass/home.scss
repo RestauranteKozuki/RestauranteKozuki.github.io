@@ -4,6 +4,7 @@
     flex-direction: column;
     #prime-hero {
         height: 700px;
+        width: 100%;
         .home-footer{
             position: relative;
             width: 100%;
@@ -370,6 +371,7 @@
         }
         #fourth-hero {
             .img {
+                width: 100%;
                 background-size: cover;
             }
         }
