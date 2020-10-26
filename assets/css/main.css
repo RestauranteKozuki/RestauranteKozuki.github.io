@@ -1645,7 +1645,7 @@ form .field input:focus + label, form .field textarea:focus + label, form .field
 #page-delivery section .container .card {
   width: 100%;
   max-width: 330px;
-  max-height: 590px;
+  max-height: 700px;
   margin-bottom: 30px;
 }
 #page-delivery section .container .card .img-card img {
