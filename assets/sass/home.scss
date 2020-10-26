@@ -198,7 +198,7 @@
         width: 100%;
         .img-delivery {
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 }
@@ -287,10 +287,9 @@
             .img {
                 height: 500px;
                 z-index: 1;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-position: -100px;
+                .img-delivery {
+                    object-fit: cover;
+                }
             }
         }
     }
